@@ -1,3 +1,18 @@
 {
-  "stockData": []
+  "stockData": [
+    {
+      "uuid": "d6f74480-89c0-4acd-88d6-c87eb5f88285",
+      "date": "2025-10-15",
+      "stockNumber": "002611",
+      "price": 18.92,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "包装行业"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    }
+  ]
 }
