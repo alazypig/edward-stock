@@ -1,10 +1,9 @@
 import { Button, DatePicker, Divider, Flex, Input, message, Radio } from "antd"
-import { v4 as uuidv4 } from "uuid"
 import { forwardRef, useImperativeHandle, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 import type { GitHubFile, Stock } from "../type"
 import { IndustryPart } from "./IndustryPart"
 import { NotionPart } from "./NotionPart"
-import { BorderlessTableOutlined } from "@ant-design/icons"
 
 export interface EditorMethods {
   clearFields: () => void
