@@ -1,10 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef, useState } from "react"
+import reactLogo from "./assets/react.svg"
+import viteLogo from "/vite.svg"
+import "./App.css"
+import type { Stock } from "./type"
+import { Editor, type EditorMethods } from "./components"
+import { Button, Modal } from "antd"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showModal, setShowModal] = useState(false)
+  const [data, setData] = useState<Stock[]>([])
+
+  const editorRef = useRef<EditorMethods>(null)
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const username = "alazypig"
+      const repoName = "edward-stock"
+
+      const res = await fetch(
+        `https://raw.githubusercontent.com/${username}/${repoName}/main/data/stock.json`,
+      )
+
+      const data = await res.json()
+
+      setData(data)
+    }
+
+    fetchData()
+  }, [])
 
   return (
     <>
@@ -16,18 +43,21 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <Button
+        type="primary"
+        onClick={() => {
+          editorRef.current?.clearFields()
+
+          setShowModal(true)
+        }}
+      >
+        Add New
+      </Button>
+
+      <Modal open={showModal} onCancel={closeModal} footer={null}>
+        <Editor ref={editorRef} closeModal={closeModal} />
+      </Modal>
     </>
   )
 }
