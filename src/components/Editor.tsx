@@ -66,6 +66,7 @@ export const Editor = forwardRef(({ closeModal }: Props, ref) => {
       uuid: uuidv4(),
       date,
       stockNumber,
+      stockName,
       price: priceNum,
       future,
       comment,
@@ -101,7 +102,7 @@ export const Editor = forwardRef(({ closeModal }: Props, ref) => {
 
     const newData = [...oldData, item]
 
-    const newContent = JSON.stringify({ stockData: newData }, null, 2)
+    const newContent = JSON.stringify({ stockData: newData }, null, 0)
     const encoded = btoa(unescape(encodeURIComponent(newContent)))
 
     const putRes = await fetch(
@@ -126,6 +127,8 @@ export const Editor = forwardRef(({ closeModal }: Props, ref) => {
     }
 
     messageApi.success("Stock data saved successfully.")
+
+    closeModal?.()
   }
 
   useImperativeHandle(ref, () => ({

@@ -1,10 +1,9 @@
+import { Button, Flex, Modal, Table } from "antd"
 import { useEffect, useRef, useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
-import type { Stock } from "./type"
 import { Editor, type EditorMethods } from "./components"
-import { Button, Modal } from "antd"
+import type { Stock } from "./type"
+
+import "./index.css"
 
 function App() {
   const [showModal, setShowModal] = useState(false)
@@ -16,49 +15,129 @@ function App() {
     setShowModal(false)
   }
 
+  const fetchData = async () => {
+    setData([])
+    const username = "alazypig"
+    const repoName = "edward-stock"
+
+    const res = await fetch(
+      `https://raw.githubusercontent.com/${username}/${repoName}/main/data/stock.json`,
+    )
+
+    const data = await res.json()
+
+    setData(data.stockData)
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      const username = "alazypig"
-      const repoName = "edward-stock"
-
-      const res = await fetch(
-        `https://raw.githubusercontent.com/${username}/${repoName}/main/data/stock.json`,
-      )
-
-      const data = await res.json()
-
-      setData(data)
-    }
-
     fetchData()
   }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div
+      style={{
+        backgroundColor: "#c6c6c6",
+        width: "100svw",
+        height: "100svh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div
+        style={{ width: "80svw", height: "80svh", backgroundColor: "#c6c6c6" }}
+      >
+        <Table
+          style={{ width: "100%" }}
+          dataSource={data}
+          columns={[
+            {
+              title: "日期",
+              dataIndex: "date",
+              key: "date",
+            },
+            {
+              title: "股票号码",
+              dataIndex: "stockNumber",
+              key: "stockNumber",
+            },
+            {
+              title: "股票名称",
+              dataIndex: "stockName",
+              key: "stockName",
+            },
+            {
+              title: "收盘价",
+              dataIndex: "price",
+              key: "price",
+            },
+            {
+              title: "行业",
+              dataIndex: "industry",
+              key: "industry",
+              render: (val: string[]) => {
+                return val.join(",")
+              },
+            },
+            {
+              title: "概念",
+              dataIndex: "notion",
+              key: "notion",
+              render: (val: string[]) => {
+                return val.join(",")
+              },
+            },
+            {
+              title: "预测走势",
+              dataIndex: "future",
+              key: "future",
+              render: (val: Stock["future"]) => {
+                if (val === "long") {
+                  return "上涨"
+                } else if (val === "short") {
+                  return "下跌"
+                } else {
+                  return "未知"
+                }
+              },
+            },
+            {
+              title: "备注",
+              dataIndex: "comment",
+              key: "comment",
+            },
+          ]}
+        />
       </div>
 
-      <Button
-        type="primary"
-        onClick={() => {
-          editorRef.current?.clearFields()
+      <Flex>
+        <Button
+          style={{ marginRight: 16 }}
+          type="default"
+          onClick={() => {
+            fetchData()
+          }}
+        >
+          Refresh
+        </Button>
 
-          setShowModal(true)
-        }}
-      >
-        Add New
-      </Button>
+        <Button
+          type="primary"
+          onClick={() => {
+            editorRef.current?.clearFields()
+
+            setShowModal(true)
+          }}
+        >
+          Add New
+        </Button>
+      </Flex>
 
       <Modal open={showModal} onCancel={closeModal} footer={null}>
         <Editor ref={editorRef} closeModal={closeModal} />
       </Modal>
-    </>
+    </div>
   )
 }
 
