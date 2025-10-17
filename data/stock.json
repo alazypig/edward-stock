@@ -344,6 +344,66 @@
       "notion": [
         "海南自贸区"
       ]
+    },
+    {
+      "uuid": "2e876e56-8d3e-4cae-9a23-06ef45875b74",
+      "date": "2025-10-16",
+      "stockNumber": "002497",
+      "stockName": "雅化集团",
+      "price": 16.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "民爆概念"
+      ]
+    },
+    {
+      "uuid": "a8e55bcb-63ef-4dfc-840e-29e2bda7586a",
+      "date": "2025-10-16",
+      "stockNumber": "600775",
+      "stockName": "南京熊猫",
+      "price": 12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "脑机接口"
+      ]
+    },
+    {
+      "uuid": "637ba184-ca38-401d-813a-8ebbb01cca01",
+      "date": "2025-10-16",
+      "stockNumber": "002651",
+      "stockName": "利君股份",
+      "price": 11.86,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "成飞概念"
+      ]
+    },
+    {
+      "uuid": "c059dc90-776b-408e-bad6-3b4cb93fca96",
+      "date": "2025-10-16",
+      "stockNumber": "600178",
+      "stockName": "东安动力",
+      "price": 13.81,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "兵装重组"
+      ]
     }
   ]
 }
