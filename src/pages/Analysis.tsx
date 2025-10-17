@@ -25,11 +25,6 @@ interface AnalyzedStock {
   count: number
 }
 
-interface WordData {
-  text: string
-  value: number
-}
-
 export const Analysis = () => {
   const { stocks, loading } = useStockData()
   const { token } = theme.useToken()
