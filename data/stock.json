@@ -209,6 +209,141 @@
       "notion": [
         "网红经济"
       ]
+    },
+    {
+      "uuid": "566cc3e6-9e7b-488e-bd6e-e690f83fb182",
+      "date": "2025-10-16",
+      "stockNumber": "600730",
+      "stockName": "中国高科",
+      "price": 8.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "教育培训"
+      ],
+      "notion": [
+        "职业教育"
+      ]
+    },
+    {
+      "uuid": "305b47e4-44f1-4f48-9691-9222b7f3200d",
+      "date": "2025-10-16",
+      "stockNumber": "605055",
+      "stockName": "迎丰股份",
+      "price": 11.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "纺织制造"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "26a43137-bc67-4bcf-8f90-5fa739dad792",
+      "date": "2025-10-16",
+      "stockNumber": "003010",
+      "stockName": "若羽臣",
+      "price": 48.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 电商"
+      ],
+      "notion": [
+        "拼多多"
+      ]
+    },
+    {
+      "uuid": "d81e2b38-3849-47b3-ba27-280f4c834b54",
+      "date": "2025-10-16",
+      "stockNumber": "000796",
+      "stockName": "凯撒旅业",
+      "price": 6.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 旅游"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
+    },
+    {
+      "uuid": "4fd3c245-62da-4284-8bfe-7c2f0ec256b1",
+      "date": "2025-10-16",
+      "stockNumber": "603061",
+      "stockName": "金海通",
+      "price": 139.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "b5f344c5-a484-417f-974a-80d7b7f7ec02",
+      "date": "2025-10-16",
+      "stockNumber": "002390",
+      "stockName": "信邦制药",
+      "price": 3.87,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "医药电商"
+      ]
+    },
+    {
+      "uuid": "43277f71-9f39-48c7-8cad-9df367d47368",
+      "date": "2025-10-16",
+      "stockNumber": "601579",
+      "stockName": "会稽山",
+      "price": 24.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "酒"
+      ],
+      "notion": [
+        "共同富裕示范区"
+      ]
+    },
+    {
+      "uuid": "2e553c19-22e4-41dd-a8bf-de5fa641fd93",
+      "date": "2025-10-16",
+      "stockNumber": "600523",
+      "stockName": "贵航股份",
+      "price": 15.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "成飞概念"
+      ]
+    },
+    {
+      "uuid": "ab6a3c9c-77a9-4e12-b55a-6c4f5aceed07",
+      "date": "2025-10-16",
+      "stockNumber": "000886",
+      "stockName": "海南高速",
+      "price": 7.05,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "高速"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
     }
   ]
 }
