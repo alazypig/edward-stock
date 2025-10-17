@@ -404,6 +404,96 @@
       "notion": [
         "兵装重组"
       ]
+    },
+    {
+      "uuid": "c2f57ae5-635c-4a6c-9758-6f3d2ca42098",
+      "date": "2025-10-17",
+      "stockNumber": "603931",
+      "stockName": "格林达",
+      "price": 31.25,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "19682e25-c412-40c8-84bd-1757cc63316d",
+      "date": "2025-10-17",
+      "stockNumber": "600496",
+      "stockName": "精工钢构",
+      "price": 4.24,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "钢结构"
+      ],
+      "notion": [
+        "装配式建筑"
+      ]
+    },
+    {
+      "uuid": "0af75c3d-7c20-45b2-9923-0359273a174e",
+      "date": "2025-10-17",
+      "stockNumber": "000600",
+      "stockName": "建投能源",
+      "price": 9.43,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "三季报预增"
+      ]
+    },
+    {
+      "uuid": "f5fad4e0-99f5-4b0b-a0fa-8eb7141930ad",
+      "date": "2025-10-17",
+      "stockNumber": "600179",
+      "stockName": "安通控股",
+      "price": 4.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航运港口"
+      ],
+      "notion": [
+        "自由贸易港"
+      ]
+    },
+    {
+      "uuid": "e53b975c-440f-4ab4-b6ed-b849ac59254e",
+      "date": "2025-10-17",
+      "stockNumber": "600545",
+      "stockName": "卓朗智能",
+      "price": 3.17,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "新型工业化"
+      ]
+    },
+    {
+      "uuid": "a38b4e02-4d67-4149-b9b5-134ce6affcc4",
+      "date": "2025-10-17",
+      "stockNumber": "603189",
+      "stockName": "网达软件",
+      "price": 22.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "乡村振兴"
+      ]
     }
   ]
 }
