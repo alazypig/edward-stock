@@ -4,16 +4,21 @@ import {
   Button,
   Card,
   Flex,
+  Grid,
   Input,
+  List,
   message,
   Modal,
   Table,
+  Tag,
   Typography,
 } from "antd"
 import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import { Editor, type EditorMethods } from "../components"
 import type { GitHubFile, Stock } from "../type"
+
+const { useBreakpoint } = Grid
 
 export const Add = () => {
   const [token, setToken] = useState(() => {
@@ -32,6 +37,7 @@ export const Add = () => {
     )
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const screens = useBreakpoint()
 
   const handleSave = (item: Stock) => {
     if (item.date) {
@@ -177,8 +183,65 @@ export const Add = () => {
     },
   ]
 
+  const renderMobileList = () => (
+    <List
+      itemLayout="vertical"
+      dataSource={newStocks}
+      renderItem={(stock) => (
+        <List.Item
+          key={stock.uuid}
+          actions={[
+            <Button size="small" onClick={() => handleEdit(stock)}>
+              Edit
+            </Button>,
+            <Button
+              size="small"
+              danger
+              onClick={() => handleDelete(stock.uuid)}
+            >
+              Delete
+            </Button>,
+          ]}
+        >
+          <List.Item.Meta
+            title={
+              <Flex align="center" gap="small">
+                <span>{`${stock.stockName} (${stock.stockNumber})`}</span>
+                {stock.future === "long" && (
+                  <span style={{ color: "green" }}>(Long)</span>
+                )}
+                {stock.future === "short" && (
+                  <span style={{ color: "red" }}>(Short)</span>
+                )}
+              </Flex>
+            }
+            description={`Date: ${stock.date} | Price: ${stock.price}`}
+          />
+          <div>
+            <div style={{ marginBottom: 8 }}>
+              <strong>Industry: </strong>
+              {stock.industry.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </div>
+            <div>
+              <strong>Notion: </strong>
+              {stock.notion.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </div>
+          </div>
+        </List.Item>
+      )}
+    />
+  )
+
+  const renderDesktopTable = () => (
+    <Table dataSource={newStocks} columns={columns} rowKey="uuid" />
+  )
+
   return (
-    <div style={{ margin: "2rem" }}>
+    <div style={{ margin: screens.md ? "2rem" : "1rem" }}>
       {contextHolder}
       <Flex
         justify="space-between"
@@ -202,7 +265,7 @@ export const Add = () => {
         }
         style={{ marginBottom: "2rem" }}
       >
-        <Table dataSource={newStocks} columns={columns} rowKey="uuid" />
+        {screens.md ? renderDesktopTable() : renderMobileList()}
       </Card>
 
       <Affix offsetBottom={20}>

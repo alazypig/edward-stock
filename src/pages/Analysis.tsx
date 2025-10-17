@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   Flex,
+  Grid,
   Layout,
   Spin,
   Table,
@@ -16,6 +17,8 @@ import { Link } from "react-router-dom"
 import { useStockData } from "../contexts/StockDataContext"
 import type { Stock } from "../type"
 
+const { useBreakpoint } = Grid
+
 interface AnalyzedStock {
   key: string
   stockNumber: string
@@ -28,15 +31,22 @@ interface AnalyzedStock {
 export const Analysis = () => {
   const { stocks, loading } = useStockData()
   const { token } = theme.useToken()
+  const screens = useBreakpoint()
 
   const { analyzedData, industryWords, notionWords } = useMemo(() => {
     if (!stocks || stocks.length === 0) {
       return { analyzedData: [], industryWords: [], notionWords: [] }
     }
 
-    const tenDaysAgo = dayjs().subtract(10, "day")
+    const allDates = stocks.map((stock) => stock.date)
+    const uniqueSortedDates = [...new Set(allDates)].sort((a, b) =>
+      dayjs(b).diff(a),
+    )
+    const last10Dates = uniqueSortedDates.slice(0, 10)
+    const last10DatesSet = new Set(last10Dates)
+
     const recentStocks = stocks.filter((stock) =>
-      dayjs(stock.date).isAfter(tenDaysAgo),
+      last10DatesSet.has(stock.date),
     )
 
     // Left Section Data
@@ -128,54 +138,72 @@ export const Analysis = () => {
   const fontSizeMapper = (word: { value: number }) => Math.log2(word.value) * 30
 
   return (
-    <Layout style={{ padding: "2rem", backgroundColor: token.colorBgLayout }}>
+    <Layout
+      style={{
+        padding: screens.md ? "2rem" : "1rem",
+        backgroundColor: token.colorBgLayout,
+      }}
+    >
       <Layout.Content>
         <Typography.Title level={2} style={{ marginBottom: "2rem" }}>
-          Stock Analysis (Last 10 Days)
+          Stock Analysis (Last 10 Recorded Days)
         </Typography.Title>
         <Spin spinning={loading}>
-          <Flex gap="large">
+          <Flex vertical gap="large">
             <Card
               title="Frequently Occurring Stocks"
-              style={{ flex: 3, overflow: "hidden" }}
+              style={{ overflow: "hidden" }}
             >
               <Table
                 dataSource={analyzedData}
                 columns={columns}
                 size="small"
                 scroll={{ x: true }}
+                pagination={{ pageSize: 5 }}
               />
             </Card>
+            <Flex gap="large" wrap>
+              <Card
+                title="Industry Word Cloud"
+                style={{ flex: 1, minWidth: screens.xs ? 330 : 450 }}
+              >
+                <div style={{ height: "300px", textAlign: "center" }}>
+                  {industryWords.length > 0 ? (
+                    <WordCloud
+                      data={industryWords}
+                      width={screens.xs ? 280 : 400}
+                      height={200}
+                      fontSize={fontSizeMapper}
+                    />
+                  ) : (
+                    <p>No industry data to display.</p>
+                  )}
+                </div>
+              </Card>
 
-            <Card title="Industry Word Cloud" style={{ flex: 2 }}>
-              <div style={{ height: "400px", textAlign: "center" }}>
-                {industryWords.length > 0 ? (
-                  <WordCloud
-                    data={industryWords}
-                    width={400}
-                    height={400}
-                    fontSize={fontSizeMapper}
-                  />
-                ) : (
-                  <p>No industry data to display.</p>
-                )}
-              </div>
-            </Card>
-
-            <Card title="Notion Word Cloud" style={{ flex: 2 }}>
-              <div style={{ height: "400px", textAlign: "center" }}>
-                {notionWords.length > 0 ? (
-                  <WordCloud
-                    data={notionWords}
-                    width={400}
-                    height={400}
-                    fontSize={fontSizeMapper}
-                  />
-                ) : (
-                  <p>No notion data to display.</p>
-                )}
-              </div>
-            </Card>
+              <Card
+                title="Notion Word Cloud"
+                style={{ flex: 1, minWidth: screens.xs ? 330 : 450 }}
+              >
+                <div
+                  style={{
+                    height: "300px",
+                    textAlign: "center",
+                  }}
+                >
+                  {notionWords.length > 0 ? (
+                    <WordCloud
+                      data={notionWords}
+                      width={screens.xs ? 280 : 400}
+                      height={200}
+                      fontSize={fontSizeMapper}
+                    />
+                  ) : (
+                    <p>No notion data to display.</p>
+                  )}
+                </div>
+              </Card>
+            </Flex>
           </Flex>
         </Spin>
         <div style={{ marginTop: "2rem" }}>
@@ -187,3 +215,4 @@ export const Analysis = () => {
     </Layout>
   )
 }
+

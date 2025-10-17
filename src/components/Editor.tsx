@@ -1,9 +1,11 @@
-import { Button, DatePicker, Divider, Flex, Input, message, Radio } from "antd"
+import { Button, DatePicker, Flex, Grid, Input, message, Radio } from "antd"
 import dayjs from "dayjs"
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 import type { Stock } from "../type"
 import { TagInput } from "./TagInput"
+
+const { useBreakpoint } = Grid
 
 export interface EditorMethods {
   clearFields: () => void
@@ -15,8 +17,8 @@ interface Props {
   onCancel: () => void
 }
 
-export const Editor = forwardRef(
-  ({ stockToEdit, onSave, onCancel }: Props, ref) => {
+export const Editor = forwardRef<EditorMethods, Props>(
+  ({ stockToEdit, onSave, onCancel }, ref) => {
     const [date, setDate] = useState("")
     const [stockNumber, setStockNumber] = useState("")
     const [stockName, setStockName] = useState("")
@@ -28,6 +30,7 @@ export const Editor = forwardRef(
     const [notion, setNotion] = useState<string[]>([])
 
     const [messageApi, contextHolder] = message.useMessage()
+    const screens = useBreakpoint()
 
     useEffect(() => {
       if (stockToEdit) {
@@ -99,87 +102,78 @@ export const Editor = forwardRef(
     return (
       <div
         style={{
-          marginTop: 36,
+          marginTop: 24,
         }}
       >
         {contextHolder}
-
-        <DatePicker
-          value={date ? dayjs(date) : null}
-          onChange={(v) => {
-            setDate(v ? v.format("YYYY-MM-DD") : "")
-          }}
-          style={{
-            width: "100%",
-          }}
-        />
-
-        <Divider size="middle" />
-
-        <Flex>
-          <Input
-            style={{ flex: 1 }}
-            placeholder="Stock Number"
-            value={stockNumber}
-            onChange={(e) => {
-              setStockNumber(e.target.value)
+        <Flex vertical gap={screens.md ? "middle" : "small"}>
+          <DatePicker
+            value={date ? dayjs(date) : null}
+            onChange={(v) => {
+              setDate(v ? v.format("YYYY-MM-DD") : "")
+            }}
+            style={{
+              width: "100%",
             }}
           />
-          <div style={{ width: 16 }} />
+
+          <Flex vertical={!screens.md} gap="middle">
+            <Input
+              style={{ flex: 1 }}
+              placeholder="Stock Number"
+              value={stockNumber}
+              onChange={(e) => {
+                setStockNumber(e.target.value)
+              }}
+            />
+            <Input
+              style={{ flex: 1 }}
+              placeholder="Stock Name"
+              value={stockName}
+              onChange={(e) => {
+                setStockName(e.target.value)
+              }}
+            />
+          </Flex>
+
           <Input
-            style={{ flex: 1 }}
-            placeholder="Stock Name"
-            value={stockName}
+            placeholder="Price"
+            value={price}
             onChange={(e) => {
-              setStockName(e.target.value)
+              setPrice(e.target.value)
+            }}
+          />
+
+          <TagInput
+            label="行业"
+            initialValue={industry}
+            onChange={setIndustry}
+          />
+
+          <TagInput label="概念" initialValue={notion} onChange={setNotion} />
+
+          <Radio.Group
+            value={future}
+            options={[
+              { label: "Long", value: "long" },
+              { label: "Short", value: "short" },
+              { label: "unknown", value: "none" },
+            ]}
+            optionType="button"
+            buttonStyle="solid"
+            onChange={(e) => {
+              setFuture(e.target.value)
+            }}
+          />
+
+          <Input
+            placeholder="Comment"
+            value={comment}
+            onChange={(e) => {
+              setComment(e.target.value)
             }}
           />
         </Flex>
-
-        <Divider size="middle" />
-
-        <Input
-          placeholder="Price"
-          value={price}
-          onChange={(e) => {
-            setPrice(e.target.value)
-          }}
-        />
-
-        <Divider size="middle" />
-
-        <TagInput label="行业" initialValue={industry} onChange={setIndustry} />
-
-        <Divider size="middle" />
-
-        <TagInput label="概念" initialValue={notion} onChange={setNotion} />
-
-        <Divider size="middle" />
-
-        <Radio.Group
-          value={future}
-          block
-          options={[
-            { label: "Long", value: "long" },
-            { label: "Short", value: "short" },
-            { label: "unknown", value: "none" },
-          ]}
-          optionType="button"
-          buttonStyle="solid"
-          onChange={(e) => {
-            setFuture(e.target.value)
-          }}
-        />
-
-        <Divider size="middle" />
-
-        <Input
-          placeholder="Comment"
-          value={comment}
-          onChange={(e) => {
-            setComment(e.target.value)
-          }}
-        />
 
         <Flex
           style={{
@@ -207,3 +201,4 @@ export const Editor = forwardRef(
     )
   },
 )
+
