@@ -2,19 +2,13 @@ import { PlusOutlined } from "@ant-design/icons"
 import { Flex, Input, Tag, theme, Tooltip, type InputRef } from "antd"
 import { useEffect, useRef, useState } from "react"
 
-const tagInputStyle: React.CSSProperties = {
-  width: 64,
-  height: 22,
-  marginInlineEnd: 8,
-  verticalAlign: "top",
-}
-
 interface Props {
+  label: string
   initialValue?: string[]
-  onChange?: (notion: string[]) => void
+  onChange?: (tags: string[]) => void
 }
 
-export const NotionPart = ({ initialValue = [], onChange }: Props) => {
+export const TagInput = ({ label, initialValue = [], onChange }: Props) => {
   const [tags, setTags] = useState<string[]>(initialValue)
   const [inputVisible, setInputVisible] = useState(false)
   const [inputValue, setInputValue] = useState("")
@@ -22,13 +16,28 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
   const [editInputValue, setEditInputValue] = useState("")
   const inputRef = useRef<InputRef>(null)
   const editInputRef = useRef<InputRef>(null)
-
   const { token: styleToken } = theme.useToken()
+
+  useEffect(() => {
+    if (inputVisible) {
+      inputRef.current?.focus()
+    }
+  }, [inputVisible])
+
+  useEffect(() => {
+    editInputRef.current?.focus()
+  }, [editInputValue])
+
+  useEffect(() => {
+    setTags(initialValue)
+  }, [initialValue])
 
   const handleClose = (removedTag: string) => {
     const newTags = tags.filter((tag) => tag !== removedTag)
-    console.log(newTags)
     setTags(newTags)
+    if (onChange) {
+      onChange(newTags)
+    }
   }
 
   const showInput = () => {
@@ -42,9 +51,7 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
   const handleInputConfirm = () => {
     if (inputValue && !tags.includes(inputValue)) {
       const newTags = [...tags, inputValue]
-
       setTags(newTags)
-
       if (onChange) {
         onChange(newTags)
       }
@@ -61,13 +68,18 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
     const newTags = [...tags]
     newTags[editInputIndex] = editInputValue
     setTags(newTags)
-
     if (onChange) {
       onChange(newTags)
     }
-
     setEditInputIndex(-1)
     setEditInputValue("")
+  }
+
+  const tagInputStyle: React.CSSProperties = {
+    width: 64,
+    height: 22,
+    marginInlineEnd: 8,
+    verticalAlign: "top",
   }
 
   const tagPlusStyle: React.CSSProperties = {
@@ -75,20 +87,6 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
     background: styleToken.colorBgContainer,
     borderStyle: "dashed",
   }
-
-  useEffect(() => {
-    if (inputVisible) {
-      inputRef.current?.focus()
-    }
-  }, [inputVisible])
-
-  useEffect(() => {
-    editInputRef.current?.focus()
-  }, [editInputValue])
-
-  useEffect(() => {
-    setTags(initialValue)
-  }, [initialValue])
 
   return (
     <Flex
@@ -107,12 +105,7 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
               ref={editInputRef}
               key={tag}
               size="small"
-              style={{
-                width: 64,
-                height: 22,
-                marginInlineEnd: 8,
-                verticalAlign: "top",
-              }}
+              style={tagInputStyle}
               value={editInputValue}
               onChange={handleEditInputChange}
               onBlur={handleEditInputConfirm}
@@ -124,7 +117,7 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
         const tagElem = (
           <Tag
             key={tag}
-            closable={index !== 0}
+            closable
             style={{ userSelect: "none" }}
             onClose={() => handleClose(tag)}
           >
@@ -162,7 +155,7 @@ export const NotionPart = ({ initialValue = [], onChange }: Props) => {
         />
       ) : (
         <Tag style={tagPlusStyle} icon={<PlusOutlined />} onClick={showInput}>
-          概念
+          {label}
         </Tag>
       )}
     </Flex>
