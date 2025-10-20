@@ -494,6 +494,126 @@
       "notion": [
         "乡村振兴"
       ]
+    },
+    {
+      "uuid": "aaf20781-1114-4bec-a654-4d9913e5c047",
+      "date": "2025-10-20",
+      "stockNumber": "600123",
+      "stockName": "兰花科创",
+      "price": 7.12,
+      "future": "none",
+      "comment": "观望",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "36423f78-77ca-4fa5-bb6e-93c87c93dc75",
+      "date": "2025-10-20",
+      "stockNumber": "603131",
+      "stockName": "上海沪工",
+      "price": 22.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "d736d7ad-dad2-459c-981a-57ba0a46c0c5",
+      "date": "2025-10-20",
+      "stockNumber": "002527",
+      "stockName": "新时达",
+      "price": 17.77,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "b2e43065-5021-4154-a5eb-de00ae79c5b7",
+      "date": "2025-10-20",
+      "stockNumber": "002766",
+      "stockName": "索菱股份",
+      "price": 6,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        " 汽车零部件"
+      ],
+      "notion": [
+        "5G"
+      ]
+    },
+    {
+      "uuid": "7212ca98-1969-4173-a09c-cdc8593b31d1",
+      "date": "2025-10-20",
+      "stockNumber": "000558",
+      "stockName": "天府文旅",
+      "price": 5.39,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "体育产业"
+      ]
+    },
+    {
+      "uuid": "4e5a4a39-aa70-4c7d-8313-05c2fdeb5f78",
+      "date": "2025-10-20",
+      "stockNumber": "002497",
+      "stockName": "雅化集团",
+      "price": 16.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "民爆概念"
+      ]
+    },
+    {
+      "uuid": "769d00d2-f35a-450e-98ab-f93700b32867",
+      "date": "2025-10-20",
+      "stockNumber": "600640",
+      "stockName": "国脉文化",
+      "price": 14.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "数字媒体"
+      ],
+      "notion": [
+        "Sora"
+      ]
+    },
+    {
+      "uuid": "3c7ca07d-c20f-4434-82cb-eabb51366c88",
+      "date": "2025-10-20",
+      "stockNumber": "002317",
+      "stockName": "众生药业",
+      "price": 18.2,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "创新药"
+      ]
     }
   ]
 }
