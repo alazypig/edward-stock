@@ -119,7 +119,13 @@ export const Analysis = () => {
     { title: "Stock Name", dataIndex: "stockName", key: "stockName" },
     { title: "First Price", dataIndex: "firstPrice", key: "firstPrice" },
     { title: "Last Price", dataIndex: "lastPrice", key: "lastPrice" },
-    { title: "Count", dataIndex: "count", key: "count" },
+    {
+      title: "Count",
+      dataIndex: "count",
+      key: "count",
+      sorter: (a: AnalyzedStock, b: AnalyzedStock) => a.count - b.count,
+      defaultSortOrder: "descend",
+    },
     {
       title: "Change",
       key: "change",
