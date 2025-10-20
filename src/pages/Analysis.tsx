@@ -124,11 +124,13 @@ export const Analysis = () => {
       dataIndex: "count",
       key: "count",
       sorter: (a: AnalyzedStock, b: AnalyzedStock) => a.count - b.count,
-      defaultSortOrder: "descend",
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      defaultSortOrder: "descend" as any,
     },
     {
       title: "Change",
       key: "change",
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       render: (_: any, record: AnalyzedStock) => {
         const { firstPrice, lastPrice } = record
         if (firstPrice === 0) {
@@ -221,4 +223,3 @@ export const Analysis = () => {
     </Layout>
   )
 }
-
