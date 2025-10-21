@@ -614,6 +614,171 @@
       "notion": [
         "创新药"
       ]
+    },
+    {
+      "uuid": "098fb913-0971-4bcc-a8d2-10aaf6c5f6fb",
+      "date": "2025-10-21",
+      "stockNumber": "603822",
+      "stockName": "嘉澳环保",
+      "price": 95.5,
+      "future": "none",
+      "comment": "观望 太高了",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "碳中和"
+      ]
+    },
+    {
+      "uuid": "d41d0ab1-2d7d-4d4d-aa62-90dc5d09ec59",
+      "date": "2025-10-21",
+      "stockNumber": "002448",
+      "stockName": "中原内配",
+      "price": 11.04,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "汽车电子"
+      ]
+    },
+    {
+      "uuid": "229d84cf-ccbc-47b6-8922-5465bff6f836",
+      "date": "2025-10-21",
+      "stockNumber": "002204",
+      "stockName": "大连重工",
+      "price": 6.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "核电"
+      ]
+    },
+    {
+      "uuid": "f45838ae-99a1-43e2-bb42-40d8d562b29c",
+      "date": "2025-10-21",
+      "stockNumber": "600288",
+      "stockName": "大恒科技",
+      "price": 15.05,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "cc2e6b43-0b9d-43de-93a8-9cd6011f1618",
+      "date": "2025-10-21",
+      "stockNumber": "603299",
+      "stockName": "苏盐井神",
+      "price": 11.63,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "a8ec4fe7-71fc-4378-bbd6-6cae12aaea88",
+      "date": "2025-10-21",
+      "stockNumber": "600425",
+      "stockName": "青松建化",
+      "price": 4.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "水泥"
+      ],
+      "notion": [
+        "水泥"
+      ]
+    },
+    {
+      "uuid": "e3eb5b7a-c83c-4d3c-8fe1-47d1978cfe6f",
+      "date": "2025-10-21",
+      "stockNumber": "600759",
+      "stockName": "洲际油气",
+      "price": 2.49,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "油气开采"
+      ],
+      "notion": [
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "f183e752-b45f-4e5d-b0a9-18982b08c667",
+      "date": "2025-10-21",
+      "stockNumber": "002482",
+      "stockName": "广田集团",
+      "price": 1.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "装修装饰"
+      ],
+      "notion": [
+        "装配式建筑"
+      ]
+    },
+    {
+      "uuid": "5d00b934-f761-4672-a8fa-2b2abe564c9b",
+      "date": "2025-10-21",
+      "stockNumber": "600545",
+      "stockName": "卓郎智能",
+      "price": 3.26,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "新型工业化"
+      ]
+    },
+    {
+      "uuid": "325e8577-e795-4983-b922-214be0ec7e62",
+      "date": "2025-10-21",
+      "stockNumber": "002870",
+      "stockName": "香山股份",
+      "price": 42.17,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "智能座舱"
+      ]
+    },
+    {
+      "uuid": "f5ed1a0b-32db-4923-8b4c-9e0cac0a66f9",
+      "date": "2025-10-21",
+      "stockNumber": "000501",
+      "stockName": "武商集团",
+      "price": 10.51,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "物业管理"
+      ]
     }
   ]
 }
