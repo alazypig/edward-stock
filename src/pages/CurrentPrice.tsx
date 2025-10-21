@@ -76,7 +76,7 @@ export const CurrentPrice = () => {
       setLoading(true)
       try {
         const response = await fetch(
-          `http://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
+          `https://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
         )
         const blob = await response.blob()
         const reader = new FileReader()
@@ -130,7 +130,7 @@ export const CurrentPrice = () => {
     { title: "股票名称", dataIndex: "name", key: "name" },
     { title: "当前价格", dataIndex: "currentPrice", key: "currentPrice" },
     {
-      title: "涨跌幅",
+      title: "今日涨跌幅",
       key: "change",
       render: (_: unknown, record: StockData) => {
         const percentage = parseFloat(record.changePercentage)

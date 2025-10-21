@@ -6,10 +6,12 @@ import {
   Grid,
   List,
   Table,
+  Tag,
   Typography,
   theme,
+  Input,
 } from "antd"
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
@@ -30,9 +32,29 @@ export const Home = () => {
   const screens = useBreakpoint()
   const { token } = theme.useToken()
 
+  const [searchTerm, setSearchTerm] = useState("")
+
   const sortedStocks = useMemo(() => {
     return [...stocks].sort((a, b) => b.date.localeCompare(a.date))
   }, [stocks])
+
+  const filteredStocks = useMemo(() => {
+    if (!searchTerm) {
+      return sortedStocks
+    }
+    const lowerCaseSearchTerm = searchTerm.toLowerCase()
+    return sortedStocks.filter(
+      (stock) =>
+        stock.stockNumber.toLowerCase().includes(lowerCaseSearchTerm) ||
+        stock.stockName.toLowerCase().includes(lowerCaseSearchTerm) ||
+        stock.industry.some((industry) =>
+          industry.toLowerCase().includes(lowerCaseSearchTerm)
+        ) ||
+        stock.notion.some((notion) =>
+          notion.toLowerCase().includes(lowerCaseSearchTerm)
+        )
+    )
+  }, [sortedStocks, searchTerm])
 
   const columns = [
     { title: "日期", dataIndex: "date", key: "date" },
@@ -43,13 +65,25 @@ export const Home = () => {
       title: "行业",
       dataIndex: "industry",
       key: "industry",
-      render: (val: string[]) => val.join(","),
+      render: (val: string[]) => (
+        <>
+          {val.map((item) => (
+            <Tag key={item}>{item}</Tag>
+          ))}
+        </>
+      ),
     },
     {
       title: "概念",
       dataIndex: "notion",
       key: "notion",
-      render: (val: string[]) => val.join(","),
+      render: (val: string[]) => (
+        <>
+          {val.map((item) => (
+            <Tag key={item}>{item}</Tag>
+          ))}
+        </>
+      ),
     },
     {
       title: "预测走势",
@@ -64,7 +98,7 @@ export const Home = () => {
     <List
       loading={loading}
       grid={{ gutter: 16, xs: 1, sm: 2 }}
-      dataSource={sortedStocks}
+      dataSource={filteredStocks}
       renderItem={(stock: Stock) => (
         <List.Item>
           <Card
@@ -81,10 +115,14 @@ export const Home = () => {
                 {renderFuture(stock.future)}
               </Descriptions.Item>
               <Descriptions.Item label="行业">
-                {stock.industry.join(", ")}
+                {stock.industry.map((item) => (
+                  <Tag key={item}>{item}</Tag>
+                ))}
               </Descriptions.Item>
               <Descriptions.Item label="概念">
-                {stock.notion.join(", ")}
+                {stock.notion.map((item) => (
+                  <Tag key={item}>{item}</Tag>
+                ))}
               </Descriptions.Item>
               {stock.comment && (
                 <Descriptions.Item label="备注">
@@ -101,7 +139,7 @@ export const Home = () => {
   const renderDesktopTable = () => (
     <Table
       loading={loading}
-      dataSource={sortedStocks}
+      dataSource={filteredStocks}
       columns={columns}
       scroll={{ x: true }}
       rowKey="uuid"
@@ -124,6 +162,13 @@ export const Home = () => {
           <Typography.Title level={2} style={{ margin: "0.5rem 0" }}>
             Stock List
           </Typography.Title>
+          <Input.Search
+            placeholder="搜索股票号码、名称、行业或概念"
+            allowClear
+            onSearch={setSearchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            style={{ width: 300 }}
+          />
           <Flex gap="middle" wrap="wrap">
             <Button onClick={refetch}>Refresh</Button>
             <Link to="/add">
