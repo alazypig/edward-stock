@@ -14,11 +14,11 @@ const Analysis = lazy(() =>
   import("./pages/Analysis").then((module) => ({ default: module.Analysis })),
 )
 
-// const CurrentPrice = lazy(() =>
-//   import("./pages/CurrentPrice").then((module) => ({
-//     default: module.CurrentPrice,
-//   })),
-// )
+const CurrentPrice = lazy(() =>
+  import("./pages/CurrentPrice").then((module) => ({
+    default: module.CurrentPrice,
+  })),
+)
 
 export const router = createBrowserRouter([
   {
@@ -49,14 +49,14 @@ export const router = createBrowserRouter([
           </Suspense>
         ),
       },
-      // {
-      //   path: "current-price",
-      //   element: (
-      //     <Suspense fallback={<PageSpinner />}>
-      //       <CurrentPrice />
-      //     </Suspense>
-      //   ),
-      // },
+      {
+        path: "current-price",
+        element: (
+          <Suspense fallback={<PageSpinner />}>
+            <CurrentPrice />
+          </Suspense>
+        ),
+      },
     ],
   },
 ])

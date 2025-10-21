@@ -14,6 +14,14 @@ export default defineConfig({
           referer: "https://finance.sina.com.cn/",
         },
       },
+      "/api/qt": {
+        target: "http://qt.gtimg.cn",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/qt/, ""),
+        headers: {
+          referer: "https://stock.qq.com/",
+        },
+      },
     },
   },
 })

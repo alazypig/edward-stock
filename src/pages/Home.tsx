@@ -132,6 +132,9 @@ export const Home = () => {
             <Link to="/analysis">
               <Button>Analysis</Button>
             </Link>
+            <Link to="/current-price">
+              <Button>Current Price</Button>
+            </Link>
 
           </Flex>
         </Flex>

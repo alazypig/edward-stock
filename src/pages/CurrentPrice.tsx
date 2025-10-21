@@ -28,6 +28,9 @@ interface StockData {
   turnover: string
   date: string
   time: string
+  changeAmount: string
+  changePercentage: string
+  unknownField9: string
 }
 
 export const CurrentPrice = () => {
@@ -72,36 +75,40 @@ export const CurrentPrice = () => {
     const fetchData = async () => {
       setLoading(true)
       try {
-        const response = await fetch(`/api/list=${stockCodes.join(",")}`)
+        const response = await fetch(
+          `http://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
+        )
         const blob = await response.blob()
         const reader = new FileReader()
         reader.onload = () => {
           const text = reader.result as string
-          const stockEntries = text.split("var ").filter(Boolean)
+          const stockEntries = text.split("\n").filter(Boolean)
           const parsedStocks: StockData[] = []
-
           console.log(text)
 
           stockEntries.forEach((entry) => {
-            const match = entry.match(/(?:var )?hq_str_(\w+)="(.*)";/)
+            const match = entry.match(/(?:var )?v_s_(\w+)="(.*)";/)
 
             if (match) {
               const stockCode = match[1]
               const dataString = match[2]
-              const dataArray = dataString.split(",")
+              const dataArray = dataString.split("~")
 
               parsedStocks.push({
                 key: stockCode,
-                name: dataArray[0],
-                openingPrice: dataArray[1],
-                previousClosingPrice: dataArray[2],
+                name: dataArray[1],
+                openingPrice: "", // Not available in new format
+                previousClosingPrice: "", // Not available in new format
                 currentPrice: dataArray[3],
-                highestPrice: dataArray[4],
-                lowestPrice: dataArray[5],
-                volume: (parseInt(dataArray[8]) / 100).toString(),
-                turnover: (parseInt(dataArray[9]) / 10000).toString(),
-                date: dataArray[30],
-                time: dataArray[31],
+                highestPrice: "", // Not available in new format
+                lowestPrice: "", // Not available in new format
+                volume: (parseInt(dataArray[6]) / 100).toString(),
+                turnover: parseFloat(dataArray[7]).toString(),
+                date: "", // Not available in new format
+                time: "", // Not available in new format
+                changeAmount: dataArray[4],
+                changePercentage: dataArray[5],
+                unknownField9: dataArray[9],
               })
             }
           })
@@ -126,39 +133,19 @@ export const CurrentPrice = () => {
       title: "涨跌幅",
       key: "change",
       render: (_: unknown, record: StockData) => {
-        const change =
-          parseFloat(record.currentPrice) -
-          parseFloat(record.previousClosingPrice)
-        const percentage =
-          (change / parseFloat(record.previousClosingPrice)) * 100
+        const percentage = parseFloat(record.changePercentage)
         const color = percentage < 0 ? "red" : "green"
         return <span style={{ color }}>{percentage.toFixed(2)}%</span>
       },
       sorter: (a: StockData, b: StockData) => {
-        const percentageA =
-          ((parseFloat(a.currentPrice) - parseFloat(a.previousClosingPrice)) /
-            parseFloat(a.previousClosingPrice)) *
-          100
-        const percentageB =
-          ((parseFloat(b.currentPrice) - parseFloat(b.previousClosingPrice)) /
-            parseFloat(b.previousClosingPrice)) *
-          100
+        const percentageA = parseFloat(a.changePercentage)
+        const percentageB = parseFloat(b.changePercentage)
         return percentageA - percentageB
       },
       defaultSortOrder: "descend",
     },
-    { title: "今日开盘价", dataIndex: "openingPrice", key: "openingPrice" },
-    {
-      title: "昨日收盘价",
-      dataIndex: "previousClosingPrice",
-      key: "previousClosingPrice",
-    },
-    { title: "今日最高价", dataIndex: "highestPrice", key: "highestPrice" },
-    { title: "今日最低价", dataIndex: "lowestPrice", key: "lowestPrice" },
-    { title: "成交量（手）", dataIndex: "volume", key: "volume" },
     { title: "成交额（万元）", dataIndex: "turnover", key: "turnover" },
-    { title: "日期", dataIndex: "date", key: "date" },
-    { title: "时间", dataIndex: "time", key: "time" },
+    { title: "未知字段", dataIndex: "unknownField9", key: "unknownField9" },
   ]
 
   return (
