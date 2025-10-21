@@ -1,7 +1,7 @@
-import { Spin } from "antd"
 import { lazy, Suspense } from "react"
 import { createBrowserRouter } from "react-router-dom"
 import App from "./App"
+import { PageSpinner } from "./components/PageSpinner"
 
 // Dynamically import pages
 const Home = lazy(() =>
@@ -14,19 +14,11 @@ const Analysis = lazy(() =>
   import("./pages/Analysis").then((module) => ({ default: module.Analysis })),
 )
 
-// A simple spinner component for the fallback
-const PageSpinner = () => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh",
-    }}
-  >
-    <Spin size="large" />
-  </div>
-)
+// const CurrentPrice = lazy(() =>
+//   import("./pages/CurrentPrice").then((module) => ({
+//     default: module.CurrentPrice,
+//   })),
+// )
 
 export const router = createBrowserRouter([
   {
@@ -57,7 +49,14 @@ export const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      // {
+      //   path: "current-price",
+      //   element: (
+      //     <Suspense fallback={<PageSpinner />}>
+      //       <CurrentPrice />
+      //     </Suspense>
+      //   ),
+      // },
     ],
   },
 ])
-

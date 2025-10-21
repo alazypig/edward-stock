@@ -11,7 +11,7 @@ import {
 } from "antd"
 import { useMemo } from "react"
 import { Link } from "react-router-dom"
-import { useStockData } from "../contexts/StockDataContext"
+import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
 
 const { useBreakpoint } = Grid
@@ -132,6 +132,7 @@ export const Home = () => {
             <Link to="/analysis">
               <Button>Analysis</Button>
             </Link>
+
           </Flex>
         </Flex>
       </div>
@@ -141,4 +142,3 @@ export const Home = () => {
     </div>
   )
 }
-

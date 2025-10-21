@@ -1,22 +1,6 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react"
+import { useCallback, useEffect, useState, type ReactNode } from "react"
 import type { Stock } from "../type"
-
-interface StockDataContextType {
-  stocks: Stock[]
-  loading: boolean
-  refetch: () => void
-}
-
-const StockDataContext = createContext<StockDataContextType | undefined>(
-  undefined,
-)
+import { StockDataContext } from "./StockDataContext"
 
 export const StockDataProvider = ({ children }: { children: ReactNode }) => {
   const [stocks, setStocks] = useState<Stock[]>([])
@@ -55,12 +39,4 @@ export const StockDataProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </StockDataContext.Provider>
   )
-}
-
-export const useStockData = () => {
-  const context = useContext(StockDataContext)
-  if (context === undefined) {
-    throw new Error("useStockData must be used within a StockDataProvider")
-  }
-  return context
 }

@@ -14,7 +14,7 @@ import dayjs from "dayjs"
 import { useMemo } from "react"
 import WordCloud from "react-d3-cloud"
 import { Link } from "react-router-dom"
-import { useStockData } from "../contexts/StockDataContext"
+import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
 
 const { useBreakpoint } = Grid
