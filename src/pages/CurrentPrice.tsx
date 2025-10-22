@@ -2,15 +2,16 @@ import { ArrowLeftOutlined } from "@ant-design/icons"
 import {
   Button,
   Card,
+  Descriptions,
+  Flex,
   Grid,
-  Layout,
-  Spin,
+  List,
   Table,
   theme,
   Typography,
 } from "antd"
 import dayjs from "dayjs"
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { useStockData } from "../hooks/useStockData"
 
@@ -39,6 +40,14 @@ export const CurrentPrice = () => {
   const { stocks } = useStockData()
   const { token } = theme.useToken()
   const screens = useBreakpoint()
+
+  const sortedStockData = useMemo(() => {
+    return [...stockData].sort((a, b) => {
+      const percentageA = parseFloat(a.changePercentage) || 0
+      const percentageB = parseFloat(b.changePercentage) || 0
+      return percentageB - percentageA
+    })
+  }, [stockData])
 
   const stockCodes = useMemo(() => {
     if (!stocks || stocks.length === 0) {
@@ -71,59 +80,70 @@ export const CurrentPrice = () => {
     })
   }, [stocks])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
-      try {
-        const response = await fetch(
-          `https://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
-        )
-        const blob = await response.blob()
-        const reader = new FileReader()
-        reader.onload = () => {
-          const text = reader.result as string
-          const stockEntries = text.split("\n").filter(Boolean)
-          const parsedStocks: StockData[] = []
-          console.log(text)
+  const fetchData = useCallback(async () => {
+    if (stockCodes.length === 0) {
+      setStockData([])
+      setLoading(false)
+      return
+    }
+    setLoading(true)
+    try {
+      const response = await fetch(
+        `https://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
+      )
+      const blob = await response.blob()
+      const reader = new FileReader()
+      reader.onload = () => {
+        const text = reader.result as string
+        const stockEntries = text.split("\n").filter(Boolean)
+        const parsedStocks: StockData[] = []
+        console.log(text)
 
-          stockEntries.forEach((entry) => {
-            const match = entry.match(/(?:var )?v_s_(\w+)="(.*)";/)
+        stockEntries.forEach((entry) => {
+          const match = entry.match(/(?:var )?v_s_(\w+)="(.*)";/)
 
-            if (match) {
-              const stockCode = match[1]
-              const dataString = match[2]
-              const dataArray = dataString.split("~")
+          if (match) {
+            const stockCode = match[1]
+            const dataString = match[2]
+            const dataArray = dataString.split("~")
 
-              parsedStocks.push({
-                key: stockCode,
-                name: dataArray[1],
-                openingPrice: "", // Not available in new format
-                previousClosingPrice: "", // Not available in new format
-                currentPrice: dataArray[3],
-                highestPrice: "", // Not available in new format
-                lowestPrice: "", // Not available in new format
-                volume: (parseInt(dataArray[6]) / 100).toString(),
-                turnover: parseFloat(dataArray[7]).toString(),
-                date: "", // Not available in new format
-                time: "", // Not available in new format
-                changeAmount: dataArray[4],
-                changePercentage: dataArray[5],
-                unknownField9: dataArray[9],
-              })
-            }
-          })
-          setStockData(parsedStocks)
-          setLoading(false)
-        }
-        reader.readAsText(blob, "gbk")
-      } catch (error) {
-        console.error("Failed to fetch current price", error)
+            parsedStocks.push({
+              key: stockCode,
+              name: dataArray[1],
+              openingPrice: "", // Not available in new format
+              previousClosingPrice: "", // Not available in new format
+              currentPrice: dataArray[3],
+              highestPrice: "", // Not available in new format
+              lowestPrice: "", // Not available in new format
+              volume: (parseInt(dataArray[6]) / 100).toString(),
+              turnover: parseFloat(dataArray[7]).toString(),
+              date: "", // Not available in new format
+              time: "", // Not available in new format
+              changeAmount: dataArray[4],
+              changePercentage: dataArray[5],
+              unknownField9: dataArray[9],
+            })
+          }
+        })
+        setStockData(parsedStocks)
         setLoading(false)
       }
+      reader.readAsText(blob, "gbk")
+    } catch (error) {
+      console.error("Failed to fetch current price", error)
+      setLoading(false)
     }
-
-    fetchData()
   }, [stockCodes])
+
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
+
+  const renderChange = (record: StockData) => {
+    const percentage = parseFloat(record.changePercentage)
+    const color = percentage < 0 ? "red" : "green"
+    return <span style={{ color }}>{percentage.toFixed(2)}%</span>
+  }
 
   const columns = [
     { title: "股票代码", dataIndex: "key", key: "key" },
@@ -132,11 +152,7 @@ export const CurrentPrice = () => {
     {
       title: "今日涨跌幅",
       key: "change",
-      render: (_: unknown, record: StockData) => {
-        const percentage = parseFloat(record.changePercentage)
-        const color = percentage < 0 ? "red" : "green"
-        return <span style={{ color }}>{percentage.toFixed(2)}%</span>
-      },
+      render: (_: unknown, record: StockData) => renderChange(record),
       sorter: (a: StockData, b: StockData) => {
         const percentageA = parseFloat(a.changePercentage)
         const percentageB = parseFloat(b.changePercentage)
@@ -148,38 +164,77 @@ export const CurrentPrice = () => {
     { title: "未知字段", dataIndex: "unknownField9", key: "unknownField9" },
   ]
 
-  return (
-    <Layout
-      style={{
-        padding: screens.md ? "2rem" : "1rem",
-        backgroundColor: token.colorBgLayout,
-      }}
-    >
-      <Layout.Content>
-        <Typography.Title level={2} style={{ marginBottom: "2rem" }}>
-          Current Price
-        </Typography.Title>
-        {loading ? (
-          <Spin />
-        ) : (
-          <Card title="实时行情" style={{ overflow: "hidden" }}>
-            <Table
-              dataSource={stockData}
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              columns={columns as any}
-              bordered
-              pagination={false}
-              scroll={{ y: 500 }}
-              style={{ marginTop: "1rem" }}
-            />
+  const renderMobileList = () => (
+    <List
+      loading={loading}
+      grid={{ gutter: 16, xs: 1, sm: 2 }}
+      dataSource={sortedStockData}
+      renderItem={(stock: StockData) => (
+        <List.Item>
+          <Card
+            hoverable
+            title={`${stock.name} (${stock.key})`}
+            size="small"
+          >
+            <Descriptions column={1} bordered size="small">
+              <Descriptions.Item label="当前价格">
+                {stock.currentPrice}
+              </Descriptions.Item>
+              <Descriptions.Item label="今日涨跌幅">
+                {renderChange(stock)}
+              </Descriptions.Item>
+              <Descriptions.Item label="成交额（万元）">
+                {stock.turnover}
+              </Descriptions.Item>
+              <Descriptions.Item label="未知字段">
+                {stock.unknownField9}
+              </Descriptions.Item>
+            </Descriptions>
           </Card>
-        )}
-        <div style={{ marginTop: "2rem" }}>
-          <Link to="/">
-            <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
-          </Link>
-        </div>
-      </Layout.Content>
-    </Layout>
+        </List.Item>
+      )}
+    />
+  )
+
+  const renderDesktopTable = () => (
+    <Table
+      loading={loading}
+      dataSource={sortedStockData}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      columns={columns as any}
+      bordered
+      pagination={false}
+      scroll={{ y: 500 }}
+    />
+  )
+
+  return (
+    <div>
+      <div
+        style={{
+          backgroundColor: token.colorBgContainer,
+          padding: "1rem",
+          borderBottom: `1px solid ${token.colorBorder}`,
+          position: "sticky",
+          top: 0,
+          zIndex: 1,
+        }}
+      >
+        <Flex justify="space-between" align="center" wrap="wrap">
+          <Typography.Title level={2} style={{ margin: "0.5rem 0" }}>
+            Current Price
+          </Typography.Title>
+          <Flex gap="middle" wrap="wrap">
+            <Button onClick={fetchData}>Refresh</Button>
+            <Link to="/">
+              <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
+            </Link>
+          </Flex>
+        </Flex>
+      </div>
+      <div style={{ padding: screens.md ? "2rem" : "1rem" }}>
+        {screens.md ? renderDesktopTable() : renderMobileList()}
+      </div>
+    </div>
   )
 }
