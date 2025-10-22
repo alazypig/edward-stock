@@ -779,6 +779,201 @@
       "notion": [
         "物业管理"
       ]
+    },
+    {
+      "uuid": "7a7b9922-b316-4c4d-b540-9daaf099579a",
+      "date": "2025-10-22",
+      "stockNumber": "002681",
+      "stockName": "奋达科技",
+      "price": 6.93,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "3297f380-9c15-46e6-b21c-50e83cf72bc0",
+      "date": "2025-10-22",
+      "stockNumber": "605133",
+      "stockName": "嵘泰股份",
+      "price": 43.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "工业母机"
+      ]
+    },
+    {
+      "uuid": "19749a83-50b3-40e0-af25-13201ef768b3",
+      "date": "2025-10-22",
+      "stockNumber": "600336",
+      "stockName": "澳柯玛",
+      "price": 7.31,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "家用电器"
+      ]
+    },
+    {
+      "uuid": "8d1118fc-0ca4-4ac5-95d4-a109654954db",
+      "date": "2025-10-22",
+      "stockNumber": "600880",
+      "stockName": "博瑞传播",
+      "price": 5.16,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "教育"
+      ],
+      "notion": [
+        "人工智能"
+      ]
+    },
+    {
+      "uuid": "fe371d4d-0910-4929-b364-4fc512657c7b",
+      "date": "2025-10-22",
+      "stockNumber": "002390",
+      "stockName": "信邦制药",
+      "price": 4.01,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "医药电商"
+      ]
+    },
+    {
+      "uuid": "173ebe56-81e5-4207-a889-97cbcc6e5fec",
+      "date": "2025-10-22",
+      "stockNumber": "605580",
+      "stockName": "恒生能源",
+      "price": 34.1,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "固废处理"
+      ]
+    },
+    {
+      "uuid": "252853c7-e324-4963-8763-14e9e610424a",
+      "date": "2025-10-22",
+      "stockNumber": "002038",
+      "stockName": "双鹭药业",
+      "price": 7.79,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "创新药"
+      ]
+    },
+    {
+      "uuid": "1c03603d-a4b6-42fd-a65c-b834cde669e9",
+      "date": "2025-10-22",
+      "stockNumber": "002174",
+      "stockName": "游族网络",
+      "price": 12.98,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "游戏"
+      ],
+      "notion": [
+        "华为"
+      ]
+    },
+    {
+      "uuid": "d7f492ac-63d6-457a-b6ef-714f4e6d3dfb",
+      "date": "2025-10-22",
+      "stockNumber": "000718",
+      "stockName": "苏宁环球",
+      "price": 2.83,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "文化传媒"
+      ]
+    },
+    {
+      "uuid": "f44de10f-a540-490c-a763-44567a34cb31",
+      "date": "2025-10-22",
+      "stockNumber": "603619",
+      "stockName": "中曼石油",
+      "price": 20.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "油气开采"
+      ],
+      "notion": [
+        "俄乌冲突"
+      ]
+    },
+    {
+      "uuid": "8e9d2512-57f3-4526-a6ed-b489a783773b",
+      "date": "2025-10-22",
+      "stockNumber": "002004",
+      "stockName": "华邦健康",
+      "price": 5.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "仿制药一致性评价"
+      ]
+    },
+    {
+      "uuid": "c5a2bce1-5943-4412-a77e-045c6770575e",
+      "date": "2025-10-22",
+      "stockNumber": "002240",
+      "stockName": "盛新锂能",
+      "price": 19.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "091bd0e8-2e8c-4b7e-8703-ccf7182b3c6e",
+      "date": "2025-10-22",
+      "stockNumber": "002146",
+      "stockName": "荣盛发展",
+      "price": 1.71,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "旅游"
+      ]
     }
   ]
 }
