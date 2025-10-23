@@ -974,6 +974,156 @@
       "notion": [
         "旅游"
       ]
+    },
+    {
+      "uuid": "0d79907c-85e1-4598-b947-e61b70d14ad5",
+      "date": "2025-10-23",
+      "stockNumber": "600123",
+      "stockName": "兰花科创",
+      "price": 7.07,
+      "future": "none",
+      "comment": "观望",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "00b0bf0e-44e7-477f-bfe8-8e9a07e029f1",
+      "date": "2025-10-23",
+      "stockNumber": "600971",
+      "stockName": "恒源煤电",
+      "price": 7.46,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "16dd5482-3498-4bb8-9f30-22aab162685d",
+      "date": "2025-10-23",
+      "stockNumber": "000980",
+      "stockName": "众泰汽车",
+      "price": 3.85,
+      "future": "short",
+      "comment": "",
+      "industry": [
+        "乘用车"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "4ff77b6c-47c9-46c0-9231-5d2fa3310e40",
+      "date": "2025-10-23",
+      "stockNumber": "603069",
+      "stockName": "海汽集团",
+      "price": 27.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "铁路公路"
+      ],
+      "notion": [
+        "旅游"
+      ]
+    },
+    {
+      "uuid": "e6a67dc0-1ddc-4f37-ac8c-9bfd7caf0964",
+      "date": "2025-10-23",
+      "stockNumber": "002564",
+      "stockName": "天沃科技",
+      "price": 9.38,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "煤化工"
+      ]
+    },
+    {
+      "uuid": "edb856bb-f8b2-422d-ac54-89bd5f88384e",
+      "date": "2025-10-23",
+      "stockNumber": "000016",
+      "stockName": "深康佳",
+      "price": 5.56,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "a3117041-8bce-4ea7-9108-68902bb5afbe",
+      "date": "2025-10-23",
+      "stockNumber": "000096",
+      "stockName": "广聚能源",
+      "price": 12.18,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "炼化及贸易"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "e6b86046-3fc4-4a0f-a4b4-566740ea02d1",
+      "date": "2025-10-23",
+      "stockNumber": "600756",
+      "stockName": "浪潮软件",
+      "price": 16.36,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "智慧政务"
+      ]
+    },
+    {
+      "uuid": "23e906a1-5ef3-4ce0-861b-d8bbbecbf0e3",
+      "date": "2025-10-23",
+      "stockNumber": "605255",
+      "stockName": "天普股份",
+      "price": 95.57,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "8528388f-8837-4a3e-937f-ac228f0fa3a9",
+      "date": "2025-10-23",
+      "stockNumber": "002183",
+      "stockName": "怡亚通",
+      "price": 5.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "深圳国企改革"
+      ]
     }
   ]
 }
