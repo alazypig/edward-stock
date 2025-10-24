@@ -1124,6 +1124,156 @@
       "notion": [
         "深圳国企改革"
       ]
+    },
+    {
+      "uuid": "ec68f2f9-b3ff-4a5b-8bbb-0c72f1a8c1d6",
+      "date": "2025-10-24",
+      "stockNumber": "002276",
+      "stockName": "万马股份",
+      "price": 17.56,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "0ac5ea4c-aa33-401e-ad78-1db2c50c9bab",
+      "date": "2025-10-24",
+      "stockNumber": "603283",
+      "stockName": "赛腾股份",
+      "price": 45.89,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "存储芯片"
+      ]
+    },
+    {
+      "uuid": "36e268ed-93c2-4b2a-845a-d2f022be8bcc",
+      "date": "2025-10-24",
+      "stockNumber": "002756",
+      "stockName": "永兴材料",
+      "price": 40.48,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "18b2a331-f6c6-4c77-9692-132f0e5b404b",
+      "date": "2025-10-24",
+      "stockNumber": "600986",
+      "stockName": "浙文互联",
+      "price": 8.93,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "AIGC"
+      ]
+    },
+    {
+      "uuid": "1cbf01d8-7923-4193-9339-94bc3da3eb49",
+      "date": "2025-10-24",
+      "stockNumber": "002256",
+      "stockName": "兆新股份",
+      "price": 3.16,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "1c77cacf-4631-4727-a92d-54e94a6a8f32",
+      "date": "2025-10-24",
+      "stockNumber": "002094",
+      "stockName": "青岛金王",
+      "price": 8,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "家具用品"
+      ],
+      "notion": [
+        "跨境支付"
+      ]
+    },
+    {
+      "uuid": "1bfc88e4-d0fb-47ce-9588-65f9787e4fe7",
+      "date": "2025-10-24",
+      "stockNumber": "600502",
+      "stockName": "安徽建工",
+      "price": 4.97,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "基础建设"
+      ],
+      "notion": [
+        "抽水蓄能"
+      ]
+    },
+    {
+      "uuid": "0c56a5c4-b162-47db-879e-add873a99741",
+      "date": "2025-10-24",
+      "stockNumber": "002957",
+      "stockName": "科瑞技术",
+      "price": 22.31,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "共封装光学"
+      ]
+    },
+    {
+      "uuid": "6d2d5e61-af3f-4e47-b2f8-8b653f2ab450",
+      "date": "2025-10-24",
+      "stockNumber": "002632",
+      "stockName": "道明光学",
+      "price": 10.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "AI 手机"
+      ]
+    },
+    {
+      "uuid": "a5903985-ca30-4296-aa4f-0e7788a259ca",
+      "date": "2025-10-24",
+      "stockNumber": "603189",
+      "stockName": "网达软件",
+      "price": 23.3,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "MR"
+      ]
     }
   ]
 }
