@@ -1709,6 +1709,321 @@
       "notion": [
         "固态电池"
       ]
+    },
+    {
+      "uuid": "b77cae02-b1c2-450b-9d31-fe1d534297e9",
+      "date": "2025-10-28",
+      "stockNumber": "002291",
+      "stockName": "遥望科技",
+      "price": 6.94,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "Web3.0"
+      ]
+    },
+    {
+      "uuid": "359e1228-a0c7-4e07-b9a3-96e5b3440a95",
+      "date": "2025-10-28",
+      "stockNumber": "603200",
+      "stockName": "上海洗霸",
+      "price": 87.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "837a9811-b88e-4f16-b5a5-d9178b261a70",
+      "date": "2025-10-28",
+      "stockNumber": "600698",
+      "stockName": "湖南天雁",
+      "price": 10.44,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "兵装重组"
+      ]
+    },
+    {
+      "uuid": "457bfd56-b2db-48b6-8e56-397e65092c41",
+      "date": "2025-10-28",
+      "stockNumber": "600590",
+      "stockName": "泰豪科技",
+      "price": 9.8,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军工"
+      ]
+    },
+    {
+      "uuid": "cb6d588a-a3cb-448c-b554-5fdedb7eb2c2",
+      "date": "2025-10-28",
+      "stockNumber": "600589",
+      "stockName": "大位科技",
+      "price": 7.57,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "算力租赁"
+      ]
+    },
+    {
+      "uuid": "4beecc09-d63a-403d-93a6-2827c5cbf448",
+      "date": "2025-10-28",
+      "stockNumber": "002108",
+      "stockName": "沧州明珠",
+      "price": 4.34,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "f826b347-7fc8-46eb-bf40-0cfbb2d2b7e1",
+      "date": "2025-10-28",
+      "stockNumber": "002428",
+      "stockName": "云南锗业",
+      "price": 27.96,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "小金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "80f3bd1a-3b84-46cf-868c-6a5d10c3ac31",
+      "date": "2025-10-28",
+      "stockNumber": "600693",
+      "stockName": "东百集团",
+      "price": 6.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 一般零售"
+      ],
+      "notion": [
+        "统一大市场"
+      ]
+    },
+    {
+      "uuid": "aa97376c-60e9-462d-b3b0-54b5f8ff919c",
+      "date": "2025-10-28",
+      "stockNumber": "002448",
+      "stockName": "中原内配",
+      "price": 11.81,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "9ef143c4-9630-4ba0-9617-5b8e4f340f37",
+      "date": "2025-10-28",
+      "stockNumber": "000536",
+      "stockName": "华映科技",
+      "price": 5.06,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "418c8b6e-19da-4fdb-a07d-9c4fc66f9b03",
+      "date": "2025-10-28",
+      "stockNumber": "600734",
+      "stockName": "实达集团",
+      "price": 3.61,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "算力租赁"
+      ]
+    },
+    {
+      "uuid": "5040c19b-7928-4aed-8162-8b2078bafc86",
+      "date": "2025-10-28",
+      "stockNumber": "601890",
+      "stockName": "亚星锚链",
+      "price": 10.29,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航海设备"
+      ],
+      "notion": [
+        "海工装备"
+      ]
+    },
+    {
+      "uuid": "d8342784-3df8-412d-87e7-f2e74732327a",
+      "date": "2025-10-28",
+      "stockNumber": "600278",
+      "stockName": "东方创业",
+      "price": 8.2,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "上海国企改革"
+      ]
+    },
+    {
+      "uuid": "c4b5c311-88eb-4a3e-9026-fd63ade4a115",
+      "date": "2025-10-28",
+      "stockNumber": "601388",
+      "stockName": "怡球资源",
+      "price": 3.12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "铝"
+      ],
+      "notion": [
+        "汽车拆解"
+      ]
+    },
+    {
+      "uuid": "0c5c7a29-4781-4b30-95f1-6b0b83e960a6",
+      "date": "2025-10-27",
+      "stockNumber": "600067",
+      "stockName": "冠城新材",
+      "price": 3.67,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "51cde733-6422-467e-b164-3b855cc4511e",
+      "date": "2025-10-28",
+      "stockNumber": "000525",
+      "stockName": "红太阳",
+      "price": 6.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "摘帽"
+      ]
+    },
+    {
+      "uuid": "3de4f36c-0571-4ade-b766-b1a5dd23f4d6",
+      "date": "2025-10-28",
+      "stockNumber": "603978",
+      "stockName": "深圳新星",
+      "price": 25.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "金属新材料"
+      ],
+      "notion": [
+        "PVDF"
+      ]
+    },
+    {
+      "uuid": "179749da-eb55-45e8-bd3a-c1ed14b91b19",
+      "date": "2025-10-28",
+      "stockNumber": "000589",
+      "stockName": "贵州轮胎",
+      "price": 4.92,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "2cd2515c-37a4-4077-856f-27597b7d7ddd",
+      "date": "2025-10-28",
+      "stockNumber": "603466",
+      "stockName": "风语筑",
+      "price": 9.71,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "数字媒体"
+      ],
+      "notion": [
+        "MR"
+      ]
+    },
+    {
+      "uuid": "4cfa9e63-8f0a-40fc-a419-0df6cfe626d3",
+      "date": "2025-10-28",
+      "stockNumber": "600353",
+      "stockName": "旭光电子",
+      "price": 17.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "da921afa-dec0-4c21-9c11-a2f960f60917",
+      "date": "2025-10-28",
+      "stockNumber": "002077",
+      "stockName": "大港股份",
+      "price": 17.15,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片"
+      ]
     }
   ]
 }
