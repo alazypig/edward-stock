@@ -1,118 +1,18 @@
 import { ArrowLeftOutlined } from "@ant-design/icons"
-import {
-  Button,
-  Card,
-  Flex,
-  Grid,
-  Layout,
-  Spin,
-  Table,
-  Typography,
-  theme,
-} from "antd"
-import dayjs from "dayjs"
-import { useMemo } from "react"
+import { Button, Card, Flex, Grid, Spin, Table, Typography, theme } from "antd"
 import WordCloud from "react-d3-cloud"
 import { Link } from "react-router-dom"
+import { useAnalysisData, type AnalyzedStock } from "../hooks/useAnalysisData"
 import { useStockData } from "../hooks/useStockData"
-import type { Stock } from "../type"
 
 const { useBreakpoint } = Grid
-
-interface AnalyzedStock {
-  key: string
-  stockNumber: string
-  stockName: string
-  firstPrice: number
-  lastPrice: number
-  count: number
-}
 
 export const Analysis = () => {
   const { stocks, loading } = useStockData()
   const { token } = theme.useToken()
   const screens = useBreakpoint()
 
-  const { analyzedData, industryWords, notionWords } = useMemo(() => {
-    if (!stocks || stocks.length === 0) {
-      return { analyzedData: [], industryWords: [], notionWords: [] }
-    }
-
-    const allDates = stocks.map((stock) => stock.date)
-    const uniqueSortedDates = [...new Set(allDates)].sort((a, b) =>
-      dayjs(b).diff(a),
-    )
-    const last10Dates = uniqueSortedDates.slice(0, 10)
-    const last10DatesSet = new Set(last10Dates)
-
-    const recentStocks = stocks.filter((stock) =>
-      last10DatesSet.has(stock.date),
-    )
-
-    // Left Section Data
-    const groupedByStockNumber = recentStocks.reduce(
-      (acc, stock) => {
-        if (!acc[stock.stockNumber]) {
-          acc[stock.stockNumber] = []
-        }
-        acc[stock.stockNumber].push(stock)
-        return acc
-      },
-      {} as Record<string, Stock[]>,
-    )
-
-    const processedData = Object.values(groupedByStockNumber)
-      .filter((group) => group.length > 1)
-      .map((group) => {
-        const sortedGroup = group.sort((a, b) =>
-          dayjs(a.date).diff(dayjs(b.date)),
-        )
-        const firstEntry = sortedGroup[0]
-        const lastEntry = sortedGroup[sortedGroup.length - 1]
-        return {
-          key: firstEntry.stockNumber,
-          stockNumber: firstEntry.stockNumber,
-          stockName: firstEntry.stockName,
-          firstPrice: firstEntry.price,
-          lastPrice: lastEntry.price,
-          count: group.length,
-        }
-      })
-
-    // Middle & Right Section Data
-    const industryWordCounts = recentStocks
-      .flatMap((stock) => stock.industry)
-      .reduce(
-        (acc, word) => {
-          acc[word] = (acc[word] || 0) + 1
-          return acc
-        },
-        {} as Record<string, number>,
-      )
-
-    const industryWords = Object.entries(industryWordCounts).map(
-      ([text, value]) => ({ text, value }),
-    )
-
-    const notionWordCounts = recentStocks
-      .flatMap((stock) => stock.notion)
-      .reduce(
-        (acc, word) => {
-          acc[word] = (acc[word] || 0) + 1
-          return acc
-        },
-        {} as Record<string, number>,
-      )
-
-    const notionWords = Object.entries(notionWordCounts).map(
-      ([text, value]) => ({
-        text,
-        value,
-      }),
-    )
-
-    return { analyzedData: processedData, industryWords, notionWords }
-  }, [stocks])
+  const { analyzedData, industryWords, notionWords } = useAnalysisData(stocks)
 
   const columns = [
     { title: "Stock Number", dataIndex: "stockNumber", key: "stockNumber" },
@@ -146,18 +46,34 @@ export const Analysis = () => {
   const fontSizeMapper = (word: { value: number }) => Math.log2(word.value) * 30
 
   return (
-    <Layout
-      style={{
-        padding: screens.md ? "2rem" : "1rem",
-        backgroundColor: token.colorBgLayout,
-      }}
-    >
-      <Layout.Content>
-        <Typography.Title level={2} style={{ marginBottom: "2rem" }}>
-          Stock Analysis (Last 10 Recorded Days)
-        </Typography.Title>
+    <div>
+      <div
+        style={{
+          backgroundColor: token.colorBgContainer,
+          padding: "1rem",
+          borderBottom: `1px solid ${token.colorBorder}`,
+          position: "sticky",
+          top: 0,
+          zIndex: 1,
+        }}
+      >
+        <Flex justify="space-between" align="center" wrap="wrap">
+          <Typography.Title level={2} style={{ margin: "0.5rem 0" }}>
+            Stock Analysis (Last 10 Recorded Days)
+          </Typography.Title>
+          <Link to="/">
+            <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
+          </Link>
+        </Flex>
+      </div>
+      <div
+        style={{
+          padding: screens.md ? "1rem" : "0.5rem",
+          backgroundColor: token.colorBgLayout,
+        }}
+      >
         <Spin spinning={loading}>
-          <Flex vertical gap="large">
+          <Flex vertical gap="middle">
             <Card
               title="Frequently Occurring Stocks"
               style={{ overflow: "hidden" }}
@@ -166,21 +82,21 @@ export const Analysis = () => {
                 dataSource={analyzedData}
                 columns={columns}
                 size="small"
-                scroll={{ x: true }}
+                scroll={{ x: true, y: 300 }}
                 pagination={{ pageSize: 5 }}
-              />
+              />{" "}
             </Card>
-            <Flex gap="large" wrap>
+            <Flex gap="middle" wrap>
               <Card
                 title="Industry Word Cloud"
                 style={{ flex: 1, minWidth: screens.xs ? 330 : 450 }}
               >
-                <div style={{ height: "300px", textAlign: "center" }}>
+                <div style={{ height: "200px", textAlign: "center" }}>
                   {industryWords.length > 0 ? (
                     <WordCloud
                       data={industryWords}
                       width={screens.xs ? 280 : 400}
-                      height={200}
+                      height={150}
                       fontSize={fontSizeMapper}
                     />
                   ) : (
@@ -195,7 +111,7 @@ export const Analysis = () => {
               >
                 <div
                   style={{
-                    height: "300px",
+                    height: "200px",
                     textAlign: "center",
                   }}
                 >
@@ -203,7 +119,7 @@ export const Analysis = () => {
                     <WordCloud
                       data={notionWords}
                       width={screens.xs ? 280 : 400}
-                      height={200}
+                      height={150}
                       fontSize={fontSizeMapper}
                     />
                   ) : (
@@ -214,12 +130,7 @@ export const Analysis = () => {
             </Flex>
           </Flex>
         </Spin>
-        <div style={{ marginTop: "2rem" }}>
-          <Link to="/">
-            <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
-          </Link>
-        </div>
-      </Layout.Content>
-    </Layout>
+      </div>
+    </div>
   )
 }
