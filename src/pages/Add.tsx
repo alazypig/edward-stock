@@ -13,8 +13,8 @@ import {
   Tag,
   Typography,
 } from "antd"
-import { useRef, useState } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useRef, useState } from "react"
+import { useBlocker, useNavigate } from "react-router-dom"
 import { Editor, type EditorMethods } from "../components"
 import type { GitHubFile, Stock } from "../type"
 
@@ -38,6 +38,41 @@ export const Add = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const screens = useBreakpoint()
+  const navigate = useNavigate()
+  const [showLeaveConfirm, setShowLeaveConfirm] = useState(false)
+  const [nextLocation, setNextLocation] = useState<string | null>(null)
+
+  useBlocker((tx) => {
+    if (newStocks.length > 0) {
+      setNextLocation(tx.nextLocation.pathname)
+      setShowLeaveConfirm(true)
+      return true // Block navigation
+    }
+    return false // Allow navigation
+  })
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      console.log("newStocks.length:", newStocks.length)
+      if (newStocks.length > 0) {
+        event.preventDefault() // For some browsers
+        return "您有未保存的更改。确定要离开吗？" // For other browsers
+      }
+    }
+
+    window.addEventListener("beforeunload", handleBeforeUnload)
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload)
+    }
+  }, [newStocks])
+
+  useEffect(() => {
+    if (!showLeaveConfirm && nextLocation) {
+      navigate(nextLocation)
+      setNextLocation(null) // Clear nextLocation after navigation
+    }
+  }, [showLeaveConfirm, nextLocation, navigate])
 
   const handleSave = (item: Stock) => {
     if (item.date) {
@@ -251,9 +286,19 @@ export const Add = () => {
         <Typography.Title level={2} style={{ margin: 0 }}>
           Add New Stocks
         </Typography.Title>
-        <Link to="/">
-          <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
-        </Link>
+        <Button
+          icon={<ArrowLeftOutlined />}
+          onClick={() => {
+            if (newStocks.length > 0) {
+              setNextLocation("/")
+              setShowLeaveConfirm(true)
+            } else {
+              navigate("/")
+            }
+          }}
+        >
+          Back to Home
+        </Button>
       </Flex>
 
       <Card
@@ -306,6 +351,30 @@ export const Add = () => {
             setEditingStock(null)
           }}
         />
+      </Modal>
+
+      <Modal
+        title="确认离开"
+        open={showLeaveConfirm}
+        onCancel={() => setShowLeaveConfirm(false)}
+        footer={[
+          <Button key="back" onClick={() => setShowLeaveConfirm(false)}>
+            取消
+          </Button>,
+          <Button
+            key="submit"
+            type="primary"
+            danger
+            onClick={() => {
+              setNewStocks([]) // Discard changes
+              setShowLeaveConfirm(false)
+            }}
+          >
+            放弃更改并离开
+          </Button>,
+        ]}
+      >
+        <p>您有未保存的更改。确定要放弃更改并离开吗？</p>
       </Modal>
     </div>
   )
