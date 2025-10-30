@@ -4,12 +4,12 @@ import {
   Descriptions,
   Flex,
   Grid,
+  Input,
   List,
   Table,
   Tag,
   Typography,
   theme,
-  Input,
 } from "antd"
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
@@ -47,12 +47,13 @@ export const Home = () => {
       (stock) =>
         stock.stockNumber.toLowerCase().includes(lowerCaseSearchTerm) ||
         stock.stockName.toLowerCase().includes(lowerCaseSearchTerm) ||
+        stock.comment.toLowerCase().includes(lowerCaseSearchTerm) ||
         stock.industry.some((industry) =>
-          industry.toLowerCase().includes(lowerCaseSearchTerm)
+          industry.toLowerCase().includes(lowerCaseSearchTerm),
         ) ||
         stock.notion.some((notion) =>
-          notion.toLowerCase().includes(lowerCaseSearchTerm)
-        )
+          notion.toLowerCase().includes(lowerCaseSearchTerm),
+        ),
     )
   }, [sortedStocks, searchTerm])
 
@@ -180,7 +181,6 @@ export const Home = () => {
             <Link to="/current-price">
               <Button>Current Price</Button>
             </Link>
-
           </Flex>
         </Flex>
       </div>
