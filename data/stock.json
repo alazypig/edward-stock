@@ -2414,6 +2414,171 @@
       "notion": [
         "新能源汽车"
       ]
+    },
+    {
+      "uuid": "b9e0a71c-8172-43fb-97b4-ebe9e06f7d38",
+      "date": "2025-10-30",
+      "stockNumber": "001301",
+      "stockName": "尚太科技",
+      "price": 93.02,
+      "future": "long",
+      "comment": "基金重仓, 关注",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "石墨电极"
+      ]
+    },
+    {
+      "uuid": "adbc7999-597b-4745-b7e7-cbc9032673b4",
+      "date": "2025-10-30",
+      "stockNumber": "601975",
+      "stockName": "招商南油",
+      "price": 3.37,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航运港口"
+      ],
+      "notion": [
+        "航运"
+      ]
+    },
+    {
+      "uuid": "a3b07015-ca0f-44dc-8a1a-d717d6912e2e",
+      "date": "2025-10-30",
+      "stockNumber": "603906",
+      "stockName": "龙蟠科技",
+      "price": 16.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "宁德时代"
+      ]
+    },
+    {
+      "uuid": "1c20f541-35bc-4280-b288-178472bcd580",
+      "date": "2025-10-30",
+      "stockNumber": "603108",
+      "stockName": "润达医疗",
+      "price": 15.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医药商业"
+      ],
+      "notion": [
+        "华为盘古"
+      ]
+    },
+    {
+      "uuid": "9ce899dc-bdf3-460f-bd29-1a99106e6300",
+      "date": "2025-10-30",
+      "stockNumber": "603800",
+      "stockName": "洪田股份",
+      "price": 56.28,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "光刻机"
+      ]
+    },
+    {
+      "uuid": "09d6efa3-fdca-44e7-ba29-0a7018355c36",
+      "date": "2025-10-30",
+      "stockNumber": "605100",
+      "stockName": "华丰股份",
+      "price": 30.09,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "汽车电子"
+      ]
+    },
+    {
+      "uuid": "143be314-d909-4d6b-bd6f-ac020e3d91d6",
+      "date": "2025-10-30",
+      "stockNumber": "600960",
+      "stockName": "渤海汽车",
+      "price": 5.73,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "中俄贸易"
+      ]
+    },
+    {
+      "uuid": "b112e571-e93e-4de8-83fa-4d473f4677d2",
+      "date": "2025-10-30",
+      "stockNumber": "603399",
+      "stockName": "永杉锂业",
+      "price": 10.36,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "27b8dd71-864f-46e8-8a67-b00911671dd5",
+      "date": "2025-10-30",
+      "stockNumber": "600855",
+      "stockName": "航天长峰",
+      "price": 15.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军工信息化"
+      ]
+    },
+    {
+      "uuid": "27b03f7e-dc04-451f-bdce-437ac09180be",
+      "date": "2025-10-30",
+      "stockNumber": "002161",
+      "stockName": " 远望谷",
+      "price": 8.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "无人零售"
+      ]
+    },
+    {
+      "uuid": "cc486fab-eefb-45c7-878b-4a82711951f5",
+      "date": "2025-10-30",
+      "stockNumber": "600748",
+      "stockName": "上实发展",
+      "price": 7.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "土地流转"
+      ]
     }
   ]
 }
