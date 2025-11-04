@@ -3179,6 +3179,186 @@
       "notion": [
         "雅下水电"
       ]
+    },
+    {
+      "uuid": "68771ee5-0a7c-4597-a5b2-39867084f28b",
+      "date": "2025-11-04",
+      "stockNumber": "600375",
+      "stockName": "汉马科技",
+      "price": 7.87,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "商用车"
+      ],
+      "notion": [
+        "换电"
+      ]
+    },
+    {
+      "uuid": "a534e065-8454-47af-abc3-444585c5e484",
+      "date": "2025-11-04",
+      "stockNumber": "600755",
+      "stockName": "厦门国贸",
+      "price": 6.72,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "物流"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "4930f655-f04c-4b67-a6a9-4a05bbc8c5c8",
+      "date": "2025-11-04",
+      "stockNumber": "000547",
+      "stockName": "航天发展",
+      "price": 8.98,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "f5987422-023c-4a2e-8ae6-8652ff9bcf2b",
+      "date": "2025-11-04",
+      "stockNumber": "002217",
+      "stockName": "合力泰",
+      "price": 3.42,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "富士康"
+      ]
+    },
+    {
+      "uuid": "1f8f0ded-9406-4ed5-95bf-8e67b770844b",
+      "date": "2025-11-04",
+      "stockNumber": "603181",
+      "stockName": "皇马科技",
+      "price": 18.68,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "工业互联网"
+      ]
+    },
+    {
+      "uuid": "2a6f3cfe-d21a-46eb-98e9-5f7a81b461b7",
+      "date": "2025-11-04",
+      "stockNumber": "000949",
+      "stockName": "新乡化纤",
+      "price": 4.68,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "新疆振兴"
+      ]
+    },
+    {
+      "uuid": "da61ff30-e6d9-4e1e-a2e2-f7e5f19ef1ef",
+      "date": "2025-11-04",
+      "stockNumber": "600775",
+      "stockName": "南京熊猫",
+      "price": 12.55,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "脑机接口"
+      ]
+    },
+    {
+      "uuid": "0dc86bf6-9ea9-4052-ac4b-9f4709163e73",
+      "date": "2025-11-04",
+      "stockNumber": "000524",
+      "stockName": "岭南控股",
+      "price": 14.47,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "免税店"
+      ]
+    },
+    {
+      "uuid": "bb2b4dcd-9d52-4fb1-82f9-84a0b51c5463",
+      "date": "2025-11-04",
+      "stockNumber": "002029",
+      "stockName": "七匹狼",
+      "price": 9.26,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "参股保险"
+      ]
+    },
+    {
+      "uuid": "612694ac-3a05-477d-a464-b14683b218d5",
+      "date": "2025-11-04",
+      "stockNumber": "605365",
+      "stockName": "立达信",
+      "price": 20.57,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "照明设备"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "1b221eb6-21a3-461b-bcf4-586df739ff25",
+      "date": "2025-11-04",
+      "stockNumber": "600693",
+      "stockName": "东百集团",
+      "price": 6.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "免税店"
+      ]
+    },
+    {
+      "uuid": "a4a78cba-8164-4f8f-b17d-c6e6ebda8c8a",
+      "date": "2025-11-04",
+      "stockNumber": "600340",
+      "stockName": "华夏幸福",
+      "price": 2.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "特色小镇"
+      ]
     }
   ]
 }
