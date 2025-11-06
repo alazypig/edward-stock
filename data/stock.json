@@ -3359,6 +3359,306 @@
       "notion": [
         "特色小镇"
       ]
+    },
+    {
+      "uuid": "ff184c95-1dbe-49cd-9ec7-6efb9751583f",
+      "date": "2025-11-05",
+      "stockNumber": "600367",
+      "stockName": "红星发展",
+      "price": 16.9,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "钠离子电池"
+      ]
+    },
+    {
+      "uuid": "f55a1f97-d49e-4374-9064-95a2021553ec",
+      "date": "2025-11-05",
+      "stockNumber": "002006",
+      "stockName": "精工科技",
+      "price": 21.89,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "1250e0c8-a056-4eb8-86c2-4c174d694594",
+      "date": "2025-11-05",
+      "stockNumber": "603663",
+      "stockName": "三祥新材",
+      "price": 28.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "非金属材料"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "7394be23-1b41-4ce9-8a5f-49acedfa1734",
+      "date": "2025-11-05",
+      "stockNumber": "600644",
+      "stockName": "乐山电力",
+      "price": 11.67,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "天然气"
+      ]
+    },
+    {
+      "uuid": "fef50074-bd15-46fe-bce6-cf5c86cbe0d1",
+      "date": "2025-11-05",
+      "stockNumber": "002772",
+      "stockName": "众兴菌业",
+      "price": 14.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "种植业"
+      ],
+      "notion": [
+        "乡村振兴"
+      ]
+    },
+    {
+      "uuid": "a366ef01-ad23-40bf-aad2-8f5bc8ae23dd",
+      "date": "2025-11-05",
+      "stockNumber": "002170",
+      "stockName": "芭田股份",
+      "price": 11.29,
+      "future": "long",
+      "comment": "值得关注",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "5f8aa976-ce4c-49a4-abab-f33ec656bbc9",
+      "date": "2025-11-05",
+      "stockNumber": "000682",
+      "stockName": "东方电子",
+      "price": 12.96,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "智能电网"
+      ]
+    },
+    {
+      "uuid": "2ac4d911-c4a5-47d6-9782-36fef9e2140f",
+      "date": "2025-11-05",
+      "stockNumber": "002865",
+      "stockName": "钧达股份",
+      "price": 43.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "BC 电池"
+      ]
+    },
+    {
+      "uuid": "d1078812-016c-415e-ae9f-cb53783911a9",
+      "date": "2025-11-05",
+      "stockNumber": "600101",
+      "stockName": "明星电力",
+      "price": 10.28,
+      "future": "long",
+      "comment": "值得关注",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "0c893d65-1a7d-414b-877e-f606f22824d4",
+      "date": "2025-11-05",
+      "stockNumber": "000422",
+      "stockName": "湖北宜化",
+      "price": 14.19,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "dc6ec1c7-394d-44a0-83d0-0c18f1c069e9",
+      "date": "2025-11-05",
+      "stockNumber": "603610",
+      "stockName": "麒盛科技",
+      "price": 19.68,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 家居用品"
+      ],
+      "notion": [
+        "脑机接口"
+      ]
+    },
+    {
+      "uuid": "6b90c2a5-aa32-4014-9c27-10ad894d0605",
+      "date": "2025-11-05",
+      "stockNumber": "600399",
+      "stockName": "抚顺特钢",
+      "price": 5.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "特钢"
+      ],
+      "notion": [
+        "特钢"
+      ]
+    },
+    {
+      "uuid": "5d48e71b-5f70-49c7-a345-1494d4f6fd25",
+      "date": "2025-11-05",
+      "stockNumber": "002364",
+      "stockName": "中恒电气",
+      "price": 25.81,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他能源设备"
+      ],
+      "notion": [
+        "中国 AI 50"
+      ]
+    },
+    {
+      "uuid": "b18caa89-19ce-4dc0-8bd4-936bb1b10c99",
+      "date": "2025-11-05",
+      "stockNumber": "600586",
+      "stockName": "金晶科技",
+      "price": 5.94,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "光伏建筑一体化"
+      ]
+    },
+    {
+      "uuid": "70bf12f2-d6fb-41aa-8be6-8519ead6ada5",
+      "date": "2025-11-05",
+      "stockNumber": "603861",
+      "stockName": "白云电器",
+      "price": 13.2,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "柔性直流输电"
+      ]
+    },
+    {
+      "uuid": "e60c5438-2dc2-4c8b-9d83-e0658ffbc91d",
+      "date": "2025-11-05",
+      "stockNumber": "002378",
+      "stockName": "章源钨业",
+      "price": 13.59,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "小金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "7c69a10c-c8ae-4bd1-91f4-ead3858c0795",
+      "date": "2025-11-05",
+      "stockNumber": "000722",
+      "stockName": "湖南发展",
+      "price": 13.61,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "供销社"
+      ]
+    },
+    {
+      "uuid": "5fec1216-2df5-4c98-94f2-c2e44775aed1",
+      "date": "2025-11-05",
+      "stockNumber": "002093",
+      "stockName": "国脉科技",
+      "price": 11.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信服务"
+      ],
+      "notion": [
+        "数据要素"
+      ]
+    },
+    {
+      "uuid": "926a806e-4851-470a-805f-00bf370975db",
+      "date": "2025-11-05",
+      "stockNumber": "002016",
+      "stockName": "世荣兆业",
+      "price": 6.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "物业管理"
+      ]
+    },
+    {
+      "uuid": "cdb2bdac-2496-4345-9d58-63e3ae8f6a56",
+      "date": "2025-11-05",
+      "stockNumber": "002706",
+      "stockName": "良信股份",
+      "price": 11.37,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "智能电网"
+      ]
     }
   ]
 }
