@@ -3944,6 +3944,276 @@
       "notion": [
         "乳业"
       ]
+    },
+    {
+      "uuid": "c8441ffd-5f65-458a-89fd-0840d9e4aa2d",
+      "date": "2025-11-17",
+      "stockNumber": "002400",
+      "stockName": "广告营销",
+      "price": 8.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "小红书"
+      ]
+    },
+    {
+      "uuid": "473b5336-5902-4630-a82f-e820db13fb7e",
+      "date": "2025-11-17",
+      "stockNumber": "603099",
+      "stockName": "长白山",
+      "price": 52.9,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "冰雪"
+      ]
+    },
+    {
+      "uuid": "691376d7-13a7-40bb-bcb7-9adacd0f7031",
+      "date": "2025-11-17",
+      "stockNumber": "600162",
+      "stockName": "香江控股",
+      "price": 2.39,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "民营医院"
+      ]
+    },
+    {
+      "uuid": "5cff0fc8-4069-4766-b7dd-3f720ba68b06",
+      "date": "2025-11-17",
+      "stockNumber": "002068",
+      "stockName": "黑猫股份",
+      "price": 11.12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "橡胶"
+      ],
+      "notion": [
+        "PVDF"
+      ]
+    },
+    {
+      "uuid": "98f176a9-9f2e-47e0-a4fd-9ab0dcf72e6b",
+      "date": "2025-11-17",
+      "stockNumber": "002840",
+      "stockName": "华统股份",
+      "price": 11.85,
+      "future": "long",
+      "comment": "关注,低位",
+      "industry": [
+        "食品加工"
+      ],
+      "notion": [
+        "猪肉"
+      ]
+    },
+    {
+      "uuid": "5eb714a2-a666-4d49-b11c-6dc83664f86f",
+      "date": "2025-11-17",
+      "stockNumber": "002651",
+      "stockName": "利君股份",
+      "price": 11.42,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "成飞概念"
+      ]
+    },
+    {
+      "uuid": "11f3ff78-aef0-4e9d-87f6-65ded5d7baff",
+      "date": "2025-11-17",
+      "stockNumber": "600860",
+      "stockName": "京城股份",
+      "price": 13.44,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "燃料电池"
+      ]
+    },
+    {
+      "uuid": "1551e239-53d1-497f-828b-aa4aa3cc04a4",
+      "date": "2025-11-17",
+      "stockNumber": "002189",
+      "stockName": "中光学",
+      "price": 25.4,
+      "future": "long",
+      "comment": "突破压力位",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "兵装重组"
+      ]
+    },
+    {
+      "uuid": "9743858e-1286-4ce6-a5b8-85484197d87d",
+      "date": "2025-11-17",
+      "stockNumber": "000558",
+      "stockName": "天府文旅",
+      "price": 5.62,
+      "future": "long",
+      "comment": "突破压力位",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "冰雪"
+      ]
+    },
+    {
+      "uuid": "74b6da97-be74-4f17-8d17-3e73e44c845f",
+      "date": "2025-11-17",
+      "stockNumber": "600185",
+      "stockName": "珠免集团",
+      "price": 7.68,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "旅游零售"
+      ],
+      "notion": [
+        "免税店"
+      ]
+    },
+    {
+      "uuid": "95b713fa-5a76-4acb-9ed8-2670a738b30d",
+      "date": "2025-11-17",
+      "stockNumber": "603931",
+      "stockName": "格林达",
+      "price": 30.98,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "光刻胶"
+      ]
+    },
+    {
+      "uuid": "5f9f69c4-57b6-491a-86d6-4ca9378a1a5a",
+      "date": "2025-11-17",
+      "stockNumber": "002536",
+      "stockName": "飞龙股份",
+      "price": 23.16,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "液冷服务"
+      ]
+    },
+    {
+      "uuid": "574fceb6-ef2d-4350-9c36-8db345aa779d",
+      "date": "2025-11-17",
+      "stockNumber": "603158",
+      "stockName": "腾龙股份",
+      "price": 11.64,
+      "future": "none",
+      "comment": "关注, 压力位",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "空气能热泵"
+      ]
+    },
+    {
+      "uuid": "5e465c11-cb00-47e5-9b3f-d04eda30cce8",
+      "date": "2025-11-17",
+      "stockNumber": "002369",
+      "stockName": "卓翼科技",
+      "price": 9.35,
+      "future": "none",
+      "comment": "关注, 压力位 9.94",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "区块链"
+      ]
+    },
+    {
+      "uuid": "b1f3834a-afb5-4897-b5a8-9ec52f49f182",
+      "date": "2025-11-17",
+      "stockNumber": "002291",
+      "stockName": "遥望科技",
+      "price": 7.06,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "网红经济"
+      ]
+    },
+    {
+      "uuid": "81833ab2-eb9b-428b-bebc-8e5136ad22a8",
+      "date": "2025-11-17",
+      "stockNumber": "002685",
+      "stockName": "华东重机",
+      "price": 8.07,
+      "future": "long",
+      "comment": "关注, 无压力位",
+      "industry": [
+        "工程机械"
+      ],
+      "notion": [
+        "信创"
+      ]
+    },
+    {
+      "uuid": "952586bb-15b0-4e0b-ad58-05d414af3c05",
+      "date": "2025-11-17",
+      "stockNumber": "600734",
+      "stockName": "实达集团",
+      "price": 4.04,
+      "future": "none",
+      "comment": "压力位",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "0a6bb6d8-6ac5-42c9-a236-b5821e845353",
+      "date": "2025-11-17",
+      "stockNumber": "601015",
+      "stockName": "陕西黑猫",
+      "price": 5,
+      "future": "long",
+      "comment": "关注, 趁早上车",
+      "industry": [
+        "焦炭"
+      ],
+      "notion": [
+        "煤炭"
+      ]
     }
   ]
 }
