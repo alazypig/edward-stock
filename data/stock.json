@@ -4214,6 +4214,66 @@
       "notion": [
         "煤炭"
       ]
+    },
+    {
+      "uuid": "0750a085-c905-4e44-ada7-787064566009",
+      "date": "2025-11-18",
+      "stockNumber": "002378",
+      "stockName": "章源钨业",
+      "price": 13.11,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "小金属"
+      ],
+      "notion": [
+        "钨"
+      ]
+    },
+    {
+      "uuid": "c0795a34-6e9c-41b8-bf5f-0f035bb144e5",
+      "date": "2025-11-18",
+      "stockNumber": "002315",
+      "stockName": "焦点科技",
+      "price": 45.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "互联网电商"
+      ],
+      "notion": [
+        "ERP"
+      ]
+    },
+    {
+      "uuid": "269ee72a-4122-4fb6-adb4-4cac188cda02",
+      "date": "2025-11-18",
+      "stockNumber": "000676",
+      "stockName": "智度股份",
+      "price": 9.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "财税数字化"
+      ]
+    },
+    {
+      "uuid": "550d0dd6-48aa-4df5-b493-1639d0938415",
+      "date": "2025-11-18",
+      "stockNumber": "603630",
+      "stockName": "拉芳家化",
+      "price": 23.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化妆品"
+      ],
+      "notion": [
+        "网红经济"
+      ]
     }
   ]
 }
