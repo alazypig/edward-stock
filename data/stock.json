@@ -4274,6 +4274,231 @@
       "notion": [
         "网红经济"
       ]
+    },
+    {
+      "uuid": "aa8e5c11-5608-4210-86a5-86306473ed6d",
+      "date": "2025-11-28",
+      "stockNumber": "000901",
+      "stockName": "航天科技",
+      "price": 18.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "75705afd-5b6e-45f8-92ca-fd12f5e29197",
+      "date": "2025-11-28",
+      "stockNumber": "002117",
+      "stockName": "东港股份",
+      "price": 12.63,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "电子身份证"
+      ]
+    },
+    {
+      "uuid": "5e8fd2eb-755f-4ea9-881a-35723b54368c",
+      "date": "2025-11-28",
+      "stockNumber": "000620",
+      "stockName": "盈新发展",
+      "price": 3.26,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "旅游"
+      ]
+    },
+    {
+      "uuid": "7f20c6d1-afa8-45d6-9296-bcadc48c3372",
+      "date": "2025-11-28",
+      "stockNumber": "603319",
+      "stockName": "美湖股份",
+      "price": 36.73,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "499bb598-13d6-4d21-aabc-e45b400edf9a",
+      "date": "2025-11-28",
+      "stockNumber": "000882",
+      "stockName": "华联股份",
+      "price": 2.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "物业管理"
+      ]
+    },
+    {
+      "uuid": "f2c8eb4f-79d9-4da1-86cc-42ff83b307bb",
+      "date": "2025-11-28",
+      "stockNumber": "002752",
+      "stockName": "昇兴股份",
+      "price": 6.91,
+      "future": "long",
+      "comment": "关注, 上升中",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "福建自贸区"
+      ]
+    },
+    {
+      "uuid": "d88ab898-780b-4c36-8619-e0b9341f4ec5",
+      "date": "2025-11-28",
+      "stockNumber": "000993",
+      "stockName": "闽东电力",
+      "price": 12.1,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "e27e1402-7358-43b1-8867-f955c46dca58",
+      "date": "2025-11-28",
+      "stockNumber": "000422",
+      "stockName": "湖北宜化",
+      "price": 15.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "ced01fa2-fa78-4d11-8100-83faba1d3c40",
+      "date": "2025-11-28",
+      "stockNumber": "603667",
+      "stockName": "五洲新春",
+      "price": 44.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "6cb2509e-84b1-4484-b5e6-29745feb4a7d",
+      "date": "2025-11-28",
+      "stockNumber": "002009",
+      "stockName": "天奇股份",
+      "price": 16.9,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "2f39d05f-c706-4556-a898-019487f67edf",
+      "date": "2025-11-28",
+      "stockNumber": "001330",
+      "stockName": "博纳影业",
+      "price": 7.12,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "影视院线"
+      ],
+      "notion": [
+        "短剧游戏"
+      ]
+    },
+    {
+      "uuid": "088618bd-f6f2-408d-91ad-25121a31beec",
+      "date": "2025-11-28",
+      "stockNumber": "601113",
+      "stockName": "华鼎股份",
+      "price": 4.62,
+      "future": "long",
+      "comment": "关注, 异动",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "涤纶"
+      ]
+    },
+    {
+      "uuid": "e3c84029-98c3-4997-938f-144ee240322e",
+      "date": "2025-11-28",
+      "stockNumber": "603286",
+      "stockName": "日盈电子",
+      "price": 49.93,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "fb799cd9-e63a-4309-a761-6b3e20f153c9",
+      "date": "2025-11-28",
+      "stockNumber": "002716",
+      "stockName": "湖南白银",
+      "price": 6.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "贵金属"
+      ],
+      "notion": [
+        "铅"
+      ]
+    },
+    {
+      "uuid": "6b161d6d-ae23-48a5-abcb-8434fe9de25a",
+      "date": "2025-11-28",
+      "stockNumber": "600984",
+      "stockName": "建设机械",
+      "price": 4.37,
+      "future": "long",
+      "comment": "关注, 上升中",
+      "industry": [
+        "工程机械"
+      ],
+      "notion": [
+        "国企改革"
+      ]
     }
   ]
 }
