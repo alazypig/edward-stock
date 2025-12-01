@@ -4499,6 +4499,246 @@
       "notion": [
         "国企改革"
       ]
+    },
+    {
+      "uuid": "1cba088e-1686-49b6-8557-e02575eab126",
+      "date": "2025-12-01",
+      "stockNumber": "京城股份",
+      "stockName": "600860",
+      "price": 12.67,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "c152b7eb-b86e-488c-a865-95e4330691f2",
+      "date": "2025-12-01",
+      "stockNumber": "胜利精密",
+      "stockName": "002426",
+      "price": 3.66,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "81011063-8f65-410b-8b3a-dad5df2f9b72",
+      "date": "2025-12-01",
+      "stockNumber": "沃格光电",
+      "stockName": "603773",
+      "price": 31.36,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "存储"
+      ]
+    },
+    {
+      "uuid": "9fc85b6d-2387-462e-ae92-5b52aae199a0",
+      "date": "2025-12-01",
+      "stockNumber": "金龙羽",
+      "stockName": "002882",
+      "price": 32.11,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "f7d5cc0b-ed5f-4d1b-b0b7-648ca58d0b95",
+      "date": "2025-12-01",
+      "stockNumber": "众兴菌业",
+      "stockName": "002772",
+      "price": 13.13,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "种植业"
+      ],
+      "notion": [
+        "乡村振兴"
+      ]
+    },
+    {
+      "uuid": "0667f810-09ab-4c5c-969a-1bd978771a1c",
+      "date": "2025-12-01",
+      "stockNumber": "澳柯玛",
+      "stockName": "600336",
+      "price": 8.05,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "冰雪"
+      ]
+    },
+    {
+      "uuid": "ef036222-1050-491a-a82e-693395a772f4",
+      "date": "2025-12-01",
+      "stockNumber": "浙江荣泰",
+      "stockName": "603119",
+      "price": 95.44,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "707c2a69-44dd-45ef-80f9-e798fe7ef152",
+      "date": "2025-12-01",
+      "stockNumber": "豫光金铅",
+      "stockName": "600531",
+      "price": 11.49,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "铅"
+      ]
+    },
+    {
+      "uuid": "08e36f2a-6bf6-43a7-acf6-d0066fcc99e7",
+      "date": "2025-12-01",
+      "stockNumber": "漫步者",
+      "stockName": "002351",
+      "price": 13.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "语音技术"
+      ]
+    },
+    {
+      "uuid": "15632300-a9df-4759-aacf-b5cf142758f9",
+      "date": "2025-12-01",
+      "stockNumber": "大连圣亚",
+      "stockName": "600593",
+      "price": 48.76,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "冰雪"
+      ]
+    },
+    {
+      "uuid": "a024c1a1-588a-4fc4-86f4-2017e0643b34",
+      "date": "2025-12-01",
+      "stockNumber": "诺德股份",
+      "stockName": "600110",
+      "price": 7.78,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "e3622d7c-336a-44b4-af0d-41e47f469515",
+      "date": "2025-12-01",
+      "stockNumber": "盛路通信",
+      "stockName": "002446",
+      "price": 8.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "a0bc5748-aed0-4654-8089-69fe4cb04c5d",
+      "date": "2025-12-01",
+      "stockNumber": "再升科技",
+      "stockName": "603601",
+      "price": 5.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "玻璃纤维"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "2fc2666e-1ded-4018-a998-02d723b7d79c",
+      "date": "2025-12-01",
+      "stockNumber": "天马科技",
+      "stockName": "603668",
+      "price": 15.53,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "饲料"
+      ],
+      "notion": [
+        "养鸡"
+      ]
+    },
+    {
+      "uuid": "bf52b3f0-6aba-4296-b0a4-c6ed32297df9",
+      "date": "2025-12-01",
+      "stockNumber": "苏州科达",
+      "stockName": "603660",
+      "price": 10.05,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "计算机设备"
+      ],
+      "notion": [
+        "智慧政务"
+      ]
+    },
+    {
+      "uuid": "96a6a88e-0d09-4b30-9563-8f62cabd58f0",
+      "date": "2025-12-01",
+      "stockNumber": "五洲新春",
+      "stockName": "603667",
+      "price": 46.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器"
+      ]
     }
   ]
 }
