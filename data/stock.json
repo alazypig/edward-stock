@@ -4739,6 +4739,262 @@
       "notion": [
         "减速器"
       ]
+    },
+    {
+      "uuid": "869e9afb-d072-42b0-bdd9-09722ddb953e",
+      "date": "2025-12-12",
+      "stockNumber": "603169",
+      "stockName": "兰石重装",
+      "price": 10.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "1d387eec-c29b-4164-827f-e2a6d718d134",
+      "date": "2025-12-12",
+      "stockNumber": "002651",
+      "stockName": "利君股份",
+      "price": 12.16,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "6fec3bde-3208-409b-97d8-0541c6089041",
+      "date": "2025-12-12",
+      "stockNumber": "600468",
+      "stockName": "百利电气",
+      "price": 6.67,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "超导"
+      ]
+    },
+    {
+      "uuid": "a23edc5f-8395-42bb-94ad-a8a483e41db3",
+      "date": "2025-12-12",
+      "stockNumber": "002533",
+      "stockName": "金杯电工",
+      "price": 12.73,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "超导",
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "c1cb0bc1-a3d0-4033-9046-f30ef96f1c3f",
+      "date": "2025-12-12",
+      "stockNumber": "002364",
+      "stockName": "中恒电气",
+      "price": 25.33,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电源设备"
+      ],
+      "notion": [
+        "中国 AI 50"
+      ]
+    },
+    {
+      "uuid": "5ecf1223-29fe-41ff-a767-3063907414a5",
+      "date": "2025-12-12",
+      "stockNumber": "002971",
+      "stockName": "和远气体",
+      "price": 32.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "氟化工"
+      ]
+    },
+    {
+      "uuid": "b1cce087-6dbe-4860-8557-770af84d05a2",
+      "date": "2025-12-12",
+      "stockNumber": "002117",
+      "stockName": "东港股份",
+      "price": 13.62,
+      "future": "long",
+      "comment": "关注, 二次接触压力位",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "电子身份证"
+      ]
+    },
+    {
+      "uuid": "e8e91e41-8490-4947-b778-654b16a9d678",
+      "date": "2025-12-12",
+      "stockNumber": "600336",
+      "stockName": "澳柯玛",
+      "price": 8.42,
+      "future": "long",
+      "comment": "关注, 上升中",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "无人零售"
+      ]
+    },
+    {
+      "uuid": "b4b4ac83-0a88-4fa2-be86-ee9dedad7e5e",
+      "date": "2025-12-12",
+      "stockNumber": "002611",
+      "stockName": "东方精工",
+      "price": 18.2,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "bd445fae-17f5-4347-bacd-658fb61540e1",
+      "date": "2025-12-12",
+      "stockNumber": "001389",
+      "stockName": "广合科技",
+      "price": 77.24,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "共封装光学"
+      ]
+    },
+    {
+      "uuid": "d728c99b-61c3-4f62-a805-7641a6915bd5",
+      "date": "2025-12-12",
+      "stockNumber": "600619",
+      "stockName": "海立股份",
+      "price": 21.11,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "家电零部件"
+      ],
+      "notion": [
+        "光刻机"
+      ]
+    },
+    {
+      "uuid": "e9ddb002-9dc6-4f8d-94fb-122867815f6b",
+      "date": "2025-12-12",
+      "stockNumber": "603421",
+      "stockName": "鼎信通讯",
+      "price": 8.34,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "虚拟电厂"
+      ]
+    },
+    {
+      "uuid": "e2104f73-5d77-4ea3-8966-57e603170450",
+      "date": "2025-12-12",
+      "stockNumber": "600353",
+      "stockName": "旭光电子",
+      "price": 17.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "bc127b62-01b9-417b-9fea-3598b26e553d",
+      "date": "2025-12-12",
+      "stockNumber": "600644",
+      "stockName": "乐山电力",
+      "price": 10.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "103ca5fa-c882-42c9-981d-f50fcfdc7fcc",
+      "date": "2025-12-12",
+      "stockNumber": "603211",
+      "stockName": "晋拓股份",
+      "price": 20.03,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "特斯拉"
+      ]
+    },
+    {
+      "uuid": "70b15aae-9b1d-4a63-a59b-6ed57bbfc253",
+      "date": "2025-12-12",
+      "stockNumber": "002104",
+      "stockName": "恒宝股份",
+      "price": 18.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "数字货币"
+      ]
+    },
+    {
+      "uuid": "2a6177ee-a25b-40a0-b573-74eae6cd17df",
+      "date": "2025-12-12",
+      "stockNumber": "000799",
+      "stockName": "酒鬼酒",
+      "price": 55.74,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "白酒"
+      ],
+      "notion": [
+        "白酒"
+      ]
     }
   ]
 }
