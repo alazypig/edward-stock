@@ -4995,6 +4995,126 @@
       "notion": [
         "白酒"
       ]
+    },
+    {
+      "uuid": "f077a30b-ba9e-4a37-9597-280aa83c7ea6",
+      "date": "2025-12-19",
+      "stockNumber": "600859",
+      "stockName": "王府井",
+      "price": 15.52,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "免税店"
+      ]
+    },
+    {
+      "uuid": "c8c82dbc-44d8-4314-a9fe-c57648a65055",
+      "date": "2025-12-19",
+      "stockNumber": "002277",
+      "stockName": "友阿股份",
+      "price": 7.59,
+      "future": "long",
+      "comment": "关注， 上升中",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "ac6d2f13-2d32-4c4b-bf80-36fa81a8e021",
+      "date": "2025-12-19",
+      "stockNumber": "002326",
+      "stockName": "永太科技",
+      "price": 23.05,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "36240153-be71-49b1-971f-c4fca92772a9",
+      "date": "2025-12-19",
+      "stockNumber": "600650",
+      "stockName": "锦江在线",
+      "price": 15.94,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "铁路公路"
+      ],
+      "notion": [
+        "网约车"
+      ]
+    },
+    {
+      "uuid": "d332e76b-1087-4cdc-8d66-691bbc10cb57",
+      "date": "2025-12-19",
+      "stockNumber": "002164",
+      "stockName": "宁波东力",
+      "price": 17.79,
+      "future": "long",
+      "comment": "上升通道",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "e7ab6bd5-eca1-4a10-a91c-1486c0d6e194",
+      "date": "2025-12-19",
+      "stockNumber": "002029",
+      "stockName": "七匹狼",
+      "price": 11.78,
+      "future": "long",
+      "comment": "上升通道",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "2116e26c-ddec-4ddd-8f6a-19c10ff513e3",
+      "date": "2025-12-19",
+      "stockNumber": "605388",
+      "stockName": "均瑶健康",
+      "price": 8.39,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "饮料乳品"
+      ],
+      "notion": [
+        "乳业"
+      ]
+    },
+    {
+      "uuid": "4e66d04e-d4b4-48c5-b73b-ecb472d0dbb0",
+      "date": "2025-12-19",
+      "stockNumber": "600429",
+      "stockName": "三元股份",
+      "price": 5.8,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "饮料乳品"
+      ],
+      "notion": [
+        "乳业"
+      ]
     }
   ]
 }
