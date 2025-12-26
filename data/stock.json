@@ -5115,6 +5115,261 @@
       "notion": [
         "乳业"
       ]
+    },
+    {
+      "uuid": "5f717352-d75b-4dae-a8ea-71101b5b7c82",
+      "date": "2025-12-26",
+      "stockNumber": "601500",
+      "stockName": "通用股份",
+      "price": 4.95,
+      "future": "long",
+      "comment": "关注，突破压力位",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "一带一路",
+        "工业互联网"
+      ]
+    },
+    {
+      "uuid": "49cdd9e7-a9da-41eb-9490-2b6d8d2fa9a0",
+      "date": "2025-12-26",
+      "stockNumber": "600399",
+      "stockName": "抚顺特钢",
+      "price": 6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "特钢"
+      ],
+      "notion": [
+        "特钢",
+        "军工",
+        "航空发动机"
+      ]
+    },
+    {
+      "uuid": "ff8bd41c-8e43-4dd7-af47-364d60fc8342",
+      "date": "2025-12-26",
+      "stockNumber": "002338",
+      "stockName": "奥普光电",
+      "price": 60.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军民融合",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "cbbbc937-92ed-4f6d-b816-0510468c67d6",
+      "date": "2025-12-26",
+      "stockNumber": "603026",
+      "stockName": "石大胜华",
+      "price": 82.47,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "氟化工",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "86cdb130-b550-4062-bdbb-e799d86cbdcd",
+      "date": "2025-12-26",
+      "stockNumber": "600877",
+      "stockName": "电科芯片",
+      "price": 16.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "卫星导航",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "aa3a07a1-9406-4c07-bc59-0fd003947d7f",
+      "date": "2025-12-26",
+      "stockNumber": "002108",
+      "stockName": "沧州明珠",
+      "price": 5.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "固态电池",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "5e323618-3963-4055-96e6-116d96679ac5",
+      "date": "2025-12-26",
+      "stockNumber": "600336",
+      "stockName": "澳柯玛",
+      "price": 8.97,
+      "future": "long",
+      "comment": "关注，上升中",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "冰雪产业",
+        "冷链物流"
+      ]
+    },
+    {
+      "uuid": "aeb3dcd6-298c-4632-9f41-a00af5806b03",
+      "date": "2025-12-26",
+      "stockNumber": "000420",
+      "stockName": "吉林化纤",
+      "price": 4.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "碳纤维",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "332c1a07-2482-4964-9309-c2a3fe2a1846",
+      "date": "2025-12-26",
+      "stockNumber": "000628",
+      "stockName": "高新发展",
+      "price": 46.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房屋建设"
+      ],
+      "notion": [
+        "智慧城市",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "08c73718-ba1d-4fb7-b8cf-7d001bd33409",
+      "date": "2025-12-26",
+      "stockNumber": "600531",
+      "stockName": "豫光金铅",
+      "price": 11.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "黄金",
+        "金属回收"
+      ]
+    },
+    {
+      "uuid": "e8bc0837-3bc9-42aa-b29b-1d44b2454e1f",
+      "date": "2025-12-26",
+      "stockNumber": "000751",
+      "stockName": "锌业股份",
+      "price": 4.13,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "金属锌",
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "72a06f31-6dbd-4e44-9b8d-c47a259f6a99",
+      "date": "2025-12-26",
+      "stockNumber": "601061",
+      "stockName": "中信金属",
+      "price": 14.62,
+      "future": "none",
+      "comment": "关注，回踩支撑",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "金属铜",
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "ecdfe60d-adcc-4f70-8793-26affbddcf2f",
+      "date": "2025-12-26",
+      "stockNumber": "003041",
+      "stockName": "真爱美家",
+      "price": 44.95,
+      "future": "none",
+      "comment": "关注，回踩支撑",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "一带一路",
+        "人民币贬值"
+      ]
+    },
+    {
+      "uuid": "f1ad5600-328c-419b-949e-d6e7339c3501",
+      "date": "2025-12-26",
+      "stockNumber": "600078",
+      "stockName": "澄星股份",
+      "price": 10.29,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "00ea3970-7ec1-44f9-a556-132a5f31ebf2",
+      "date": "2025-12-26",
+      "stockNumber": "603315",
+      "stockName": "福鞍股份",
+      "price": 16.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "特钢",
+        "核电"
+      ]
+    },
+    {
+      "uuid": "cbbfeee1-c1e7-4bcb-bcbb-a6ef52fbdbcd",
+      "date": "2025-12-26",
+      "stockNumber": "603399",
+      "stockName": "永杉锂业",
+      "price": 11.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
     }
   ]
 }
