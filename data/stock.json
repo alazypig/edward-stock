@@ -6068,6 +6068,243 @@
         "专精特新",
         "国企改革"
       ]
+    },
+    {
+      "uuid": "b12330e8-2c88-4819-9ef8-f3940ebe4d44",
+      "date": "2026-01-23",
+      "stockNumber": "002254",
+      "stockName": "泰和新材",
+      "price": 13.82,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "固态电池",
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "9982e82a-3295-4344-8509-e8de817b169e",
+      "date": "2026-01-23",
+      "stockNumber": "600880",
+      "stockName": "博瑞传播",
+      "price": 5.87,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "教育"
+      ],
+      "notion": [
+        "AIGC"
+      ]
+    },
+    {
+      "uuid": "7c1a107f-328f-4f94-a76d-710593887141",
+      "date": "2026-01-23",
+      "stockNumber": "002538",
+      "stockName": "斯特尔",
+      "price": 7.22,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工",
+        "化肥"
+      ]
+    },
+    {
+      "uuid": "09aa4482-ffcb-4e09-811e-49225f22d840",
+      "date": "2026-01-23",
+      "stockNumber": "002886",
+      "stockName": "沃特股份",
+      "price": 24.57,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "特斯拉",
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "8c29dabb-0b41-4bae-a646-fa4927a41702",
+      "date": "2026-01-23",
+      "stockNumber": "601061",
+      "stockName": "中信金属",
+      "price": 16.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "铜",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "ce3d5b1d-7700-44b5-891d-534e03a3cb05",
+      "date": "2026-01-23",
+      "stockNumber": "002301",
+      "stockName": "齐心集团",
+      "price": 8.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "文娱用品"
+      ],
+      "notion": [
+        "数字经济",
+        "IP经济"
+      ]
+    },
+    {
+      "uuid": "b40359e8-f201-43bf-87a4-090fcc7f9fc9",
+      "date": "2026-01-23",
+      "stockNumber": "603088",
+      "stockName": "宁波精达",
+      "price": 12.17,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "专精特新",
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "913ec08c-6731-46e7-b588-c3a9e2f5967f",
+      "date": "2026-01-23",
+      "stockNumber": "603267",
+      "stockName": "鸿远电子",
+      "price": 59.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "商业航天",
+        "专精特新"
+      ]
+    },
+    {
+      "uuid": "dc67b88e-4855-42cd-bbdc-53ff9a613254",
+      "date": "2026-01-23",
+      "stockNumber": "002935",
+      "stockName": "天奥电子",
+      "price": 23.15,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "商业航天",
+        "卫星导航"
+      ]
+    },
+    {
+      "uuid": "2530d9d3-278f-467b-b352-7460479f5a05",
+      "date": "2026-01-23",
+      "stockNumber": "002469",
+      "stockName": "三维化学",
+      "price": 9.54,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "煤化工"
+      ]
+    },
+    {
+      "uuid": "c9e65102-8e3a-4d32-8690-a000a372a552",
+      "date": "2026-01-23",
+      "stockNumber": "002803",
+      "stockName": "吉宏股份",
+      "price": 20.4,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "互联网电商"
+      ],
+      "notion": [
+        "跨境电商"
+      ]
+    },
+    {
+      "uuid": "132b2c8d-1005-4b96-b1de-ea2816ad340f",
+      "date": "2026-01-23",
+      "stockNumber": "603319",
+      "stockName": "美湖股份",
+      "price": 38.72,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人",
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "aa9a835f-2068-4eca-a7ab-dbf71f07fd40",
+      "date": "2026-01-23",
+      "stockNumber": "000863",
+      "stockName": "三湘映像",
+      "price": 6.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "文化传媒",
+        "IP经济"
+      ]
+    },
+    {
+      "uuid": "43eef6c7-5d22-4175-8270-8bc5527f92fa",
+      "date": "2026-01-23",
+      "stockNumber": "001283",
+      "stockName": "豪鹏科技",
+      "price": 73.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "锂电池",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "ecd92c71-85fc-4e95-b798-9be65fc1bf8a",
+      "date": "2026-01-23",
+      "stockNumber": "920077",
+      "stockName": "吉林碳谷",
+      "price": 19.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "碳纤维",
+        "国企改革"
+      ]
     }
   ]
 }
