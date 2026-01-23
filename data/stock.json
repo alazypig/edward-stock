@@ -5845,6 +5845,229 @@
         "国企改革",
         "农机"
       ]
+    },
+    {
+      "uuid": "c14c9a0c-11cf-4d17-b1ab-77d39e11d71d",
+      "date": "2026-01-23",
+      "stockNumber": "000917",
+      "stockName": "电广传媒",
+      "price": 11.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "IP经济",
+        "创投"
+      ]
+    },
+    {
+      "uuid": "a947fe5d-671f-407d-a061-8220b0c26aaa",
+      "date": "2026-01-23",
+      "stockNumber": "002167",
+      "stockName": "东方皓业",
+      "price": 14.55,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "小金属"
+      ],
+      "notion": [
+        "小金属",
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "f8bc4366-88f8-4726-a4e5-61310b7adf2c",
+      "date": "2026-01-23",
+      "stockNumber": "000950",
+      "stockName": "重药控股",
+      "price": 6.43,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医药商业"
+      ],
+      "notion": [
+        "创新药",
+        "减肥药"
+      ]
+    },
+    {
+      "uuid": "a88cca52-7e2a-4379-9c61-4ff55482a27c",
+      "date": "2026-01-23",
+      "stockNumber": "002383",
+      "stockName": "合众思壮",
+      "price": 11.58,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "商业航天",
+        "无人驾驶"
+      ]
+    },
+    {
+      "uuid": "5bdd1a6d-51aa-4375-98a8-d2312a9b87b8",
+      "date": "2026-01-23",
+      "stockNumber": "000753",
+      "stockName": "漳州发展",
+      "price": 7.53,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "综合"
+      ],
+      "notion": [
+        "海峡两岸",
+        "新型城镇化"
+      ]
+    },
+    {
+      "uuid": "205774be-cf27-4c64-9506-56165c165952",
+      "date": "2026-01-23",
+      "stockNumber": "002075",
+      "stockName": "沙钢股份",
+      "price": 6.25,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "特钢"
+      ],
+      "notion": [
+        "新能源汽车",
+        "特钢"
+      ]
+    },
+    {
+      "uuid": "85c0c61c-c7b2-4e0c-8b93-1e25649e07e5",
+      "date": "2026-01-23",
+      "stockNumber": "000762",
+      "stockName": "西藏矿业",
+      "price": 29.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池",
+        "盐湖提锂"
+      ]
+    },
+    {
+      "uuid": "79ce29d6-db6c-4488-bdc6-4313c3cae5d4",
+      "date": "2026-01-23",
+      "stockNumber": "600382",
+      "stockName": "广东明珠",
+      "price": 9.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "冶钢原料"
+      ],
+      "notion": [
+        "PPP"
+      ]
+    },
+    {
+      "uuid": "e3a95e37-655f-400a-865c-fe63f5114167",
+      "date": "2026-01-23",
+      "stockNumber": "603131",
+      "stockName": "上海沪工",
+      "price": 27.44,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "商业航天",
+        "卫星导航"
+      ]
+    },
+    {
+      "uuid": "f7fcdfdc-4607-4ecd-816b-26086eb1b18f",
+      "date": "2026-01-23",
+      "stockNumber": "002540",
+      "stockName": "亚太科技",
+      "price": 7.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "大飞机",
+        "汽车热管理"
+      ]
+    },
+    {
+      "uuid": "e830c605-e89a-4d2d-8300-711bc97359b9",
+      "date": "2026-01-23",
+      "stockNumber": "002434",
+      "stockName": "万里扬",
+      "price": 10.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人",
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "af216be1-8469-416d-ba94-562f33cc61c2",
+      "date": "2026-01-23",
+      "stockNumber": "002338",
+      "stockName": "奥普光电",
+      "price": 61.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军工",
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "5b64f992-fc50-4b8b-a219-00a842f6c6b9",
+      "date": "2026-01-23",
+      "stockNumber": "601388",
+      "stockName": "怡球资源",
+      "price": 3.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "金属回收",
+        "固废处理"
+      ]
+    },
+    {
+      "uuid": "123cc9f8-e05a-42e4-8507-7e2093a1c0c5",
+      "date": "2026-01-23",
+      "stockNumber": "002522",
+      "stockName": "浙江众成",
+      "price": 6.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "专精特新",
+        "国企改革"
+      ]
     }
   ]
 }
