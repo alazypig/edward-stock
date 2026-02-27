@@ -6608,6 +6608,86 @@
         "动力电池回收",
         "锂电池"
       ]
+    },
+    {
+      "uuid": "793d81a4-47ce-4efc-8e19-e76bf6813512",
+      "date": "2026-02-27",
+      "stockNumber": "002296",
+      "stockName": "辉煌科技",
+      "price": 15.13,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "人工智能",
+        "卫星导航"
+      ]
+    },
+    {
+      "uuid": "f598e1cf-8790-4e73-8293-2a2dec9b2209",
+      "date": "2026-02-27",
+      "stockNumber": "600388",
+      "stockName": "西藏珠峰",
+      "price": 19.97,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "锌",
+        "盐湖提锂"
+      ]
+    },
+    {
+      "uuid": "7fb32389-6f31-4c3e-ae50-63e4d66aaa0d",
+      "date": "2026-02-27",
+      "stockNumber": "002538",
+      "stockName": "司特尔",
+      "price": 8.03,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工",
+        "化肥"
+      ]
+    },
+    {
+      "uuid": "a1973466-1e87-423d-acc2-d3b91981923f",
+      "date": "2026-02-27",
+      "stockNumber": "000601",
+      "stockName": "韶能股份",
+      "price": 5.66,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "生物质能发电",
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "09fe9cbf-d3a8-480d-be5b-21297a2895dd",
+      "date": "2026-02-27",
+      "stockNumber": "002730",
+      "stockName": "电光科技",
+      "price": 17.71,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "东数西算",
+        "数据中心"
+      ]
     }
   ]
 }
