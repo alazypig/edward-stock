@@ -6688,6 +6688,84 @@
         "东数西算",
         "数据中心"
       ]
+    },
+    {
+      "uuid": "d78c4d43-dc15-4b23-9f1b-5902df2256f6",
+      "date": "2026-03-07",
+      "stockNumber": "000422",
+      "stockName": "湖北宜化",
+      "price": 18.22,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工",
+        "宁德时代"
+      ]
+    },
+    {
+      "uuid": "efc333c7-493b-4357-9db3-2d4f0c0aaabb",
+      "date": "2026-03-07",
+      "stockNumber": "000099",
+      "stockName": "中信海直",
+      "price": 21.51,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "航空机场"
+      ],
+      "notion": [
+        "低空经济"
+      ]
+    },
+    {
+      "uuid": "ff1c2ee9-098e-4a5a-b6fc-b886b6a028bc",
+      "date": "2026-03-07",
+      "stockNumber": "002538",
+      "stockName": "司尔特",
+      "price": 8.18,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "化肥",
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "4e391365-8de6-4a29-9708-4f4a513b3ff4",
+      "date": "2026-03-07",
+      "stockNumber": "603118",
+      "stockName": "共进股份",
+      "price": 12.34,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "华为",
+        "先进封装"
+      ]
+    },
+    {
+      "uuid": "65b55607-a7b7-4cfb-9cd1-12819b4f10a7",
+      "date": "2026-03-07",
+      "stockNumber": "002041",
+      "stockName": "登海种业",
+      "price": 11.69,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "种植业"
+      ],
+      "notion": [
+        "农业种植"
+      ]
     }
   ]
 }
