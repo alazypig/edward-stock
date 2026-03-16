@@ -6766,6 +6766,213 @@
       "notion": [
         "农业种植"
       ]
+    },
+    {
+      "uuid": "e96e2ba5-4a85-4293-89d0-89abaf4e05cd",
+      "date": "2026-03-16",
+      "stockNumber": "603701",
+      "stockName": "德宏股份",
+      "price": 21.82,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "智能座舱",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "e6ff0516-aaa8-4fbb-bd80-83ca78fbce3f",
+      "date": "2026-03-16",
+      "stockNumber": "603683",
+      "stockName": "晶华新材",
+      "price": 27.9,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "机器人",
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "e9953058-b908-474f-b1a2-62f2082184a7",
+      "date": "2026-03-16",
+      "stockNumber": "603315",
+      "stockName": "福鞍股份",
+      "price": 15.82,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "抽水蓄能",
+        "特钢"
+      ]
+    },
+    {
+      "uuid": "59bb731b-ae51-4894-bb9a-a7f45603e1f3",
+      "date": "2026-03-16",
+      "stockNumber": "603163",
+      "stockName": "圣晖集成",
+      "price": 114.9,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专业工程"
+      ],
+      "notion": [
+        "芯片",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "c5748d20-55f3-461f-a04f-534be9a42a6f",
+      "date": "2026-03-16",
+      "stockNumber": "002068",
+      "stockName": "黑猫股份",
+      "price": 10.22,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "橡胶"
+      ],
+      "notion": [
+        "固态电池",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "f4473b7e-f9f6-463b-bc93-72280d199421",
+      "date": "2026-03-16",
+      "stockNumber": "000922",
+      "stockName": "佳电股份",
+      "price": 15.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电机"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "921f2e72-5920-4f70-811d-84794d47f63e",
+      "date": "2026-03-16",
+      "stockNumber": "002274",
+      "stockName": "华昌化工",
+      "price": 7.21,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "氢能源",
+        "煤化工"
+      ]
+    },
+    {
+      "uuid": "97a8e1e3-cfa7-41f9-96f3-ac99ad213e80",
+      "date": "2026-03-16",
+      "stockNumber": "000065",
+      "stockName": "北方国际",
+      "price": 13.39,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专业工程"
+      ],
+      "notion": [
+        "国企改革",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "3fd7f91f-da59-4708-b2cd-688532e42a7b",
+      "date": "2026-03-16",
+      "stockNumber": "002815",
+      "stockName": "崇达技术",
+      "price": 16.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "PCB",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "c02ed1a1-98ae-45f0-88ef-f6b08b5ea0f8",
+      "date": "2026-03-16",
+      "stockNumber": "001338",
+      "stockName": "永顺泰",
+      "price": 13.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农产品加工"
+      ],
+      "notion": [
+        "啤酒",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "f135090d-66ce-445c-a4c2-d8e722fae928",
+      "date": "2026-03-16",
+      "stockNumber": "600072",
+      "stockName": "中船科技",
+      "price": 13.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "风电设备"
+      ],
+      "notion": [
+        "国企改革",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "2875863c-8f6a-4624-8288-7789c23540b9",
+      "date": "2026-03-16",
+      "stockNumber": "000930",
+      "stockName": "中粮科技",
+      "price": 7.79,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "农产品加工"
+      ],
+      "notion": [
+        "粮食",
+        "代糖"
+      ]
+    },
+    {
+      "uuid": "3125641d-f327-4766-886e-0251409c11cd",
+      "date": "2026-03-16",
+      "stockNumber": "002310",
+      "stockName": "东方新能",
+      "price": 2.99,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "股权转让",
+        "绿色电力"
+      ]
     }
   ]
 }
