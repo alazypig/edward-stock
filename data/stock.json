@@ -6973,6 +6973,196 @@
         "股权转让",
         "绿色电力"
       ]
+    },
+    {
+      "uuid": "ea53f66f-cdc8-42c0-bc61-2b1116e37bc2",
+      "date": "2026-03-20",
+      "stockNumber": "600135",
+      "stockName": "乐凯胶片",
+      "price": 10.71,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "柔性屏",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "6cd2c840-6d41-474a-a747-8f091d23bfdc",
+      "date": "2026-03-20",
+      "stockNumber": "000791",
+      "stockName": "甘肃能源",
+      "price": 8.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "东数西算",
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "7ad9b8e3-5b73-4e6d-8b82-9ba0a626691c",
+      "date": "2026-03-20",
+      "stockNumber": "002611",
+      "stockName": "东方精工",
+      "price": 16.97,
+      "future": "long",
+      "comment": "建仓",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "人工智能",
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "db76ce9e-158f-472a-a644-7377ddbdd502",
+      "date": "2026-03-20",
+      "stockNumber": "000722",
+      "stockName": "湖南发展",
+      "price": 14.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "bd2017ba-4436-41f0-91d6-4e9a0ac12434",
+      "date": "2026-03-20",
+      "stockNumber": "603185",
+      "stockName": "弘元绿能",
+      "price": 25.5,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "光伏",
+        "硅能源"
+      ]
+    },
+    {
+      "uuid": "09aeffa4-49a8-405f-81ac-9efbe4395065",
+      "date": "2026-03-20",
+      "stockNumber": "603063",
+      "stockName": "禾望电气",
+      "price": 32.89,
+      "future": "long",
+      "comment": "建仓",
+      "industry": [
+        "风电设备"
+      ],
+      "notion": [
+        "智能电网",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "49ce446b-349d-4011-b30a-e6306b181aa4",
+      "date": "2026-03-20",
+      "stockNumber": "600641",
+      "stockName": "先导基电",
+      "price": 19.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片",
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "e1744a71-ce1e-40d2-afce-b3484db0b14c",
+      "date": "2026-03-20",
+      "stockNumber": "000049",
+      "stockName": "德赛电池",
+      "price": 27.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "AI眼镜",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "c1738c23-35c6-4335-97a4-8e1a579afac7",
+      "date": "2026-03-20",
+      "stockNumber": "603396",
+      "stockName": "金辰股份",
+      "price": 39.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "光伏",
+        "钙钛矿电池"
+      ]
+    },
+    {
+      "uuid": "050f011e-9e08-48e1-a54e-4b406aef294a",
+      "date": "2026-03-20",
+      "stockNumber": "000700",
+      "stockName": "模塑科技",
+      "price": 12.13,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "9805442d-3930-4066-a65a-34b67ae2032d",
+      "date": "2026-03-20",
+      "stockNumber": "603031",
+      "stockName": "安孚科技",
+      "price": 46.4,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "共封装光学",
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "85164da0-832c-4bc1-8055-81785072c5dd",
+      "date": "2026-03-20",
+      "stockNumber": "001301",
+      "stockName": "尚太科技",
+      "price": 78.44,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "宁德时代",
+        "锂电池"
+      ]
     }
   ]
 }
