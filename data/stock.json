@@ -7163,6 +7163,245 @@
         "宁德时代",
         "锂电池"
       ]
+    },
+    {
+      "uuid": "fd35ca74-cd54-4dd6-8217-002d8d00456a",
+      "date": "2026-03-27",
+      "stockNumber": "000859",
+      "stockName": "国风新材",
+      "price": 10.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "光刻胶",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "2cddb43d-073d-48a9-aad7-b5896b5e85d4",
+      "date": "2026-03-27",
+      "stockNumber": "603829",
+      "stockName": "凯洛股份",
+      "price": 29.2,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "光伏",
+        "智能电网"
+      ]
+    },
+    {
+      "uuid": "7311abec-dfbe-47cc-b4f2-09f7644b4bcf",
+      "date": "2026-03-27",
+      "stockNumber": "002840",
+      "stockName": "华统股份",
+      "price": 11.36,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "食品加工"
+      ],
+      "notion": [
+        "养鸡",
+        "猪肉"
+      ]
+    },
+    {
+      "uuid": "4b2ad27d-6695-4aef-a439-8492fea4e60a",
+      "date": "2026-03-27",
+      "stockNumber": "600645",
+      "stockName": "中源协和",
+      "price": 31.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医疗器械"
+      ],
+      "notion": [
+        "细胞免疫治疗",
+        "基因测序"
+      ]
+    },
+    {
+      "uuid": "5b7e7e5f-1659-4eb6-aada-eabd439022e9",
+      "date": "2026-03-27",
+      "stockNumber": "603977",
+      "stockName": "国泰集团",
+      "price": 17,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "小金属",
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "1d0f9881-26a3-4610-802f-dc0d84abc6b7",
+      "date": "2026-03-27",
+      "stockNumber": "000990",
+      "stockName": "诚志股份",
+      "price": 10.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "POE胶膜",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "7a482ada-d55f-493f-836f-3c35d52c6db1",
+      "date": "2026-03-27",
+      "stockNumber": "002274",
+      "stockName": "华昌化工",
+      "price": 6.57,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "煤化工",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "fd6b17b3-126b-4fef-9ae9-3662fb5802ee",
+      "date": "2026-03-27",
+      "stockNumber": "002235",
+      "stockName": "安妮股份",
+      "price": 9.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "造纸"
+      ],
+      "notion": [
+        "股权转让",
+        "知识产权保护"
+      ]
+    },
+    {
+      "uuid": "c79fa4ed-8226-436a-9c8a-7f3fa79df1d4",
+      "date": "2026-03-27",
+      "stockNumber": "002083",
+      "stockName": "孚日股份",
+      "price": 11.96,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "纺织制造"
+      ],
+      "notion": [
+        "氟化工",
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "b0841cee-45d2-4171-9eb9-b39918cf3579",
+      "date": "2026-03-27",
+      "stockNumber": "600691",
+      "stockName": "潞化科技",
+      "price": 3.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "煤化工",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "e316f6a8-00ce-4728-8537-652a2ad2b29d",
+      "date": "2026-03-27",
+      "stockNumber": "603063",
+      "stockName": "禾望电气",
+      "price": 34.44,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "风电设备"
+      ],
+      "notion": [
+        "储能",
+        "智能电网"
+      ]
+    },
+    {
+      "uuid": "a23bed68-ef0a-4dc0-a32c-c36da6cf6ff7",
+      "date": "2026-03-27",
+      "stockNumber": "002306",
+      "stockName": "永太科技",
+      "price": 23.21,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "锂电池",
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "278fe8e9-ec46-4154-b129-0ccc7acca6c9",
+      "date": "2026-03-27",
+      "stockNumber": "603960",
+      "stockName": "克来机电",
+      "price": 20.48,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "AI应用",
+        "机器视觉"
+      ]
+    },
+    {
+      "uuid": "6686cede-41b2-4287-9960-83c363b2137f",
+      "date": "2026-03-27",
+      "stockNumber": "600478",
+      "stockName": "科力远",
+      "price": 7.54,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "小金属",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "0aa1f053-f88e-4a26-83fb-65f10f9e06a8",
+      "date": "2026-03-27",
+      "stockNumber": "003010",
+      "stockName": "若羽臣",
+      "price": 31.62,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "互联网电商"
+      ],
+      "notion": [
+        "回购再增持"
+      ]
     }
   ]
 }
