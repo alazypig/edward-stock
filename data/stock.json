@@ -7656,6 +7656,199 @@
         "年报预增",
         "商业航天"
       ]
+    },
+    {
+      "uuid": "f90305b1-d2df-4b3b-83fb-4aac767425e4",
+      "date": "2026-04-17",
+      "stockNumber": "002338",
+      "stockName": "奥普光电",
+      "price": 56.13,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "芯片",
+        "专精特新"
+      ]
+    },
+    {
+      "uuid": "51545a1b-2a47-4bbd-a13f-c456ad8614b4",
+      "date": "2026-04-17",
+      "stockNumber": "002559",
+      "stockName": "亚威股份",
+      "price": 10.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "工业母机",
+        "高端装备"
+      ]
+    },
+    {
+      "uuid": "6d794183-117c-416f-a4c9-c13aec9f62f9",
+      "date": "2026-04-17",
+      "stockNumber": "002745",
+      "stockName": "木林森",
+      "price": 8.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "机器人",
+        "人工智能"
+      ]
+    },
+    {
+      "uuid": "4dccb3a3-66aa-4269-bd76-0aa2d0e272fa",
+      "date": "2026-04-17",
+      "stockNumber": "603186",
+      "stockName": "华正新材",
+      "price": 75.35,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "芯片",
+        "PCB"
+      ]
+    },
+    {
+      "uuid": "c79c1ee6-00a4-4ddf-95cd-ad9239a503ee",
+      "date": "2026-04-17",
+      "stockNumber": "002635",
+      "stockName": "安洁科技",
+      "price": 16.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "苹果",
+        "柔性屏"
+      ]
+    },
+    {
+      "uuid": "9341a48e-4c65-4f6d-96ca-ed44d6ef6234",
+      "date": "2026-04-17",
+      "stockNumber": "002882",
+      "stockName": "金龙羽",
+      "price": 30.66,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "电缆"
+      ],
+      "notion": [
+        "固态电池",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "1c3907d6-d6be-4c97-89c9-68bf71e789b4",
+      "date": "2026-04-17",
+      "stockNumber": "002585",
+      "stockName": "双星新材",
+      "price": 7.46,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "PET铜箔",
+        "消费电子"
+      ]
+    },
+    {
+      "uuid": "e1acf3b1-377b-4265-87be-1f9facc9877b",
+      "date": "2026-04-17",
+      "stockNumber": "002647",
+      "stockName": "仁东控股",
+      "price": 10.49,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "多元金融"
+      ],
+      "notion": [
+        "芯片",
+        "摘帽"
+      ]
+    },
+    {
+      "uuid": "3e2b150c-0e83-4b79-9b74-df9ed94cdfb2",
+      "date": "2026-04-17",
+      "stockNumber": "600206",
+      "stockName": "有研新材",
+      "price": 23.29,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "598b5760-9f57-4e03-9f46-5d49036bc3ef",
+      "date": "2026-04-17",
+      "stockNumber": "600531",
+      "stockName": "豫光金铅",
+      "price": 14.63,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "黄金",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "0ede293f-05ce-4daf-a848-cc1b3169b72d",
+      "date": "2026-04-17",
+      "stockNumber": "002439",
+      "stockName": "启明星辰",
+      "price": 15.3,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "网络安全",
+        "AI智能体",
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "b5aab091-2de6-4f00-a3d9-d4178bc52c39",
+      "date": "2026-04-17",
+      "stockNumber": "000420",
+      "stockName": "吉林化纤",
+      "price": 5.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学纤维"
+      ],
+      "notion": [
+        "碳纤维",
+        "低空经济"
+      ]
     }
   ]
 }
