@@ -1,0 +1,2959 @@
+{
+  "stockData": [
+    {
+      "uuid": "4e563d38-d4c6-4c1b-a07d-f0573733374e",
+      "date": "2025-10-15",
+      "stockNumber": "002611",
+      "stockName": "东方精工",
+      "price": 18.92,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "包装机械"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "1047f889-544f-4268-bd21-b2b70c4cdff7",
+      "date": "2025-10-15",
+      "stockNumber": "002446",
+      "stockName": "盛路通信",
+      "price": 8.76,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "大赫兹"
+      ]
+    },
+    {
+      "uuid": "a99bae59-4f32-4d7d-a823-2aa0695830fc",
+      "date": "2025-10-15",
+      "stockNumber": "002533",
+      "stockName": "金杯电工",
+      "price": 13.04,
+      "future": "short",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "73c61693-9c7b-4535-b7d8-e33bdb9eb512",
+      "date": "2025-10-15",
+      "stockNumber": "002046",
+      "stockName": "国机精工",
+      "price": 28.58,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "风电"
+      ]
+    },
+    {
+      "uuid": "39f16dbf-19e2-4b68-912d-c322ddf37b22",
+      "date": "2025-10-15",
+      "stockNumber": "600210",
+      "stockName": "紫江企业",
+      "price": 7.58,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "9008af23-522b-4b5c-99e6-241a807d8ce2",
+      "date": "2025-10-15",
+      "stockNumber": "000612",
+      "stockName": "焦作万方",
+      "price": 9.45,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "铝"
+      ],
+      "notion": [
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "0202d372-cec3-4abc-97ef-de736d73ccdc",
+      "date": "2025-10-15",
+      "stockNumber": "002256",
+      "stockName": "兆新股份",
+      "price": 3.19,
+      "future": "none",
+      "comment": "观察",
+      "industry": [
+        "光伏"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "46203521-9447-4fa2-824c-5714110c649a",
+      "date": "2025-10-15",
+      "stockNumber": "603319",
+      "stockName": "美湖股份",
+      "price": 36.85,
+      "future": "none",
+      "comment": "观察",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "879e7a0a-6e35-49b3-8108-f23baf133162",
+      "date": "2025-10-15",
+      "stockNumber": "601579",
+      "stockName": "会稽山",
+      "price": 24.03,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "酒"
+      ],
+      "notion": [
+        "共同富裕示范区"
+      ]
+    },
+    {
+      "uuid": "0fcaccf0-d699-4b23-9dda-c2adca455f8f",
+      "date": "2025-10-15",
+      "stockNumber": "603367",
+      "stockName": "辰欣药业",
+      "price": 20.8,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "仿制药一致性评价"
+      ]
+    },
+    {
+      "uuid": "e073a030-76a3-4321-b335-866c2e46fa69",
+      "date": "2025-10-15",
+      "stockNumber": "600756",
+      "stockName": "浪潮软件",
+      "price": 15.99,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "智慧政务"
+      ]
+    },
+    {
+      "uuid": "9767dffd-846c-4c85-9354-f363ff082f02",
+      "date": "2025-10-15",
+      "stockNumber": "002497",
+      "stockName": "雅化集团",
+      "price": 15.58,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "民爆概念"
+      ]
+    },
+    {
+      "uuid": "b28346b2-d99e-4a8a-96af-e8f15ae8c570",
+      "date": "2025-10-15",
+      "stockNumber": "002317",
+      "stockName": "众生药业",
+      "price": 17.22,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "创新药"
+      ]
+    },
+    {
+      "uuid": "0ca6be83-4a7f-4ad0-b5fc-c4dbad6da94f",
+      "date": "2025-10-15",
+      "stockNumber": "000848",
+      "stockName": "承德露露",
+      "price": 9.05,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "饮料"
+      ],
+      "notion": [
+        "网红经济"
+      ]
+    },
+    {
+      "uuid": "566cc3e6-9e7b-488e-bd6e-e690f83fb182",
+      "date": "2025-10-16",
+      "stockNumber": "600730",
+      "stockName": "中国高科",
+      "price": 8.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "教育培训"
+      ],
+      "notion": [
+        "职业教育"
+      ]
+    },
+    {
+      "uuid": "305b47e4-44f1-4f48-9691-9222b7f3200d",
+      "date": "2025-10-16",
+      "stockNumber": "605055",
+      "stockName": "迎丰股份",
+      "price": 11.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "纺织制造"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "26a43137-bc67-4bcf-8f90-5fa739dad792",
+      "date": "2025-10-16",
+      "stockNumber": "003010",
+      "stockName": "若羽臣",
+      "price": 48.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 电商"
+      ],
+      "notion": [
+        "拼多多"
+      ]
+    },
+    {
+      "uuid": "d81e2b38-3849-47b3-ba27-280f4c834b54",
+      "date": "2025-10-16",
+      "stockNumber": "000796",
+      "stockName": "凯撒旅业",
+      "price": 6.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 旅游"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
+    },
+    {
+      "uuid": "4fd3c245-62da-4284-8bfe-7c2f0ec256b1",
+      "date": "2025-10-16",
+      "stockNumber": "603061",
+      "stockName": "金海通",
+      "price": 139.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "b5f344c5-a484-417f-974a-80d7b7f7ec02",
+      "date": "2025-10-16",
+      "stockNumber": "002390",
+      "stockName": "信邦制药",
+      "price": 3.87,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "医药电商"
+      ]
+    },
+    {
+      "uuid": "43277f71-9f39-48c7-8cad-9df367d47368",
+      "date": "2025-10-16",
+      "stockNumber": "601579",
+      "stockName": "会稽山",
+      "price": 24.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "酒"
+      ],
+      "notion": [
+        "共同富裕示范区"
+      ]
+    },
+    {
+      "uuid": "2e553c19-22e4-41dd-a8bf-de5fa641fd93",
+      "date": "2025-10-16",
+      "stockNumber": "600523",
+      "stockName": "贵航股份",
+      "price": 15.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "成飞概念"
+      ]
+    },
+    {
+      "uuid": "ab6a3c9c-77a9-4e12-b55a-6c4f5aceed07",
+      "date": "2025-10-16",
+      "stockNumber": "000886",
+      "stockName": "海南高速",
+      "price": 7.05,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "高速"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
+    },
+    {
+      "uuid": "2e876e56-8d3e-4cae-9a23-06ef45875b74",
+      "date": "2025-10-16",
+      "stockNumber": "002497",
+      "stockName": "雅化集团",
+      "price": 16.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "民爆概念"
+      ]
+    },
+    {
+      "uuid": "a8e55bcb-63ef-4dfc-840e-29e2bda7586a",
+      "date": "2025-10-16",
+      "stockNumber": "600775",
+      "stockName": "南京熊猫",
+      "price": 12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "脑机接口"
+      ]
+    },
+    {
+      "uuid": "637ba184-ca38-401d-813a-8ebbb01cca01",
+      "date": "2025-10-16",
+      "stockNumber": "002651",
+      "stockName": "利君股份",
+      "price": 11.86,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "成飞概念"
+      ]
+    },
+    {
+      "uuid": "c059dc90-776b-408e-bad6-3b4cb93fca96",
+      "date": "2025-10-16",
+      "stockNumber": "600178",
+      "stockName": "东安动力",
+      "price": 13.81,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "兵装重组"
+      ]
+    },
+    {
+      "uuid": "c2f57ae5-635c-4a6c-9758-6f3d2ca42098",
+      "date": "2025-10-17",
+      "stockNumber": "603931",
+      "stockName": "格林达",
+      "price": 31.25,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "19682e25-c412-40c8-84bd-1757cc63316d",
+      "date": "2025-10-17",
+      "stockNumber": "600496",
+      "stockName": "精工钢构",
+      "price": 4.24,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "钢结构"
+      ],
+      "notion": [
+        "装配式建筑"
+      ]
+    },
+    {
+      "uuid": "0af75c3d-7c20-45b2-9923-0359273a174e",
+      "date": "2025-10-17",
+      "stockNumber": "000600",
+      "stockName": "建投能源",
+      "price": 9.43,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "三季报预增"
+      ]
+    },
+    {
+      "uuid": "f5fad4e0-99f5-4b0b-a0fa-8eb7141930ad",
+      "date": "2025-10-17",
+      "stockNumber": "600179",
+      "stockName": "安通控股",
+      "price": 4.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航运港口"
+      ],
+      "notion": [
+        "自由贸易港"
+      ]
+    },
+    {
+      "uuid": "e53b975c-440f-4ab4-b6ed-b849ac59254e",
+      "date": "2025-10-17",
+      "stockNumber": "600545",
+      "stockName": "卓朗智能",
+      "price": 3.17,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "新型工业化"
+      ]
+    },
+    {
+      "uuid": "a38b4e02-4d67-4149-b9b5-134ce6affcc4",
+      "date": "2025-10-17",
+      "stockNumber": "603189",
+      "stockName": "网达软件",
+      "price": 22.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "乡村振兴"
+      ]
+    },
+    {
+      "uuid": "aaf20781-1114-4bec-a654-4d9913e5c047",
+      "date": "2025-10-20",
+      "stockNumber": "600123",
+      "stockName": "兰花科创",
+      "price": 7.12,
+      "future": "none",
+      "comment": "观望",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "36423f78-77ca-4fa5-bb6e-93c87c93dc75",
+      "date": "2025-10-20",
+      "stockNumber": "603131",
+      "stockName": "上海沪工",
+      "price": 22.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "d736d7ad-dad2-459c-981a-57ba0a46c0c5",
+      "date": "2025-10-20",
+      "stockNumber": "002527",
+      "stockName": "新时达",
+      "price": 17.77,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "b2e43065-5021-4154-a5eb-de00ae79c5b7",
+      "date": "2025-10-20",
+      "stockNumber": "002766",
+      "stockName": "索菱股份",
+      "price": 6,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        " 汽车零部件"
+      ],
+      "notion": [
+        "5G"
+      ]
+    },
+    {
+      "uuid": "7212ca98-1969-4173-a09c-cdc8593b31d1",
+      "date": "2025-10-20",
+      "stockNumber": "000558",
+      "stockName": "天府文旅",
+      "price": 5.39,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "体育产业"
+      ]
+    },
+    {
+      "uuid": "4e5a4a39-aa70-4c7d-8313-05c2fdeb5f78",
+      "date": "2025-10-20",
+      "stockNumber": "002497",
+      "stockName": "雅化集团",
+      "price": 16.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "民爆概念"
+      ]
+    },
+    {
+      "uuid": "769d00d2-f35a-450e-98ab-f93700b32867",
+      "date": "2025-10-20",
+      "stockNumber": "600640",
+      "stockName": "国脉文化",
+      "price": 14.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "数字媒体"
+      ],
+      "notion": [
+        "Sora"
+      ]
+    },
+    {
+      "uuid": "3c7ca07d-c20f-4434-82cb-eabb51366c88",
+      "date": "2025-10-20",
+      "stockNumber": "002317",
+      "stockName": "众生药业",
+      "price": 18.2,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "创新药"
+      ]
+    },
+    {
+      "uuid": "098fb913-0971-4bcc-a8d2-10aaf6c5f6fb",
+      "date": "2025-10-21",
+      "stockNumber": "603822",
+      "stockName": "嘉澳环保",
+      "price": 95.5,
+      "future": "none",
+      "comment": "观望 太高了",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "碳中和"
+      ]
+    },
+    {
+      "uuid": "d41d0ab1-2d7d-4d4d-aa62-90dc5d09ec59",
+      "date": "2025-10-21",
+      "stockNumber": "002448",
+      "stockName": "中原内配",
+      "price": 11.04,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "汽车电子"
+      ]
+    },
+    {
+      "uuid": "229d84cf-ccbc-47b6-8922-5465bff6f836",
+      "date": "2025-10-21",
+      "stockNumber": "002204",
+      "stockName": "大连重工",
+      "price": 6.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "核电"
+      ]
+    },
+    {
+      "uuid": "f45838ae-99a1-43e2-bb42-40d8d562b29c",
+      "date": "2025-10-21",
+      "stockNumber": "600288",
+      "stockName": "大恒科技",
+      "price": 15.05,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "cc2e6b43-0b9d-43de-93a8-9cd6011f1618",
+      "date": "2025-10-21",
+      "stockNumber": "603299",
+      "stockName": "苏盐井神",
+      "price": 11.63,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "a8ec4fe7-71fc-4378-bbd6-6cae12aaea88",
+      "date": "2025-10-21",
+      "stockNumber": "600425",
+      "stockName": "青松建化",
+      "price": 4.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "水泥"
+      ],
+      "notion": [
+        "水泥"
+      ]
+    },
+    {
+      "uuid": "e3eb5b7a-c83c-4d3c-8fe1-47d1978cfe6f",
+      "date": "2025-10-21",
+      "stockNumber": "600759",
+      "stockName": "洲际油气",
+      "price": 2.49,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "油气开采"
+      ],
+      "notion": [
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "f183e752-b45f-4e5d-b0a9-18982b08c667",
+      "date": "2025-10-21",
+      "stockNumber": "002482",
+      "stockName": "广田集团",
+      "price": 1.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "装修装饰"
+      ],
+      "notion": [
+        "装配式建筑"
+      ]
+    },
+    {
+      "uuid": "5d00b934-f761-4672-a8fa-2b2abe564c9b",
+      "date": "2025-10-21",
+      "stockNumber": "600545",
+      "stockName": "卓郎智能",
+      "price": 3.26,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "新型工业化"
+      ]
+    },
+    {
+      "uuid": "325e8577-e795-4983-b922-214be0ec7e62",
+      "date": "2025-10-21",
+      "stockNumber": "002870",
+      "stockName": "香山股份",
+      "price": 42.17,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "智能座舱"
+      ]
+    },
+    {
+      "uuid": "f5ed1a0b-32db-4923-8b4c-9e0cac0a66f9",
+      "date": "2025-10-21",
+      "stockNumber": "000501",
+      "stockName": "武商集团",
+      "price": 10.51,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "物业管理"
+      ]
+    },
+    {
+      "uuid": "7a7b9922-b316-4c4d-b540-9daaf099579a",
+      "date": "2025-10-22",
+      "stockNumber": "002681",
+      "stockName": "奋达科技",
+      "price": 6.93,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "3297f380-9c15-46e6-b21c-50e83cf72bc0",
+      "date": "2025-10-22",
+      "stockNumber": "605133",
+      "stockName": "嵘泰股份",
+      "price": 43.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "工业母机"
+      ]
+    },
+    {
+      "uuid": "19749a83-50b3-40e0-af25-13201ef768b3",
+      "date": "2025-10-22",
+      "stockNumber": "600336",
+      "stockName": "澳柯玛",
+      "price": 7.31,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "家用电器"
+      ]
+    },
+    {
+      "uuid": "8d1118fc-0ca4-4ac5-95d4-a109654954db",
+      "date": "2025-10-22",
+      "stockNumber": "600880",
+      "stockName": "博瑞传播",
+      "price": 5.16,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "教育"
+      ],
+      "notion": [
+        "人工智能"
+      ]
+    },
+    {
+      "uuid": "fe371d4d-0910-4929-b364-4fc512657c7b",
+      "date": "2025-10-22",
+      "stockNumber": "002390",
+      "stockName": "信邦制药",
+      "price": 4.01,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "医药电商"
+      ]
+    },
+    {
+      "uuid": "173ebe56-81e5-4207-a889-97cbcc6e5fec",
+      "date": "2025-10-22",
+      "stockNumber": "605580",
+      "stockName": "恒生能源",
+      "price": 34.1,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "固废处理"
+      ]
+    },
+    {
+      "uuid": "252853c7-e324-4963-8763-14e9e610424a",
+      "date": "2025-10-22",
+      "stockNumber": "002038",
+      "stockName": "双鹭药业",
+      "price": 7.79,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "创新药"
+      ]
+    },
+    {
+      "uuid": "1c03603d-a4b6-42fd-a65c-b834cde669e9",
+      "date": "2025-10-22",
+      "stockNumber": "002174",
+      "stockName": "游族网络",
+      "price": 12.98,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "游戏"
+      ],
+      "notion": [
+        "华为"
+      ]
+    },
+    {
+      "uuid": "d7f492ac-63d6-457a-b6ef-714f4e6d3dfb",
+      "date": "2025-10-22",
+      "stockNumber": "000718",
+      "stockName": "苏宁环球",
+      "price": 2.83,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "文化传媒"
+      ]
+    },
+    {
+      "uuid": "f44de10f-a540-490c-a763-44567a34cb31",
+      "date": "2025-10-22",
+      "stockNumber": "603619",
+      "stockName": "中曼石油",
+      "price": 20.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "油气开采"
+      ],
+      "notion": [
+        "俄乌冲突"
+      ]
+    },
+    {
+      "uuid": "8e9d2512-57f3-4526-a6ed-b489a783773b",
+      "date": "2025-10-22",
+      "stockNumber": "002004",
+      "stockName": "华邦健康",
+      "price": 5.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "仿制药一致性评价"
+      ]
+    },
+    {
+      "uuid": "c5a2bce1-5943-4412-a77e-045c6770575e",
+      "date": "2025-10-22",
+      "stockNumber": "002240",
+      "stockName": "盛新锂能",
+      "price": 19.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "091bd0e8-2e8c-4b7e-8703-ccf7182b3c6e",
+      "date": "2025-10-22",
+      "stockNumber": "002146",
+      "stockName": "荣盛发展",
+      "price": 1.71,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "旅游"
+      ]
+    },
+    {
+      "uuid": "0d79907c-85e1-4598-b947-e61b70d14ad5",
+      "date": "2025-10-23",
+      "stockNumber": "600123",
+      "stockName": "兰花科创",
+      "price": 7.07,
+      "future": "none",
+      "comment": "观望",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "00b0bf0e-44e7-477f-bfe8-8e9a07e029f1",
+      "date": "2025-10-23",
+      "stockNumber": "600971",
+      "stockName": "恒源煤电",
+      "price": 7.46,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "16dd5482-3498-4bb8-9f30-22aab162685d",
+      "date": "2025-10-23",
+      "stockNumber": "000980",
+      "stockName": "众泰汽车",
+      "price": 3.85,
+      "future": "short",
+      "comment": "",
+      "industry": [
+        "乘用车"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "4ff77b6c-47c9-46c0-9231-5d2fa3310e40",
+      "date": "2025-10-23",
+      "stockNumber": "603069",
+      "stockName": "海汽集团",
+      "price": 27.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "铁路公路"
+      ],
+      "notion": [
+        "旅游"
+      ]
+    },
+    {
+      "uuid": "e6a67dc0-1ddc-4f37-ac8c-9bfd7caf0964",
+      "date": "2025-10-23",
+      "stockNumber": "002564",
+      "stockName": "天沃科技",
+      "price": 9.38,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "煤化工"
+      ]
+    },
+    {
+      "uuid": "edb856bb-f8b2-422d-ac54-89bd5f88384e",
+      "date": "2025-10-23",
+      "stockNumber": "000016",
+      "stockName": "深康佳",
+      "price": 5.56,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "白色家电"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "a3117041-8bce-4ea7-9108-68902bb5afbe",
+      "date": "2025-10-23",
+      "stockNumber": "000096",
+      "stockName": "广聚能源",
+      "price": 12.18,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "炼化及贸易"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "e6b86046-3fc4-4a0f-a4b4-566740ea02d1",
+      "date": "2025-10-23",
+      "stockNumber": "600756",
+      "stockName": "浪潮软件",
+      "price": 16.36,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "智慧政务"
+      ]
+    },
+    {
+      "uuid": "23e906a1-5ef3-4ce0-861b-d8bbbecbf0e3",
+      "date": "2025-10-23",
+      "stockNumber": "605255",
+      "stockName": "天普股份",
+      "price": 95.57,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "8528388f-8837-4a3e-937f-ac228f0fa3a9",
+      "date": "2025-10-23",
+      "stockNumber": "002183",
+      "stockName": "怡亚通",
+      "price": 5.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "深圳国企改革"
+      ]
+    },
+    {
+      "uuid": "ec68f2f9-b3ff-4a5b-8bbb-0c72f1a8c1d6",
+      "date": "2025-10-24",
+      "stockNumber": "002276",
+      "stockName": "万马股份",
+      "price": 17.56,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "0ac5ea4c-aa33-401e-ad78-1db2c50c9bab",
+      "date": "2025-10-24",
+      "stockNumber": "603283",
+      "stockName": "赛腾股份",
+      "price": 45.89,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "存储芯片"
+      ]
+    },
+    {
+      "uuid": "36e268ed-93c2-4b2a-845a-d2f022be8bcc",
+      "date": "2025-10-24",
+      "stockNumber": "002756",
+      "stockName": "永兴材料",
+      "price": 40.48,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "18b2a331-f6c6-4c77-9692-132f0e5b404b",
+      "date": "2025-10-24",
+      "stockNumber": "600986",
+      "stockName": "浙文互联",
+      "price": 8.93,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "AIGC"
+      ]
+    },
+    {
+      "uuid": "1cbf01d8-7923-4193-9339-94bc3da3eb49",
+      "date": "2025-10-24",
+      "stockNumber": "002256",
+      "stockName": "兆新股份",
+      "price": 3.16,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "1c77cacf-4631-4727-a92d-54e94a6a8f32",
+      "date": "2025-10-24",
+      "stockNumber": "002094",
+      "stockName": "青岛金王",
+      "price": 8,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "家具用品"
+      ],
+      "notion": [
+        "跨境支付"
+      ]
+    },
+    {
+      "uuid": "1bfc88e4-d0fb-47ce-9588-65f9787e4fe7",
+      "date": "2025-10-24",
+      "stockNumber": "600502",
+      "stockName": "安徽建工",
+      "price": 4.97,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "基础建设"
+      ],
+      "notion": [
+        "抽水蓄能"
+      ]
+    },
+    {
+      "uuid": "0c56a5c4-b162-47db-879e-add873a99741",
+      "date": "2025-10-24",
+      "stockNumber": "002957",
+      "stockName": "科瑞技术",
+      "price": 22.31,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "共封装光学"
+      ]
+    },
+    {
+      "uuid": "6d2d5e61-af3f-4e47-b2f8-8b653f2ab450",
+      "date": "2025-10-24",
+      "stockNumber": "002632",
+      "stockName": "道明光学",
+      "price": 10.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "AI 手机"
+      ]
+    },
+    {
+      "uuid": "a5903985-ca30-4296-aa4f-0e7788a259ca",
+      "date": "2025-10-24",
+      "stockNumber": "603189",
+      "stockName": "网达软件",
+      "price": 23.3,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "MR"
+      ]
+    },
+    {
+      "uuid": "9e20f10d-8df0-4c10-a039-3b119ab4bb63",
+      "date": "2025-10-27",
+      "stockNumber": "603363",
+      "stockName": "傲农生物",
+      "price": 5.16,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "饲料"
+      ],
+      "notion": [
+        "猪肉"
+      ]
+    },
+    {
+      "uuid": "390f71b8-080d-4556-aadf-ace0e00d4de2",
+      "date": "2025-10-27",
+      "stockNumber": "601015",
+      "stockName": "陕西黑猫",
+      "price": 4.27,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "焦炭"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "640a0430-1f2d-4274-9268-eeceb919352c",
+      "date": "2025-10-27",
+      "stockNumber": "002734",
+      "stockName": "利民股份",
+      "price": 18.79,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "合成生物"
+      ]
+    },
+    {
+      "uuid": "cdefca4e-0a6c-4df7-9281-062046bbed0a",
+      "date": "2025-10-27",
+      "stockNumber": "000700",
+      "stockName": "模塑科技",
+      "price": 9.72,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "84f95db9-bacd-4feb-8721-6c1a047a1df3",
+      "date": "2025-10-27",
+      "stockNumber": "002975",
+      "stockName": "博杰股份",
+      "price": 59.34,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "存储芯片"
+      ]
+    },
+    {
+      "uuid": "ea301d71-378d-4290-a5b1-f35f01048616",
+      "date": "2025-10-27",
+      "stockNumber": "600268",
+      "stockName": "国电南自",
+      "price": 12.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "超超临界发电"
+      ]
+    },
+    {
+      "uuid": "28c80ad3-e8a2-4afa-8313-c6731f381a09",
+      "date": "2025-10-27",
+      "stockNumber": "603026",
+      "stockName": "石大胜华",
+      "price": 56.62,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "氟化工"
+      ]
+    },
+    {
+      "uuid": "f4c32eff-3711-443e-b6a3-f92934cdd9ae",
+      "date": "2025-10-27",
+      "stockNumber": "603456",
+      "stockName": "九州药业",
+      "price": 19.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医疗服务"
+      ],
+      "notion": [
+        "CRO"
+      ]
+    },
+    {
+      "uuid": "5b134d01-bc0e-42fa-a768-fb80e7c2b772",
+      "date": "2025-10-27",
+      "stockNumber": "000655",
+      "stockName": "金岭矿业",
+      "price": 10.64,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 冶钢原料"
+      ],
+      "notion": [
+        "金属铜"
+      ]
+    },
+    {
+      "uuid": "fee139a2-6eb5-44f6-b191-91128ec63ff4",
+      "date": "2025-10-27",
+      "stockNumber": "603931",
+      "stockName": "格林达",
+      "price": 29.31,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "177a9445-a125-483f-a4c3-154b340ffb85",
+      "date": "2025-10-27",
+      "stockNumber": "002448",
+      "stockName": "中原内配",
+      "price": 11.45,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "工业母机"
+      ]
+    },
+    {
+      "uuid": "d24ab331-3cfe-4afa-90c6-ec95c50e8b43",
+      "date": "2025-10-27",
+      "stockNumber": "002052",
+      "stockName": "同洲电子",
+      "price": 16.37,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他能源设备"
+      ],
+      "notion": [
+        "东数西算"
+      ]
+    },
+    {
+      "uuid": "02478e18-451b-4c5a-a38c-c8172a64cc70",
+      "date": "2025-10-27",
+      "stockNumber": "603667",
+      "stockName": "五洲新春",
+      "price": 43.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "9c27a0df-b486-4d8f-aa32-ae026f9efc12",
+      "date": "2025-10-27",
+      "stockNumber": "002169",
+      "stockName": "智光电气",
+      "price": 8.13,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "钒电池"
+      ]
+    },
+    {
+      "uuid": "5c0f10af-fce3-477d-94eb-97818c1b96c7",
+      "date": "2025-10-27",
+      "stockNumber": "003009",
+      "stockName": "中天火箭",
+      "price": 54.92,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航天装备"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "14e46dd4-5542-46f1-b8b2-789ff2742c93",
+      "date": "2025-10-27",
+      "stockNumber": "603612",
+      "stockName": "索通发展",
+      "price": 25.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "非金属材料"
+      ],
+      "notion": [
+        "宁德时代"
+      ]
+    },
+    {
+      "uuid": "d77f5b12-906a-4c9e-bb78-0dc4daad5797",
+      "date": "2025-10-27",
+      "stockNumber": "002782",
+      "stockName": "可立克",
+      "price": 18.32,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "消费电子"
+      ]
+    },
+    {
+      "uuid": "d32f5f78-88c9-4381-9491-30838fb22731",
+      "date": "2025-10-27",
+      "stockNumber": "000973",
+      "stockName": "佛塑科技",
+      "price": 7.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "6e74608a-a321-411b-84af-69e92d2ac5d0",
+      "date": "2025-10-27",
+      "stockNumber": "000880",
+      "stockName": "淮柴重机",
+      "price": 30.85,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "海工装备"
+      ]
+    },
+    {
+      "uuid": "21ed6ed1-9c44-414e-9837-c4400ce0389c",
+      "date": "2025-10-27",
+      "stockNumber": "002250",
+      "stockName": "联化科技",
+      "price": 12.12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "创新药"
+      ]
+    },
+    {
+      "uuid": "50b07055-2372-4e06-891e-7e807b971042",
+      "date": "2025-10-27",
+      "stockNumber": "600468",
+      "stockName": "百利电气",
+      "price": 7.1,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "df94d571-925d-44c5-a105-ecf7ca7556df",
+      "date": "2025-10-27",
+      "stockNumber": "002023",
+      "stockName": "海特高新",
+      "price": 12.65,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "低空经济"
+      ]
+    },
+    {
+      "uuid": "409ddbda-8862-477f-af54-84a599884a0f",
+      "date": "2025-10-27",
+      "stockNumber": "002011",
+      "stockName": "盾安环境",
+      "price": 14.05,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "家电零部件"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "159fa0e2-527b-4de9-b1df-6daa90a72289",
+      "date": "2025-10-27",
+      "stockNumber": "603283",
+      "stockName": "腾赛股份",
+      "price": 48.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 自动化设备"
+      ],
+      "notion": [
+        "存储芯片"
+      ]
+    },
+    {
+      "uuid": "2c9acc1d-2f93-4685-abc3-f24ee2cca75b",
+      "date": "2025-10-27",
+      "stockNumber": "002523",
+      "stockName": "天桥起重",
+      "price": 4.34,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "核电"
+      ]
+    },
+    {
+      "uuid": "1f3a8255-482a-4ad7-bd45-c7ecdac5ad75",
+      "date": "2025-10-27",
+      "stockNumber": "001389",
+      "stockName": "广合科技",
+      "price": 81.79,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "AI PC"
+      ]
+    },
+    {
+      "uuid": "6452b9db-1c86-47c3-a8d8-71a3f7a9fa1d",
+      "date": "2025-10-27",
+      "stockNumber": "600353",
+      "stockName": "旭光电子",
+      "price": 16.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "共封装光学"
+      ]
+    },
+    {
+      "uuid": "4abcb571-109e-4651-8d31-c90a71e8512e",
+      "date": "2025-10-27",
+      "stockNumber": "002240",
+      "stockName": "盛新锂能",
+      "price": 22.48,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "79f4198a-09dc-4643-9dda-bd8c71eb7513",
+      "date": "2025-10-27",
+      "stockNumber": "603032",
+      "stockName": "德新科技",
+      "price": 22.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "b77cae02-b1c2-450b-9d31-fe1d534297e9",
+      "date": "2025-10-28",
+      "stockNumber": "002291",
+      "stockName": "遥望科技",
+      "price": 6.94,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "Web3.0"
+      ]
+    },
+    {
+      "uuid": "359e1228-a0c7-4e07-b9a3-96e5b3440a95",
+      "date": "2025-10-28",
+      "stockNumber": "603200",
+      "stockName": "上海洗霸",
+      "price": 87.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "837a9811-b88e-4f16-b5a5-d9178b261a70",
+      "date": "2025-10-28",
+      "stockNumber": "600698",
+      "stockName": "湖南天雁",
+      "price": 10.44,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "兵装重组"
+      ]
+    },
+    {
+      "uuid": "457bfd56-b2db-48b6-8e56-397e65092c41",
+      "date": "2025-10-28",
+      "stockNumber": "600590",
+      "stockName": "泰豪科技",
+      "price": 9.8,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军工"
+      ]
+    },
+    {
+      "uuid": "cb6d588a-a3cb-448c-b554-5fdedb7eb2c2",
+      "date": "2025-10-28",
+      "stockNumber": "600589",
+      "stockName": "大位科技",
+      "price": 7.57,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "算力租赁"
+      ]
+    },
+    {
+      "uuid": "4beecc09-d63a-403d-93a6-2827c5cbf448",
+      "date": "2025-10-28",
+      "stockNumber": "002108",
+      "stockName": "沧州明珠",
+      "price": 4.34,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "f826b347-7fc8-46eb-bf40-0cfbb2d2b7e1",
+      "date": "2025-10-28",
+      "stockNumber": "002428",
+      "stockName": "云南锗业",
+      "price": 27.96,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "小金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "80f3bd1a-3b84-46cf-868c-6a5d10c3ac31",
+      "date": "2025-10-28",
+      "stockNumber": "600693",
+      "stockName": "东百集团",
+      "price": 6.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        " 一般零售"
+      ],
+      "notion": [
+        "统一大市场"
+      ]
+    },
+    {
+      "uuid": "aa97376c-60e9-462d-b3b0-54b5f8ff919c",
+      "date": "2025-10-28",
+      "stockNumber": "002448",
+      "stockName": "中原内配",
+      "price": 11.81,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "9ef143c4-9630-4ba0-9617-5b8e4f340f37",
+      "date": "2025-10-28",
+      "stockNumber": "000536",
+      "stockName": "华映科技",
+      "price": 5.06,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "海峡两岸"
+      ]
+    },
+    {
+      "uuid": "418c8b6e-19da-4fdb-a07d-9c4fc66f9b03",
+      "date": "2025-10-28",
+      "stockNumber": "600734",
+      "stockName": "实达集团",
+      "price": 3.61,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "IT 服务"
+      ],
+      "notion": [
+        "算力租赁"
+      ]
+    },
+    {
+      "uuid": "5040c19b-7928-4aed-8162-8b2078bafc86",
+      "date": "2025-10-28",
+      "stockNumber": "601890",
+      "stockName": "亚星锚链",
+      "price": 10.29,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航海设备"
+      ],
+      "notion": [
+        "海工装备"
+      ]
+    },
+    {
+      "uuid": "d8342784-3df8-412d-87e7-f2e74732327a",
+      "date": "2025-10-28",
+      "stockNumber": "600278",
+      "stockName": "东方创业",
+      "price": 8.2,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "贸易"
+      ],
+      "notion": [
+        "上海国企改革"
+      ]
+    },
+    {
+      "uuid": "c4b5c311-88eb-4a3e-9026-fd63ade4a115",
+      "date": "2025-10-28",
+      "stockNumber": "601388",
+      "stockName": "怡球资源",
+      "price": 3.12,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "铝"
+      ],
+      "notion": [
+        "汽车拆解"
+      ]
+    },
+    {
+      "uuid": "0c5c7a29-4781-4b30-95f1-6b0b83e960a6",
+      "date": "2025-10-27",
+      "stockNumber": "600067",
+      "stockName": "冠城新材",
+      "price": 3.67,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "51cde733-6422-467e-b164-3b855cc4511e",
+      "date": "2025-10-28",
+      "stockNumber": "000525",
+      "stockName": "红太阳",
+      "price": 6.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "摘帽"
+      ]
+    },
+    {
+      "uuid": "3de4f36c-0571-4ade-b766-b1a5dd23f4d6",
+      "date": "2025-10-28",
+      "stockNumber": "603978",
+      "stockName": "深圳新星",
+      "price": 25.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "金属新材料"
+      ],
+      "notion": [
+        "PVDF"
+      ]
+    },
+    {
+      "uuid": "179749da-eb55-45e8-bd3a-c1ed14b91b19",
+      "date": "2025-10-28",
+      "stockNumber": "000589",
+      "stockName": "贵州轮胎",
+      "price": 4.92,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "2cd2515c-37a4-4077-856f-27597b7d7ddd",
+      "date": "2025-10-28",
+      "stockNumber": "603466",
+      "stockName": "风语筑",
+      "price": 9.71,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "数字媒体"
+      ],
+      "notion": [
+        "MR"
+      ]
+    },
+    {
+      "uuid": "4cfa9e63-8f0a-40fc-a419-0df6cfe626d3",
+      "date": "2025-10-28",
+      "stockNumber": "600353",
+      "stockName": "旭光电子",
+      "price": 17.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "da921afa-dec0-4c21-9c11-a2f960f60917",
+      "date": "2025-10-28",
+      "stockNumber": "002077",
+      "stockName": "大港股份",
+      "price": 17.15,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "462fb9e2-942b-4d4a-aea1-6fff92b446fe",
+      "date": "2025-10-29",
+      "stockNumber": "601015",
+      "stockName": "陕西黑猫",
+      "price": 4.66,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "焦炭"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "1235d553-97e7-42ec-8d12-d4a068151dc8",
+      "date": "2025-10-29",
+      "stockNumber": "002734",
+      "stockName": "利民股份",
+      "price": 19.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "合成生物"
+      ]
+    },
+    {
+      "uuid": "459e78fa-3b44-4d87-835b-76c6655e2be9",
+      "date": "2025-10-29",
+      "stockNumber": "002437",
+      "stockName": "誉衡药业",
+      "price": 3.34,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "肝炎"
+      ]
+    },
+    {
+      "uuid": "4a4700df-8f2d-4e2f-86f0-794ae126a461",
+      "date": "2025-10-29",
+      "stockNumber": "002108",
+      "stockName": "沧州明珠",
+      "price": 4.48,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "62929578-e2c0-4de1-add4-3e27dd3409df",
+      "date": "2025-10-29",
+      "stockNumber": "002269",
+      "stockName": "美邦服饰",
+      "price": 2.4,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "IP 经济"
+      ]
+    },
+    {
+      "uuid": "b1ff9123-14b6-4f09-b2c2-b68fd684df8d",
+      "date": "2025-10-29",
+      "stockNumber": "603931",
+      "stockName": "格林达",
+      "price": 30.25,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "3f89ab50-c56c-4c27-acb7-2095db63cf97",
+      "date": "2025-10-29",
+      "stockNumber": "002645",
+      "stockName": "华宏科技",
+      "price": 17,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "稀土永磁"
+      ]
+    },
+    {
+      "uuid": "fd76997b-8625-410f-a77d-4bb149def2ff",
+      "date": "2025-10-29",
+      "stockNumber": "000751",
+      "stockName": "锌业股份",
+      "price": 3.97,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "锌"
+      ]
+    },
+    {
+      "uuid": "6e24ea3d-48bc-4177-be50-92a2a14a6d2d",
+      "date": "2025-10-29",
+      "stockNumber": "002170",
+      "stockName": "芭田股份",
+      "price": 11.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "9df665fe-24c0-407d-89f7-10edfdf0fd7d",
+      "date": "2025-10-29",
+      "stockNumber": "002756",
+      "stockName": "永兴材料",
+      "price": 41.65,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "b44cdc6e-06bf-4402-b43f-9dd5591d2618",
+      "date": "2025-10-29",
+      "stockNumber": "003009",
+      "stockName": "中天火箭",
+      "price": 56.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航天装备"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "67ee5c5c-9b4b-42c2-80aa-ee29f1040844",
+      "date": "2025-10-29",
+      "stockNumber": "600110",
+      "stockName": "诺德股份",
+      "price": 6.93,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "PCB"
+      ]
+    },
+    {
+      "uuid": "13199b25-f9c1-4705-a496-8f62e6f176c2",
+      "date": "2025-10-29",
+      "stockNumber": "002536",
+      "stockName": "飞龙股份",
+      "price": 23.39,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "51f479b0-518a-4a46-ad28-25e7658379de",
+      "date": "2025-10-29",
+      "stockNumber": "000735",
+      "stockName": "罗牛山",
+      "price": 7.17,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "养殖业"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
+    },
+    {
+      "uuid": "b7ab7f6a-ae57-494e-b382-9f986e8fc663",
+      "date": "2025-10-29",
+      "stockNumber": "600361",
+      "stockName": "创新新材",
+      "price": 4.55,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "苹果"
+      ]
+    },
+    {
+      "uuid": "fec56100-6be8-4e56-b143-ab1630d83b12",
+      "date": "2025-10-29",
+      "stockNumber": "603579",
+      "stockName": "荣泰健康",
+      "price": 33.11,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他家电"
+      ],
+      "notion": [
+        "专精特新"
+      ]
+    },
+    {
+      "uuid": "3609bf8d-f012-4948-a4a8-bd9305bb74ce",
+      "date": "2025-10-29",
+      "stockNumber": "003040",
+      "stockName": "楚天龙",
+      "price": 21.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "数字货币"
+      ]
+    },
+    {
+      "uuid": "92d0b8ab-6bf6-4e1e-973a-4d76d2a56e7b",
+      "date": "2025-10-29",
+      "stockNumber": "603703",
+      "stockName": "盛洋科技",
+      "price": 12.75,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "61382e56-b7f7-4f9d-aee4-7de191c6c42f",
+      "date": "2025-10-29",
+      "stockNumber": "002246",
+      "stockName": "北化股份",
+      "price": 20.66,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "军民融合"
+      ]
+    },
+    {
+      "uuid": "0c87731a-ea2f-4c1f-a250-5bd3aede5822",
+      "date": "2025-10-29",
+      "stockNumber": "000886",
+      "stockName": "海南高速",
+      "price": 7.45,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "铁路公路"
+      ],
+      "notion": [
+        "海南自贸区"
+      ]
+    },
+    {
+      "uuid": "f6203b05-6ac2-442e-abd0-5473ddd95a61",
+      "date": "2025-10-29",
+      "stockNumber": "001283",
+      "stockName": "豪鹏科技",
+      "price": 77.17,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "钠离子电池"
+      ]
+    },
+    {
+      "uuid": "c4042f15-c224-4ab2-b948-fb3ec299a1b6",
+      "date": "2025-10-29",
+      "stockNumber": "600338",
+      "stockName": "西藏珠峰",
+      "price": 13.91,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "工业金属"
+      ],
+      "notion": [
+        "锌"
+      ]
+    },
+    {
+      "uuid": "b8f01d04-6fcd-4e8a-87ec-f38696e22e4b",
+      "date": "2025-10-29",
+      "stockNumber": "001286",
+      "stockName": "陕西能源",
+      "price": 9.76,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "煤炭"
+      ]
+    },
+    {
+      "uuid": "24b5d1cd-d1f8-4851-95d8-3e41c15f2283",
+      "date": "2025-10-29",
+      "stockNumber": "002961",
+      "stockName": "瑞达期货",
+      "price": 25.3,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "多元金融"
+      ],
+      "notion": [
+        "期货"
+      ]
+    },
+    {
+      "uuid": "fd6682a3-49bd-4e7a-acd1-76be05e2056b",
+      "date": "2025-10-29",
+      "stockNumber": "002882",
+      "stockName": "金龙羽",
+      "price": 31.87,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "固态电池"
+      ]
+    },
+    {
+      "uuid": "f9836939-9d6b-45d0-af6d-6f75649038ee",
+      "date": "2025-10-29",
+      "stockNumber": "603090",
+      "stockName": "宏盛股份",
+      "price": 57.49,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "b9e0a71c-8172-43fb-97b4-ebe9e06f7d38",
+      "date": "2025-10-30",
+      "stockNumber": "001301",
+      "stockName": "尚太科技",
+      "price": 93.02,
+      "future": "long",
+      "comment": "基金重仓, 关注",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "石墨电极"
+      ]
+    },
+    {
+      "uuid": "adbc7999-597b-4745-b7e7-cbc9032673b4",
+      "date": "2025-10-30",
+      "stockNumber": "601975",
+      "stockName": "招商南油",
+      "price": 3.37,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "航运港口"
+      ],
+      "notion": [
+        "航运"
+      ]
+    },
+    {
+      "uuid": "a3b07015-ca0f-44dc-8a1a-d717d6912e2e",
+      "date": "2025-10-30",
+      "stockNumber": "603906",
+      "stockName": "龙蟠科技",
+      "price": 16.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "宁德时代"
+      ]
+    },
+    {
+      "uuid": "1c20f541-35bc-4280-b288-178472bcd580",
+      "date": "2025-10-30",
+      "stockNumber": "603108",
+      "stockName": "润达医疗",
+      "price": 15.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医药商业"
+      ],
+      "notion": [
+        "华为盘古"
+      ]
+    },
+    {
+      "uuid": "9ce899dc-bdf3-460f-bd29-1a99106e6300",
+      "date": "2025-10-30",
+      "stockNumber": "603800",
+      "stockName": "洪田股份",
+      "price": 56.28,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "光刻机"
+      ]
+    },
+    {
+      "uuid": "09d6efa3-fdca-44e7-ba29-0a7018355c36",
+      "date": "2025-10-30",
+      "stockNumber": "605100",
+      "stockName": "华丰股份",
+      "price": 30.09,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "汽车电子"
+      ]
+    },
+    {
+      "uuid": "143be314-d909-4d6b-bd6f-ac020e3d91d6",
+      "date": "2025-10-30",
+      "stockNumber": "600960",
+      "stockName": "渤海汽车",
+      "price": 5.73,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "中俄贸易"
+      ]
+    },
+    {
+      "uuid": "b112e571-e93e-4de8-83fa-4d473f4677d2",
+      "date": "2025-10-30",
+      "stockNumber": "603399",
+      "stockName": "永杉锂业",
+      "price": 10.36,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "能源金属"
+      ],
+      "notion": [
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "27b8dd71-864f-46e8-8a67-b00911671dd5",
+      "date": "2025-10-30",
+      "stockNumber": "600855",
+      "stockName": "航天长峰",
+      "price": 15.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "军工信息化"
+      ]
+    },
+    {
+      "uuid": "27b03f7e-dc04-451f-bdce-437ac09180be",
+      "date": "2025-10-30",
+      "stockNumber": "002161",
+      "stockName": " 远望谷",
+      "price": 8.07,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "无人零售"
+      ]
+    },
+    {
+      "uuid": "cc486fab-eefb-45c7-878b-4a82711951f5",
+      "date": "2025-10-30",
+      "stockNumber": "600748",
+      "stockName": "上实发展",
+      "price": 7.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "房地产开发"
+      ],
+      "notion": [
+        "土地流转"
+      ]
+    },
+    {
+      "uuid": "543693ae-82f8-4626-bcac-6e56616e443a",
+      "date": "2025-10-31",
+      "stockNumber": "002263",
+      "stockName": "大东南",
+      "price": 3.71,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "石墨烯"
+      ]
+    },
+    {
+      "uuid": "e470793f-ad1f-4017-9e70-8768cd404527",
+      "date": "2025-10-31",
+      "stockNumber": "002437",
+      "stockName": "誉衡药业",
+      "price": 3.4,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "医药电商"
+      ]
+    },
+    {
+      "uuid": "1a37972b-ea4c-4f42-a723-8d9e0f231387",
+      "date": "2025-10-31",
+      "stockNumber": "002489",
+      "stockName": "浙江永强",
+      "price": 3.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "家具用品"
+      ],
+      "notion": [
+        "体育产业"
+      ]
+    },
+    {
+      "uuid": "fd02aebc-e7df-41a6-ae98-10f96bb51475",
+      "date": "2025-10-31",
+      "stockNumber": "000920",
+      "stockName": "沃顿科技",
+      "price": 13.52,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "盐湖提锂"
+      ]
+    },
+    {
+      "uuid": "93884c84-3c71-4ad3-8d8e-8d73bdd30387",
+      "date": "2025-10-31",
+      "stockNumber": "002747",
+      "stockName": "埃斯顿",
+      "price": 24.43,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "c14b9ebb-652a-45bd-8184-f9e2cc240156",
+      "date": "2025-10-31",
+      "stockNumber": "002169",
+      "stockName": "智光电气",
+      "price": 8.28,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "虚拟电厂"
+      ]
+    },
+    {
+      "uuid": "1e4be40b-14db-4cdc-bad1-da78c9b533a9",
+      "date": "2025-10-31",
+      "stockNumber": "603901",
+      "stockName": "永创智能",
+      "price": 12.89,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "b722495b-3ed6-47f8-96f0-ffb2d4a80784",
+      "date": "2025-10-31",
+      "stockNumber": "002564",
+      "stockName": "天沃科技",
+      "price": 8.96,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "上海国企改革"
+      ]
+    },
+    {
+      "uuid": "3283e2c5-8b80-40c6-8d6e-fcacb22a32d2",
+      "date": "2025-10-31",
+      "stockNumber": "600300",
+      "stockName": "维维股份",
+      "price": 3.58,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "饮料乳品"
+      ],
+      "notion": [
+        "粮食"
+      ]
+    },
+    {
+      "uuid": "883a4ee2-f292-4a35-9a0f-d8f9a620475c",
+      "date": "2025-10-31",
+      "stockNumber": "000524",
+      "stockName": "岭南控股",
+      "price": 14.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "免税店"
+      ]
+    },
+    {
+      "uuid": "ae2a8b9f-e3c7-4cf5-a0d4-2b2cb4a50700",
+      "date": "2025-10-31",
+      "stockNumber": "002082",
+      "stockName": "万邦德",
+      "price": 15.82,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "中药"
+      ],
+      "notion": [
+        "阿尔兹海默"
+      ]
+    },
+    {
+      "uuid": "1c4b7ed2-1758-48b4-83c2-cb97ae8ca823",
+      "date": "2025-10-31",
+      "stockNumber": "603538",
+      "stockName": "美诺华",
+      "price": 23.83,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "化学制药"
+      ],
+      "notion": [
+        "减肥药"
+      ]
+    },
+    {
+      "uuid": "0822bce3-03df-456d-a40b-19afa3a7ea3f",
+      "date": "2025-10-31",
+      "stockNumber": "000973",
+      "stockName": "佛塑科技",
+      "price": 7.79,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "a4a07b4e-8e5b-4ff1-b79f-b28e9b119ecf",
+      "date": "2025-10-31",
+      "stockNumber": "603988",
+      "stockName": "中电电机",
+      "price": 27.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电机"
+      ],
+      "notion": [
+        "风电"
+      ]
+    },
+    {
+      "uuid": "fc7b2867-e501-417e-a51c-3c2e79ff18b6",
+      "date": "2025-10-31",
+      "stockNumber": "603787",
+      "stockName": "中马传动",
+      "price": 26.96,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "农机"
+      ]
+    },
+    {
+      "uuid": "713030be-c56a-41d1-bac8-284c7c350ac5",
+      "date": "2025-10-31",
+      "stockNumber": "603123",
+      "stockName": "翠微股份",
+      "price": 12.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "多元金融"
+      ],
+      "notion": [
+        "数字货币"
+      ]
+    },
+    {
+      "uuid": "c899b24d-379c-4baa-bf3e-5cb2a67cc350",
+      "date": "2025-10-31",
+      "stockNumber": "002250",
+      "stockName": "联化科技",
+      "price": 11.83,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "回购增持再贷款"
+      ]
+    },
+    {
+      "uuid": "9092a69a-64a3-425b-b273-a15daa850706",
+      "date": "2025-10-31",
+      "stockNumber": "002703",
+      "stockName": "浙江世宝",
+      "price": 13.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "小米汽车"
+      ]
+    },
+    {
+      "uuid": "34b0dbc6-f4c0-48c5-9d28-8189d4f776bd",
+      "date": "2025-10-31",
+      "stockNumber": "600571",
+      "stockName": "信雅达",
+      "price": 17.42,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "移动支付"
+      ]
+    },
+    {
+      "uuid": "96c47658-b283-44c2-8c9e-26abbb36c7b9",
+      "date": "2025-10-31",
+      "stockNumber": "002354",
+      "stockName": "天娱数科",
+      "price": 7.1,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "MR"
+      ]
+    },
+    {
+      "uuid": "43b7de13-58f1-43a1-8a61-ebc05584e848",
+      "date": "2025-10-31",
+      "stockNumber": "600185",
+      "stockName": "珠免集团",
+      "price": 6.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "旅游零售"
+      ],
+      "notion": [
+        "物业管理"
+      ]
+    },
+    {
+      "uuid": "f26afa12-bdd8-4c69-a420-a08aa1eaaee2",
+      "date": "2025-10-31",
+      "stockNumber": "603222",
+      "stockName": "济民健康",
+      "price": 10.19,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医疗器械"
+      ],
+      "notion": [
+        "细胞免疫治疗"
+      ]
+    },
+    {
+      "uuid": "76fbeefa-0c55-4499-a58c-796c97dc3468",
+      "date": "2025-10-31",
+      "stockNumber": "600207",
+      "stockName": "安彩高科",
+      "price": 5.74,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "光热发电"
+      ]
+    },
+    {
+      "uuid": "1851c2a2-1e2b-4515-bb91-f02ed1c5dc39",
+      "date": "2025-10-31",
+      "stockNumber": "603189",
+      "stockName": "网达软件",
+      "price": 23.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "软件开发"
+      ],
+      "notion": [
+        "华为欧拉"
+      ]
+    },
+    {
+      "uuid": "812089c0-2bf8-40ac-90bc-dbb17f6a4d07",
+      "date": "2025-10-31",
+      "stockNumber": "605255",
+      "stockName": "天普股份",
+      "price": 92.62,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "汽车热管理"
+      ]
+    }
+  ]
+}

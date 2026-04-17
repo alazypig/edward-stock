@@ -43,7 +43,7 @@ export const Analysis = () => {
     },
   ]
 
-  const fontSizeMapper = (word: { value: number }) => Math.log2(word.value) * 30
+  const fontSizeMapper = (word: { value: number }) => Math.log2(word.value) *8 
 
   return (
     <div>
@@ -91,7 +91,7 @@ export const Analysis = () => {
                 title="Industry Word Cloud"
                 style={{ flex: 1, minWidth: screens.xs ? 330 : 450 }}
               >
-                <div style={{ height: "200px", textAlign: "center" }}>
+                <div style={{ height: screens.xs ? '200px': '300px', textAlign: "center" }}>
                   {industryWords.length > 0 ? (
                     <WordCloud
                       data={industryWords}

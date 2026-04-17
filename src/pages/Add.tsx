@@ -114,70 +114,128 @@ export const Add = () => {
     try {
       const username = "alazypig"
       const repoName = "edward-stock"
-
-      const res = await fetch(
-        `https://api.github.com/repos/${username}/${repoName}/contents/data/stock.json`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        },
-      )
-
-      if (!res.ok) {
-        const error = await res.json()
-        messageApi.error(`Failed to fetch file: ${error.message}`)
-        return
-      }
-
+      
       localStorage.setItem("github_token", token)
 
-      const file: GitHubFile = await res.json()
-      const oldData: Stock[] =
-        JSON.parse(decodeURIComponent(escape(atob(file.content)))).stockData ??
-        []
+      // 1. Group new stocks by month
+      const groupedNewStocks: Record<string, Stock[]> = {}
+      newStocks.forEach(stock => {
+        const month = stock.date.substring(0, 7)
+        if (!groupedNewStocks[month]) {
+          groupedNewStocks[month] = []
+        }
+        groupedNewStocks[month].push(stock)
+      })
 
-      const sha = file.sha
-
-      const newStockKeys = new Set(
-        newStocks.map((stock) => `${stock.date}|${stock.stockNumber}`),
+      // 2. Fetch index.json
+      const indexRes = await fetch(
+        `https://api.github.com/repos/${username}/${repoName}/contents/data/index.json`,
+        { headers: { Authorization: `Bearer ${token}` } }
       )
+      
+      let indexFile: GitHubFile | null = null
+      let currentIndices: string[] = []
+      if (indexRes.ok) {
+        indexFile = await indexRes.json()
+        const indexData = JSON.parse(decodeURIComponent(escape(atob(indexFile!.content))))
+        currentIndices = indexData.files || []
+      }
 
-      const filteredOldData = oldData.filter(
-        (stock) => !newStockKeys.has(`${stock.date}|${stock.stockNumber}`),
-      )
+      let indexUpdated = false
 
-      const newData = [...filteredOldData, ...newStocks]
+      // 3. Process each month
+      for (const month of Object.keys(groupedNewStocks)) {
+        const fileName = `${month}.json`
+        const filePath = `data/${fileName}`
+        
+        // Fetch existing data for this month
+        const fileRes = await fetch(
+          `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`,
+          { headers: { Authorization: `Bearer ${token}` } }
+        )
 
-      const newContent = JSON.stringify({ stockData: newData }, null, 2)
-      const encoded = btoa(unescape(encodeURIComponent(newContent)))
+        let oldData: Stock[] = []
+        let sha: string | undefined = undefined
 
-      const putRes = await fetch(
-        `https://api.github.com/repos/${username}/${repoName}/contents/data/stock.json`,
-        {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
+        if (fileRes.ok) {
+          const file: GitHubFile = await fileRes.json()
+          oldData = JSON.parse(decodeURIComponent(escape(atob(file.content)))).stockData ?? []
+          sha = file.sha
+        }
+
+        const monthNewStocks = groupedNewStocks[month]
+        const newStockKeys = new Set(
+          monthNewStocks.map((stock) => `${stock.date}|${stock.stockNumber}`),
+        )
+
+        const filteredOldData = oldData.filter(
+          (stock) => !newStockKeys.has(`${stock.date}|${stock.stockNumber}`),
+        )
+
+        const newData = [...filteredOldData, ...monthNewStocks]
+        const newContent = JSON.stringify({ stockData: newData }, null, 2)
+        const encoded = btoa(unescape(encodeURIComponent(newContent)))
+
+        // Push update for this month
+        const putRes = await fetch(
+          `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              message: `Update stock data for ${month} from website`,
+              content: encoded,
+              sha,
+            }),
           },
-          body: JSON.stringify({
-            message: `Update stock data from website`,
-            content: encoded,
-            sha,
-          }),
-        },
-      )
+        )
 
-      if (!putRes.ok) {
-        const error = await putRes.json()
-        messageApi.error(`Failed to update file: ${error.message}`)
-        return
+        if (!putRes.ok) {
+          const error = await putRes.json()
+          throw new Error(`Failed to update ${fileName}: ${error.message}`)
+        }
+
+        if (!currentIndices.includes(fileName)) {
+          currentIndices.push(fileName)
+          indexUpdated = true
+        }
+      }
+
+      // 4. Update index.json if needed
+      if (indexUpdated || !indexFile) {
+        currentIndices.sort().reverse()
+        const newIndexContent = JSON.stringify({ files: currentIndices }, null, 2)
+        const encodedIndex = btoa(unescape(encodeURIComponent(newIndexContent)))
+        
+        const putIndexRes = await fetch(
+          `https://api.github.com/repos/${username}/${repoName}/contents/data/index.json`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              message: `Update index.json from website`,
+              content: encodedIndex,
+              sha: indexFile?.sha,
+            }),
+          },
+        )
+
+        if (!putIndexRes.ok) {
+          const error = await putIndexRes.json()
+          throw new Error(`Failed to update index.json: ${error.message}`)
+        }
       }
 
       messageApi.success("Stock data saved successfully.")
       setNewStocks([])
-    } catch (error) {
-      messageApi.error("An unexpected error occurred.")
+    } catch (error: any) {
+      messageApi.error(error.message || "An unexpected error occurred.")
       console.error(error)
     } finally {
       setIsSubmitting(false)
