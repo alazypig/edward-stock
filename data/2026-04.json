@@ -446,6 +446,197 @@
         "碳纤维",
         "低空经济"
       ]
+    },
+    {
+      "uuid": "1261db14-064b-4641-9460-81186a872866",
+      "date": "2026-04-25",
+      "stockNumber": "003018",
+      "stockName": "金富科技",
+      "price": 57.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "f40b5c7d-ea72-4703-bec4-82107c826837",
+      "date": "2026-04-25",
+      "stockNumber": "002759",
+      "stockName": "天际股份",
+      "price": 33.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "氟化工",
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "0a8d2fb6-3514-4064-95ff-25155a248cd9",
+      "date": "2026-04-25",
+      "stockNumber": "603002",
+      "stockName": "宏昌电子",
+      "price": 14.39,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "先进封装",
+        "PCB"
+      ]
+    },
+    {
+      "uuid": "0afdb88a-fc19-46de-832b-bae72ae9c61d",
+      "date": "2026-04-25",
+      "stockNumber": "000404",
+      "stockName": "长虹华意",
+      "price": 8.97,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "家电零部件"
+      ],
+      "notion": [
+        "高股息",
+        "家用电器"
+      ]
+    },
+    {
+      "uuid": "8cb21a9a-23f2-44f3-a73c-9ecb943a7112",
+      "date": "2026-04-25",
+      "stockNumber": "600783",
+      "stockName": "鲁信创投",
+      "price": 22.64,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "多元金融"
+      ],
+      "notion": [
+        "创投",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "22c87377-3231-43b8-949e-2d5d400f7602",
+      "date": "2026-04-25",
+      "stockNumber": "601101",
+      "stockName": "昊华能源",
+      "price": 9.78,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "煤炭开采"
+      ],
+      "notion": [
+        "煤炭",
+        "高股息"
+      ]
+    },
+    {
+      "uuid": "c719bf9f-a913-4b69-b58e-3f9cc1f77621",
+      "date": "2026-04-25",
+      "stockNumber": "002386",
+      "stockName": "天原股份",
+      "price": 6.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "磷化工",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "04f529f9-d487-47b5-b05b-8464f54f8d25",
+      "date": "2026-04-25",
+      "stockNumber": "600078",
+      "stockName": "澄星股份",
+      "price": 13.35,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "磷化工",
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "24b9dbd9-ead7-4dcd-8097-33f2f0f576d8",
+      "date": "2026-04-25",
+      "stockNumber": "600691",
+      "stockName": "潞化科技",
+      "price": 3.38,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "农化制品"
+      ],
+      "notion": [
+        "煤化工",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "b8f73e83-60bd-42cb-9684-3875b86dc30c",
+      "date": "2026-04-25",
+      "stockNumber": "603336",
+      "stockName": "宏辉果蔬",
+      "price": 11.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "种植业"
+      ],
+      "notion": [
+        "股权转让",
+        "冷链运输"
+      ]
+    },
+    {
+      "uuid": "7b2aff1f-6c7e-4f4b-b6e5-5c4289bfa729",
+      "date": "2026-04-25",
+      "stockNumber": "002029",
+      "stockName": "七匹狼",
+      "price": 10.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "参股保险",
+        "数字经济"
+      ]
+    },
+    {
+      "uuid": "76c8b95e-a37c-43b1-b4e9-707284acafd2",
+      "date": "2026-04-25",
+      "stockNumber": "603045",
+      "stockName": "福达合金",
+      "price": 37.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "年报预增",
+        "数据中心"
+      ]
     }
   ]
 }
