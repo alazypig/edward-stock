@@ -1,0 +1,306 @@
+{
+  "stockData": [
+    {
+      "uuid": "fd0be3a2-7f14-4637-8ab3-3cc4cd23523c",
+      "date": "2026-05-08",
+      "stockNumber": "600776",
+      "stockName": "东方通信",
+      "price": 18.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "商业航天",
+        "年报预增"
+      ]
+    },
+    {
+      "uuid": "4821b7ba-2858-417e-a9c1-c6dc1d212657",
+      "date": "2026-05-08",
+      "stockNumber": "600184",
+      "stockName": "光电股份",
+      "price": 24.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "地面兵装"
+      ],
+      "notion": [
+        "光纤"
+      ]
+    },
+    {
+      "uuid": "b2855635-b74b-4ec3-8b57-5c4367f02a2e",
+      "date": "2026-05-08",
+      "stockNumber": "002611",
+      "stockName": "东方精工",
+      "price": 18.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "人形机器人",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "fd449808-76a1-4938-92f0-e483f718c068",
+      "date": "2026-05-08",
+      "stockNumber": "002334",
+      "stockName": "英威腾",
+      "price": 8.32,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "核电",
+        "光伏"
+      ]
+    },
+    {
+      "uuid": "b372ec2f-943e-4561-a045-69116f2f1b60",
+      "date": "2026-05-08",
+      "stockNumber": "002896",
+      "stockName": "中大力德",
+      "price": 76,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器",
+        "人形机器人",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "005e200a-64f9-48fa-9761-f574b5c72eef",
+      "date": "2026-05-08",
+      "stockNumber": "002931",
+      "stockName": "锋龙股份",
+      "price": 63.12,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "8770c5e0-7449-4c35-9426-6f622067f580",
+      "date": "2026-05-08",
+      "stockNumber": "002036",
+      "stockName": "联创电子",
+      "price": 8.43,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "光学光电子"
+      ],
+      "notion": [
+        "汽车电子",
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "fa332dbc-6abe-4083-803d-802327cf0033",
+      "date": "2026-05-08",
+      "stockNumber": "002040",
+      "stockName": "南京港",
+      "price": 10.71,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "航运港口"
+      ],
+      "notion": [
+        "航运",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "e327d6d4-5556-4b55-bb0e-6caf81966a97",
+      "date": "2026-05-08",
+      "stockNumber": "603267",
+      "stockName": "鸿远电子",
+      "price": 56.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "专精特新",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "bfe212a7-e33d-4cd7-919e-9360e28ed3ec",
+      "date": "2026-05-08",
+      "stockNumber": "600756",
+      "stockName": "浪潮软件",
+      "price": 17.48,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "IT服务"
+      ],
+      "notion": [
+        "养老",
+        "AIGC"
+      ]
+    },
+    {
+      "uuid": "f9318202-aef4-4c19-b9e6-7569e1172632",
+      "date": "2026-05-08",
+      "stockNumber": "001400",
+      "stockName": "江顺科技",
+      "price": 217.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "商业航天",
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "06e2c0de-b303-4f2f-8281-e8f93118c40b",
+      "date": "2026-05-08",
+      "stockNumber": "603052",
+      "stockName": "可川科技",
+      "price": 89.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "共封装光学",
+        "消费电子"
+      ]
+    },
+    {
+      "uuid": "0ada8bec-54bf-4459-b0b3-ff1f643989d4",
+      "date": "2026-05-08",
+      "stockNumber": "605123",
+      "stockName": "派克新材",
+      "price": 116.51,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "商业航天",
+        "可控核聚变"
+      ]
+    },
+    {
+      "uuid": "5914555e-8c6a-48d8-91e9-5e34f7dbc48c",
+      "date": "2026-05-08",
+      "stockNumber": "002676",
+      "stockName": "顺威股份",
+      "price": 8.15,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "家电零部件"
+      ],
+      "notion": [
+        "机器人",
+        "汽车电子"
+      ]
+    },
+    {
+      "uuid": "858562b9-907a-4f7c-8f2d-d6f12c91a75b",
+      "date": "2026-05-08",
+      "stockNumber": "002164",
+      "stockName": "宁波东力",
+      "price": 13.65,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "b31f7020-d6e8-4369-9c28-9ea00c003766",
+      "date": "2026-05-08",
+      "stockNumber": "002052",
+      "stockName": "同洲电子",
+      "price": 11.58,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "其他能源设备"
+      ],
+      "notion": [
+        "东数西算",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "3018f0d6-f7b1-483d-b86c-efbfd57ee0a4",
+      "date": "2026-05-08",
+      "stockNumber": "001314",
+      "stockName": "亿道信息",
+      "price": 57.84,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "AI眼镜"
+      ]
+    },
+    {
+      "uuid": "7cd42cd1-4362-4368-86c8-bfb04daa3809",
+      "date": "2026-05-08",
+      "stockNumber": "601199",
+      "stockName": "江南水务",
+      "price": 6.28,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "国企改革",
+        "绿色电力"
+      ]
+    },
+    {
+      "uuid": "ea10abeb-3254-4a65-b581-7e50e6223a68",
+      "date": "2026-05-08",
+      "stockNumber": "603124",
+      "stockName": "江南新材",
+      "price": 134.9,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "金属新材料"
+      ],
+      "notion": [
+        "液冷服务器",
+        "PET铜箔"
+      ]
+    }
+  ]
+}
