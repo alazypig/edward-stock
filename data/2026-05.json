@@ -301,6 +301,374 @@
         "液冷服务器",
         "PET铜箔"
       ]
+    },
+    {
+      "uuid": "6887978f-bf90-40cc-96b5-d920915739f4",
+      "date": "2026-05-15",
+      "stockNumber": "002150",
+      "stockName": "正泰电源",
+      "price": 29.72,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "储能",
+        "光伏"
+      ]
+    },
+    {
+      "uuid": "48770a99-e7bc-4a46-8318-ae49949c5e70",
+      "date": "2026-05-15",
+      "stockNumber": "002249",
+      "stockName": "大洋电机",
+      "price": 9.91,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "电机"
+      ],
+      "notion": [
+        "人形机器人",
+        "机器人",
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "a6ba5437-8393-4f1d-a069-5e30399fbcdf",
+      "date": "2026-05-15",
+      "stockNumber": "002510",
+      "stockName": "天汽模",
+      "price": 7.37,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "新能源汽车",
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "4c900479-0288-435e-a2a6-cb0c6c5381d3",
+      "date": "2026-05-15",
+      "stockNumber": "002426",
+      "stockName": "胜利精密",
+      "price": 3.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "消费电子",
+        "PET铜箔"
+      ]
+    },
+    {
+      "uuid": "57288215-6cd3-4597-93e8-5c8b1738b495",
+      "date": "2026-05-15",
+      "stockNumber": "002896",
+      "stockName": "中大力德",
+      "price": 80.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "减速器",
+        "人形机器人",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "52f427ee-bf05-47f2-a9a8-ff4341317c02",
+      "date": "2026-05-15",
+      "stockNumber": "600400",
+      "stockName": "红豆股份",
+      "price": 3.01,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "机器人",
+        "养老"
+      ]
+    },
+    {
+      "uuid": "418e3393-1bb1-47fc-b379-0b96752df12e",
+      "date": "2026-05-15",
+      "stockNumber": "600743",
+      "stockName": "华远控股",
+      "price": 2.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "物业管理",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "d65253db-1c1f-446d-8340-943d3c6817b8",
+      "date": "2026-05-15",
+      "stockNumber": "002291",
+      "stockName": "遥望科技",
+      "price": 6.8,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "AI应用"
+      ]
+    },
+    {
+      "uuid": "7278576b-90e0-42d5-95f2-7893960af15a",
+      "date": "2026-05-15",
+      "stockNumber": "000837",
+      "stockName": "秦川机床",
+      "price": 12.35,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "工业母机",
+        "高端设备"
+      ]
+    },
+    {
+      "uuid": "66eeb8bd-57e1-4be2-86f6-d3c36f0e546b",
+      "date": "2026-05-15",
+      "stockNumber": "002527",
+      "stockName": "新时达",
+      "price": 13.73,
+      "future": "long",
+      "comment": "建仓",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "机器人",
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "3f354d29-4212-41a6-a258-4110e21426e4",
+      "date": "2026-05-15",
+      "stockNumber": "002643",
+      "stockName": "万润股份",
+      "price": 18.08,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电子化学品"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "81d37747-cd2a-4c1e-98bb-8f9195cbf56d",
+      "date": "2026-05-15",
+      "stockNumber": "002637",
+      "stockName": "赞宇科技",
+      "price": 13.31,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "消毒剂",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "38dae391-3c93-4470-ba49-5f8bcfa2e4f8",
+      "date": "2026-05-15",
+      "stockNumber": "600592",
+      "stockName": "龙溪股份",
+      "price": 19.94,
+      "future": "long",
+      "comment": "建仓",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "大飞机",
+        "人形机器人"
+      ]
+    },
+    {
+      "uuid": "ab376ea6-a162-47a1-8a19-56277ea00f30",
+      "date": "2026-05-15",
+      "stockNumber": "000697",
+      "stockName": "炼石航空",
+      "price": 12.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "航空装备"
+      ],
+      "notion": [
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "f131c43e-184f-4192-932c-0d9ceb19cc38",
+      "date": "2026-05-15",
+      "stockNumber": "000551",
+      "stockName": "创元科技",
+      "price": 17.09,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环保设备"
+      ],
+      "notion": [
+        "军工",
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "43b5d4da-dba0-4cd4-b521-a68c606c27b8",
+      "date": "2026-05-15",
+      "stockNumber": "603926",
+      "stockName": "铁流股份",
+      "price": 25.3,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "c204c3f0-6450-4dce-a3ff-154d8c5bd4f0",
+      "date": "2026-05-15",
+      "stockNumber": "002301",
+      "stockName": "齐心集团",
+      "price": 8.18,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "文娱用品"
+      ],
+      "notion": [
+        "AI应用",
+        "数字经济"
+      ]
+    },
+    {
+      "uuid": "ec7d0075-02f4-4954-b14f-f549f95f9842",
+      "date": "2026-05-15",
+      "stockNumber": "603933",
+      "stockName": "睿能科技",
+      "price": 26.78,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "机器人",
+        "人形机器人",
+        "新型工业化"
+      ]
+    },
+    {
+      "uuid": "af56a43d-899e-4976-acf5-ae2e232a7636",
+      "date": "2026-05-15",
+      "stockNumber": "002664",
+      "stockName": "信质集团",
+      "price": 23.26,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人",
+        "机器人",
+        "低空经济"
+      ]
+    },
+    {
+      "uuid": "8ff5ae61-4a17-4f48-b503-c4610e62d05d",
+      "date": "2026-05-15",
+      "stockNumber": "603163",
+      "stockName": "圣晖集成",
+      "price": 110.75,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专业工程"
+      ],
+      "notion": [
+        "中芯国际",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "eb0f3fdf-454e-45af-82b0-35dd8053ccc5",
+      "date": "2026-05-15",
+      "stockNumber": "002965",
+      "stockName": "祥鑫科技",
+      "price": 35.82,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "机器人",
+        "液冷服务器"
+      ]
+    },
+    {
+      "uuid": "c4b188de-c142-49a2-ae50-02d4f4c44b23",
+      "date": "2026-05-15",
+      "stockNumber": "600382",
+      "stockName": "广东明珠",
+      "price": 9.06,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "冶钢原料"
+      ],
+      "notion": [
+        "年报预增",
+        "PPP"
+      ]
+    },
+    {
+      "uuid": "0a52bc76-fdc3-47df-9a51-3149dae5bf1f",
+      "date": "2026-05-15",
+      "stockNumber": "002068",
+      "stockName": "黑猫股份",
+      "price": 9.94,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "橡胶"
+      ],
+      "notion": [
+        "锂电池",
+        "固态电池"
+      ]
     }
   ]
 }
