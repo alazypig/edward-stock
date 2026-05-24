@@ -669,6 +669,87 @@
         "锂电池",
         "固态电池"
       ]
+    },
+    {
+      "uuid": "e7b766c8-2022-41e5-af2f-c6e9b2c13701",
+      "date": "2026-05-22",
+      "stockNumber": "603693",
+      "stockName": "江苏新能",
+      "price": 17.69,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "海工装备",
+        "风电"
+      ]
+    },
+    {
+      "uuid": "c639820b-703a-41c1-a5cd-f35218f05909",
+      "date": "2026-05-22",
+      "stockNumber": "002881",
+      "stockName": "美格智能",
+      "price": 47.48,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "人形机器人",
+        "机器人",
+        "人工智能"
+      ]
+    },
+    {
+      "uuid": "60dd7030-9d37-4a9b-87ff-7512ecdd68e4",
+      "date": "2026-05-22",
+      "stockNumber": "002263",
+      "stockName": "大东南",
+      "price": 3.86,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "塑料"
+      ],
+      "notion": [
+        "PET铜箔",
+        "新能源汽车"
+      ]
+    },
+    {
+      "uuid": "8f9ba189-9d0d-40de-b993-f19acfa7583f",
+      "date": "2026-05-22",
+      "stockNumber": "002125",
+      "stockName": "湘潭电化",
+      "price": 14.73,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "小金属",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "0dd52d4a-206b-4d23-a1ab-60f00dc5d071",
+      "date": "2026-05-22",
+      "stockNumber": "603012",
+      "stockName": "创立集团",
+      "price": 9.74,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "高端设备",
+        "人工智能"
+      ]
     }
   ]
 }
