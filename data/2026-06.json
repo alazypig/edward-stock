@@ -303,6 +303,180 @@
         "碳纤维",
         "国企改革"
       ]
+    },
+    {
+      "uuid": "f0ec5796-289a-4034-98b1-9a1aa60ba5fb",
+      "date": "2026-06-12",
+      "stockNumber": "600593",
+      "stockName": "大连圣亚",
+      "price": 41.4,
+      "future": "long",
+      "comment": "关注，可建仓",
+      "industry": [
+        "旅游及景区"
+      ],
+      "notion": [
+        "旅游",
+        "IP经济"
+      ]
+    },
+    {
+      "uuid": "09b4980a-ed1a-4f6b-a2ed-52bb8daa72b8",
+      "date": "2026-06-12",
+      "stockNumber": "603906",
+      "stockName": "龙蟠科技",
+      "price": 24.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "锂电池",
+        "宁德时代"
+      ]
+    },
+    {
+      "uuid": "7d2e9382-489e-440e-aa78-a81c1c5e3055",
+      "date": "2026-06-12",
+      "stockNumber": "000762",
+      "stockName": "西藏矿业",
+      "price": 30.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "冶钢原料"
+      ],
+      "notion": [
+        "盐湖提锂",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "14778a3b-5019-4dbd-a88f-4f54c29ce48b",
+      "date": "2026-06-12",
+      "stockNumber": "600397",
+      "stockName": "江钨装备",
+      "price": 14.72,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "国企改革",
+        "股权转让"
+      ]
+    },
+    {
+      "uuid": "4a85f834-67be-4707-817f-320edafdbed1",
+      "date": "2026-06-12",
+      "stockNumber": "603015",
+      "stockName": "弘讯科技",
+      "price": 13.27,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "可控核聚变",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "83ae7ad7-1521-401c-964c-dc0b3ead872c",
+      "date": "2026-06-12",
+      "stockNumber": "001208",
+      "stockName": "华菱线缆",
+      "price": 16.24,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "商业航天",
+        "特高压"
+      ]
+    },
+    {
+      "uuid": "eb84c8f4-c0e5-4f1c-9450-96a11b413efe",
+      "date": "2026-06-12",
+      "stockNumber": "002832",
+      "stockName": "比音勒芬",
+      "price": 21.37,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "体育产业"
+      ]
+    },
+    {
+      "uuid": "2c93486b-e999-4b50-9e5a-ebd453d0424b",
+      "date": "2026-06-12",
+      "stockNumber": "002805",
+      "stockName": "丰元股份",
+      "price": 21.24,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电池"
+      ],
+      "notion": [
+        "锂电池",
+        "磷化工"
+      ]
+    },
+    {
+      "uuid": "431ad9be-ea1a-4429-be82-cbbf055b1e70",
+      "date": "2026-06-12",
+      "stockNumber": "603978",
+      "stockName": "深圳新星",
+      "price": 25.74,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "金属新材料"
+      ],
+      "notion": [
+        "锂电池",
+        "氟化工"
+      ]
+    },
+    {
+      "uuid": "76add5cd-dea9-41e6-9539-a8fa1b1696ed",
+      "date": "2026-06-12",
+      "stockNumber": "600590",
+      "stockName": "泰豪科技",
+      "price": 11.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电源设备"
+      ],
+      "notion": [
+        "储能"
+      ]
+    },
+    {
+      "uuid": "bbb5d50a-43c0-4bf3-8d44-e7fbf9978127",
+      "date": "2026-06-12",
+      "stockNumber": "000534",
+      "stockName": "万泽股份",
+      "price": 30.42,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "生物制品"
+      ],
+      "notion": [
+        "航空发动机",
+        "低空经济"
+      ]
     }
   ]
 }
