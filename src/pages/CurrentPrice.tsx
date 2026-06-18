@@ -31,7 +31,7 @@ interface StockData {
   time: string
   changeAmount: string
   changePercentage: string
-  unknownField9: string
+  marketCap: string
 }
 
 export const CurrentPrice = () => {
@@ -121,7 +121,7 @@ export const CurrentPrice = () => {
               time: "", // Not available in new format
               changeAmount: dataArray[4],
               changePercentage: dataArray[5],
-              unknownField9: dataArray[9],
+              marketCap: dataArray[9],
             })
           }
         })
@@ -161,7 +161,7 @@ export const CurrentPrice = () => {
       defaultSortOrder: "descend",
     },
     { title: "成交额（万元）", dataIndex: "turnover", key: "turnover" },
-    { title: "未知字段", dataIndex: "unknownField9", key: "unknownField9" },
+    { title: "市值（亿）", dataIndex: "marketCap", key: "marketCap" },
   ]
 
   const renderMobileList = () => (
@@ -186,8 +186,8 @@ export const CurrentPrice = () => {
               <Descriptions.Item label="成交额（万元）">
                 {stock.turnover}
               </Descriptions.Item>
-              <Descriptions.Item label="未知字段">
-                {stock.unknownField9}
+              <Descriptions.Item label="市值（亿）">
+                {stock.marketCap}
               </Descriptions.Item>
             </Descriptions>
           </Card>
