@@ -477,6 +477,134 @@
         "航空发动机",
         "低空经济"
       ]
+    },
+    {
+      "uuid": "cf55773a-4d66-4855-b877-c0322369b6c6",
+      "date": "2026-06-18",
+      "stockNumber": "002326",
+      "stockName": "永太科技",
+      "price": 23.21,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "化学制品"
+      ],
+      "notion": [
+        "氟化工",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "2bb98be7-9b2e-472c-b233-8d7c5da25663",
+      "date": "2026-06-18",
+      "stockNumber": "002896",
+      "stockName": "中大力德",
+      "price": 82.3,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "人形机器人",
+        "减速器"
+      ]
+    },
+    {
+      "uuid": "f24f1dd0-ca89-45dd-9d4c-5254f9ad1709",
+      "date": "2026-06-18",
+      "stockNumber": "603166",
+      "stockName": "福达股份",
+      "price": 16.49,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人",
+        "减速器",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "25834643-5f6a-40c3-a37c-217bf65e6632",
+      "date": "2026-06-18",
+      "stockNumber": "603206",
+      "stockName": "石大胜华",
+      "price": 18.97,
+      "future": "long",
+      "comment": "",
+      "industry": [
+        "通信服务"
+      ],
+      "notion": [
+        "AI智能体",
+        "华为"
+      ]
+    },
+    {
+      "uuid": "ff5f3aa3-e5d5-4fff-88c2-e022ec962a2c",
+      "date": "2026-06-18",
+      "stockNumber": "002029",
+      "stockName": "七匹狼",
+      "price": 8.75,
+      "future": "short",
+      "comment": "",
+      "industry": [
+        "服装家纺"
+      ],
+      "notion": [
+        "数字经济",
+        "参股保险"
+      ]
+    },
+    {
+      "uuid": "c86d7328-f99c-4338-b09f-678373cfc0d7",
+      "date": "2026-06-18",
+      "stockNumber": "603315",
+      "stockName": "福鞍股份",
+      "price": 17.42,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "环境治理"
+      ],
+      "notion": [
+        "特钢"
+      ]
+    },
+    {
+      "uuid": "49e733e2-8668-4fd6-ac85-e49369dc3f03",
+      "date": "2026-06-18",
+      "stockNumber": "002881",
+      "stockName": "美格智能",
+      "price": 43.68,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "机器人",
+        "人形机器人",
+        "AI智能体"
+      ]
+    },
+    {
+      "uuid": "b372aa11-050d-4c85-b9ee-83dc23b22371",
+      "date": "2026-06-18",
+      "stockNumber": "002785",
+      "stockName": "万里石",
+      "price": 40.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "装修建材"
+      ],
+      "notion": [
+        "小金属"
+      ]
     }
   ]
 }
