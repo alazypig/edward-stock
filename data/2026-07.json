@@ -272,6 +272,292 @@
         "机器人",
         "人形机器人"
       ]
+    },
+    {
+      "uuid": "1d43680a-1dad-433d-989e-01e9e7e181a0",
+      "date": "2026-07-03",
+      "stockNumber": "002565",
+      "stockName": "顺灏股份",
+      "price": 11.15,
+      "future": "long",
+      "comment": "可建仓",
+      "industry": [
+        "包装印刷"
+      ],
+      "notion": [
+        "商业航天"
+      ]
+    },
+    {
+      "uuid": "5f334c2d-b5e0-493f-a470-8c414e104299",
+      "date": "2026-07-03",
+      "stockNumber": "002639",
+      "stockName": "雪人集团",
+      "price": 12.59,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "可控核聚变",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "da776958-121a-423f-bcee-1353c69d0b4f",
+      "date": "2026-07-03",
+      "stockNumber": "600345",
+      "stockName": "长江通信",
+      "price": 61.88,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "商业航天",
+        "光纤"
+      ]
+    },
+    {
+      "uuid": "1d7b3520-6e45-44f6-8bd5-b59201e84160",
+      "date": "2026-07-03",
+      "stockNumber": "002506",
+      "stockName": "协鑫集成",
+      "price": 2.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "光伏设备"
+      ],
+      "notion": [
+        "储能",
+        "TOPCON电池"
+      ]
+    },
+    {
+      "uuid": "7b098c92-cad4-4d79-a0b5-3e60dc3a6d13",
+      "date": "2026-07-03",
+      "stockNumber": "002044",
+      "stockName": "美年健康",
+      "price": 4.64,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "医疗服务"
+      ],
+      "notion": [
+        "AIGC",
+        "AI应用"
+      ]
+    },
+    {
+      "uuid": "067b5454-01ae-454a-abdb-ad4e4f116bc3",
+      "date": "2026-07-03",
+      "stockNumber": "002181",
+      "stockName": "粤传媒",
+      "price": 9.1,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "出版"
+      ],
+      "notion": [
+        "短剧游戏",
+        "AIGC"
+      ]
+    },
+    {
+      "uuid": "fe75879a-7bf9-4dca-9477-45d0d79843c0",
+      "date": "2026-07-03",
+      "stockNumber": "600363",
+      "stockName": "联创光电",
+      "price": 34.11,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "可控核聚变",
+        "超导"
+      ]
+    },
+    {
+      "uuid": "7550eef6-adcf-40f2-b25b-2b3be32c17eb",
+      "date": "2026-07-03",
+      "stockNumber": "002400",
+      "stockName": "省广集团",
+      "price": 6.19,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "广告营销"
+      ],
+      "notion": [
+        "AIGC",
+        "跨境电商"
+      ]
+    },
+    {
+      "uuid": "5a32f5df-2558-4f1c-b87a-eb534b086815",
+      "date": "2026-07-03",
+      "stockNumber": "001330",
+      "stockName": "博纳影业",
+      "price": 5.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "影视院线"
+      ],
+      "notion": [
+        "AI视频",
+        "文化传媒"
+      ]
+    },
+    {
+      "uuid": "07243961-7387-4a26-8e8a-93b1300e2e67",
+      "date": "2026-07-03",
+      "stockNumber": "002251",
+      "stockName": "步步高",
+      "price": 3.49,
+      "future": "none",
+      "comment": "可建仓，搏一搏",
+      "industry": [
+        "一般零售"
+      ],
+      "notion": [
+        "统一大市场",
+        "智能物流"
+      ]
+    },
+    {
+      "uuid": "36163e28-19cd-4df2-905a-9359781031f1",
+      "date": "2026-07-03",
+      "stockNumber": "603220",
+      "stockName": "中贝通信",
+      "price": 20.61,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "通信服务"
+      ],
+      "notion": [
+        "算力租赁",
+        "人工智能"
+      ]
+    },
+    {
+      "uuid": "c21e4f23-0c9c-46e7-9d53-4f307cec4dae",
+      "date": "2026-07-03",
+      "stockNumber": "600666",
+      "stockName": "奥瑞德",
+      "price": 3.67,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "IT服务"
+      ],
+      "notion": [
+        "算力租赁",
+        "东数西算"
+      ]
+    },
+    {
+      "uuid": "e3789207-6c85-4fc7-8e64-bb424457954d",
+      "date": "2026-07-03",
+      "stockNumber": "002605",
+      "stockName": "姚记科技",
+      "price": 20.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "游戏"
+      ],
+      "notion": [
+        "手机游戏",
+        "网络游戏"
+      ]
+    },
+    {
+      "uuid": "52962e35-f4ec-4dfc-9ff8-6492f35c235b",
+      "date": "2026-07-03",
+      "stockNumber": "002881",
+      "stockName": "美格智能",
+      "price": 37.71,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "AI智能体",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "4e71589e-7669-4ce6-afb1-d74b20e12022",
+      "date": "2026-07-03",
+      "stockNumber": "600722",
+      "stockName": "金牛化工",
+      "price": 8.04,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "化学原料"
+      ],
+      "notion": [
+        "煤化工",
+        "风电"
+      ]
+    },
+    {
+      "uuid": "e8f6101a-a1b5-4251-b4e9-e62b15736d1b",
+      "date": "2026-07-03",
+      "stockNumber": "600158",
+      "stockName": "中体产业",
+      "price": 6.54,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "体育"
+      ],
+      "notion": [
+        "体育",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "38e22dae-c970-4559-a604-bec3e066707f",
+      "date": "2026-07-03",
+      "stockNumber": "600962",
+      "stockName": "国投中鲁",
+      "price": 24.63,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "饮料乳品"
+      ],
+      "notion": [
+        "股权转让",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "7ba7aed3-6433-42eb-9462-a245c30de75a",
+      "date": "2026-07-03",
+      "stockNumber": "002338",
+      "stockName": "奥普光电",
+      "price": 54.93,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "军工电子"
+      ],
+      "notion": [
+        "商业航天"
+      ]
     }
   ]
 }
