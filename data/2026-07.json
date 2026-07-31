@@ -558,6 +558,213 @@
       "notion": [
         "商业航天"
       ]
+    },
+    {
+      "uuid": "29a5f336-b495-4103-8212-1adb4ecd81fd",
+      "date": "2026-07-31",
+      "stockNumber": "002068",
+      "stockName": "黑猫股份",
+      "price": 7.64,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "橡胶"
+      ],
+      "notion": [
+        "超级电容",
+        "锂电池"
+      ]
+    },
+    {
+      "uuid": "2d51bc13-f2ec-498a-87a1-aeaa2ce75bc2",
+      "date": "2026-07-31",
+      "stockNumber": "002885",
+      "stockName": "京泉华",
+      "price": 23.27,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "数据中心",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "10dd0a69-ecab-46a5-96a8-aab2bb37f837",
+      "date": "2026-07-31",
+      "stockNumber": "603063",
+      "stockName": "禾望电气",
+      "price": 28.17,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "风电设备"
+      ],
+      "notion": [
+        "光伏",
+        "储能"
+      ]
+    },
+    {
+      "uuid": "443f51b5-e6a1-47f2-a6c4-d1074041b480",
+      "date": "2026-07-31",
+      "stockNumber": "603936",
+      "stockName": "航天工程",
+      "price": 21.46,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "军民融合",
+        "氢能源"
+      ]
+    },
+    {
+      "uuid": "604cf8d4-481a-4bd2-afb1-d244ab163349",
+      "date": "2026-07-31",
+      "stockNumber": "603936",
+      "stockName": "博敏电子",
+      "price": 12.35,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "共封装光学",
+        "第三代半导体"
+      ]
+    },
+    {
+      "uuid": "ce502396-93c6-4ebd-8cdb-96e0ffccd56d",
+      "date": "2026-07-31",
+      "stockNumber": "600961",
+      "stockName": "株冶集团",
+      "price": 22.7,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "贵金属"
+      ],
+      "notion": [
+        "黄金",
+        "小金属"
+      ]
+    },
+    {
+      "uuid": "b5e60b36-2523-48d8-93c2-1ba26098e06e",
+      "date": "2026-07-31",
+      "stockNumber": "002815",
+      "stockName": "崇达技术",
+      "price": 11.15,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "东数西算",
+        "PCB"
+      ]
+    },
+    {
+      "uuid": "365067bd-e686-4ff7-a833-cdde522c1f2f",
+      "date": "2026-07-31",
+      "stockNumber": "603163",
+      "stockName": "圣晖集成",
+      "price": 73.23,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专业工程"
+      ],
+      "notion": [
+        "芯片",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "c836da8d-0746-4764-ad2b-77ac945c9e48",
+      "date": "2026-07-31",
+      "stockNumber": "603283",
+      "stockName": "赛腾股份",
+      "price": 38.5,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "芯片",
+        "存储芯片"
+      ]
+    },
+    {
+      "uuid": "55f4eb60-143e-48e9-b8f8-feb23cc176be",
+      "date": "2026-07-31",
+      "stockNumber": "000823",
+      "stockName": "超声电子",
+      "price": 12.6,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "共封装光学",
+        "PCB"
+      ]
+    },
+    {
+      "uuid": "ee070cf2-1676-4736-8167-699ea0dfe20f",
+      "date": "2026-07-31",
+      "stockNumber": "000070",
+      "stockName": "特发信息",
+      "price": 12.68,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "通信设备"
+      ],
+      "notion": [
+        "光纤"
+      ]
+    },
+    {
+      "uuid": "b5d2031d-ad4e-4ada-9801-8140e1800f5c",
+      "date": "2026-07-31",
+      "stockNumber": "600360",
+      "stockName": "华微电子",
+      "price": 9.32,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "芯片",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "8b4496c1-5bfc-49c9-a999-67b20ac4469d",
+      "date": "2026-07-31",
+      "stockNumber": "603005",
+      "stockName": "晶方科技",
+      "price": 29.04,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "先进封装",
+        "光刻机"
+      ]
     }
   ]
 }
