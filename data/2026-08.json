@@ -1,0 +1,37 @@
+{
+  "stockData": [
+    {
+      "uuid": "ebb7f49e-ddde-43dd-b81a-61213bd3514f",
+      "date": "2026-08-21",
+      "stockNumber": "002073",
+      "stockName": "软控股份",
+      "price": 5.94,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "固态电池",
+        "一带一路"
+      ]
+    },
+    {
+      "uuid": "2b7c8154-6a59-4d41-b0ae-1aef7f5f020b",
+      "date": "2026-08-21",
+      "stockNumber": "002965",
+      "stockName": "祥鑫科技",
+      "price": 31.56,
+      "future": "none",
+      "comment": "可建仓",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "液冷服务器",
+        "人形机器人",
+        "机器人"
+      ]
+    }
+  ]
+}
