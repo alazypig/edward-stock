@@ -1,41 +1,81 @@
-import { ArrowLeftOutlined } from "@ant-design/icons"
 import {
-  Affix,
+  ArrowLeftOutlined,
+  CloudUploadOutlined,
+  DeleteOutlined,
+  EditOutlined,
+  InfoCircleOutlined,
+  PlusOutlined,
+} from "@ant-design/icons"
+import {
+  Alert,
   Button,
   Card,
+  Empty,
   Flex,
   Grid,
   Input,
   List,
   message,
   Modal,
+  Space,
   Table,
   Tag,
   Typography,
 } from "antd"
+import type { ColumnsType } from "antd/es/table"
+import dayjs from "dayjs"
 import { useEffect, useRef, useState } from "react"
 import { useBlocker, useNavigate } from "react-router-dom"
-import { Editor, type EditorMethods } from "../components"
+import { Editor, PageHeader, type EditorMethods } from "../components"
+import { useColorConvention } from "../hooks/useColorConvention"
 import type { GitHubFile, Stock } from "../type"
+import { getChangeSemantic } from "../utils/changeColor"
 
 const { useBreakpoint } = Grid
 
+const GITHUB_USERNAME = "alazypig"
+const GITHUB_REPO = "edward-stock"
+const TOKEN_STORAGE_KEY = "github_token"
+const LAST_DATE_STORAGE_KEY = "last_stock_date"
+
+const decodeBase64Utf8 = (base64: string): string => {
+  const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0))
+  return new TextDecoder().decode(bytes)
+}
+
+const FutureTag = ({ future }: { future: Stock["future"] }) => {
+  const { convention } = useColorConvention()
+  if (future === "long") {
+    return (
+      <Tag color={getChangeSemantic(1, convention)} style={{ fontWeight: 600 }}>
+        上涨
+      </Tag>
+    )
+  }
+  if (future === "short") {
+    return (
+      <Tag color={getChangeSemantic(-1, convention)} style={{ fontWeight: 600 }}>
+        下跌
+      </Tag>
+    )
+  }
+  return <Tag>未知</Tag>
+}
+
 export const Add = () => {
-  const [token, setToken] = useState(() => {
-    const token = localStorage.getItem("github_token")
-    return token ?? ""
-  })
+  const [token, setToken] = useState<string>(
+    () => localStorage.getItem(TOKEN_STORAGE_KEY) ?? "",
+  )
   const [newStocks, setNewStocks] = useState<Stock[]>([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [editingStock, setEditingStock] = useState<Stock | null>(null)
   const [messageApi, contextHolder] = message.useMessage()
   const editorRef = useRef<EditorMethods>(null)
-  const [lastDate, setLastDate] = useState<string>(() => {
-    return (
-      localStorage.getItem("last_stock_date") ||
-      new Date().toISOString().slice(0, 10)
-    )
-  })
+  const [lastDate, setLastDate] = useState<string>(
+    () =>
+      localStorage.getItem(LAST_DATE_STORAGE_KEY) ||
+      dayjs().format("YYYY-MM-DD"),
+  )
   const [isSubmitting, setIsSubmitting] = useState(false)
   const screens = useBreakpoint()
   const navigate = useNavigate()
@@ -46,17 +86,16 @@ export const Add = () => {
     if (newStocks.length > 0) {
       setNextLocation(tx.nextLocation.pathname)
       setShowLeaveConfirm(true)
-      return true // Block navigation
+      return true
     }
-    return false // Allow navigation
+    return false
   })
 
   useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      console.log("newStocks.length:", newStocks.length)
       if (newStocks.length > 0) {
-        event.preventDefault() // For some browsers
-        return "您有未保存的更改。确定要离开吗？" // For other browsers
+        event.preventDefault()
+        event.returnValue = "您有未保存的更改，确定要离开吗？"
       }
     }
 
@@ -70,28 +109,28 @@ export const Add = () => {
   useEffect(() => {
     if (!showLeaveConfirm && nextLocation) {
       navigate(nextLocation)
-      setNextLocation(null) // Clear nextLocation after navigation
+      setNextLocation(null)
     }
   }, [showLeaveConfirm, nextLocation, navigate])
 
   const handleSave = (item: Stock) => {
     if (item.date) {
       setLastDate(item.date)
-      localStorage.setItem("last_stock_date", item.date)
+      localStorage.setItem(LAST_DATE_STORAGE_KEY, item.date)
     }
     if (editingStock?.uuid) {
-      setNewStocks(
-        newStocks.map((stock) => (stock.uuid === item.uuid ? item : stock)),
+      setNewStocks((prev) =>
+        prev.map((stock) => (stock.uuid === item.uuid ? item : stock)),
       )
     } else {
-      setNewStocks([...newStocks, item])
+      setNewStocks((prev) => [...prev, item])
     }
     setIsModalOpen(false)
     setEditingStock(null)
   }
 
   const handleDelete = (uuid: string) => {
-    setNewStocks(newStocks.filter((stock) => stock.uuid !== uuid))
+    setNewStocks((prev) => prev.filter((stock) => stock.uuid !== uuid))
   }
 
   const handleEdit = (stock: Stock) => {
@@ -106,20 +145,20 @@ export const Add = () => {
 
   const handleSubmitAll = async () => {
     if (newStocks.length === 0) {
-      messageApi.error("No new stocks to submit.")
+      messageApi.error("没有待提交的记录")
+      return
+    }
+    if (!token) {
+      messageApi.error("请先填写 GitHub Token")
       return
     }
 
     setIsSubmitting(true)
     try {
-      const username = "alazypig"
-      const repoName = "edward-stock"
-      
-      localStorage.setItem("github_token", token)
+      localStorage.setItem(TOKEN_STORAGE_KEY, token)
 
-      // 1. Group new stocks by month
       const groupedNewStocks: Record<string, Stock[]> = {}
-      newStocks.forEach(stock => {
+      newStocks.forEach((stock) => {
         const month = stock.date.substring(0, 7)
         if (!groupedNewStocks[month]) {
           groupedNewStocks[month] = []
@@ -127,31 +166,29 @@ export const Add = () => {
         groupedNewStocks[month].push(stock)
       })
 
-      // 2. Fetch index.json
       const indexRes = await fetch(
-        `https://api.github.com/repos/${username}/${repoName}/contents/data/index.json`,
-        { headers: { Authorization: `Bearer ${token}` } }
+        `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/data/index.json`,
+        { headers: { Authorization: `Bearer ${token}` } },
       )
-      
+
       let indexFile: GitHubFile | null = null
       let currentIndices: string[] = []
       if (indexRes.ok) {
-        indexFile = await indexRes.json()
-        const indexData = JSON.parse(decodeURIComponent(escape(atob(indexFile!.content))))
+        const fetched = await indexRes.json()
+        indexFile = fetched
+        const indexData = JSON.parse(decodeBase64Utf8(fetched.content))
         currentIndices = indexData.files || []
       }
 
       let indexUpdated = false
 
-      // 3. Process each month
       for (const month of Object.keys(groupedNewStocks)) {
         const fileName = `${month}.json`
         const filePath = `data/${fileName}`
-        
-        // Fetch existing data for this month
+
         const fileRes = await fetch(
-          `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`,
-          { headers: { Authorization: `Bearer ${token}` } }
+          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${filePath}`,
+          { headers: { Authorization: `Bearer ${token}` } },
         )
 
         let oldData: Stock[] = []
@@ -159,13 +196,15 @@ export const Add = () => {
 
         if (fileRes.ok) {
           const file: GitHubFile = await fileRes.json()
-          oldData = JSON.parse(decodeURIComponent(escape(atob(file.content)))).stockData ?? []
+          oldData = JSON.parse(decodeBase64Utf8(file.content)).stockData ?? []
           sha = file.sha
         }
 
         const monthNewStocks = groupedNewStocks[month]
         const newStockKeys = new Set(
-          monthNewStocks.map((stock) => `${stock.date}|${stock.stockNumber}`),
+          monthNewStocks.map(
+            (stock) => `${stock.date}|${stock.stockNumber}`,
+          ),
         )
 
         const filteredOldData = oldData.filter(
@@ -174,11 +213,10 @@ export const Add = () => {
 
         const newData = [...filteredOldData, ...monthNewStocks]
         const newContent = JSON.stringify({ stockData: newData }, null, 2)
-        const encoded = btoa(unescape(encodeURIComponent(newContent)))
+        const encoded = btoa(String.fromCharCode(...new TextEncoder().encode(newContent)))
 
-        // Push update for this month
         const putRes = await fetch(
-          `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`,
+          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${filePath}`,
           {
             method: "PUT",
             headers: {
@@ -194,8 +232,8 @@ export const Add = () => {
         )
 
         if (!putRes.ok) {
-          const error = await putRes.json()
-          throw new Error(`Failed to update ${fileName}: ${error.message}`)
+          const error = (await putRes.json()) as { message?: string }
+          throw new Error(`更新 ${fileName} 失败：${error.message ?? "未知错误"}`)
         }
 
         if (!currentIndices.includes(fileName)) {
@@ -204,14 +242,19 @@ export const Add = () => {
         }
       }
 
-      // 4. Update index.json if needed
       if (indexUpdated || !indexFile) {
         currentIndices.sort().reverse()
-        const newIndexContent = JSON.stringify({ files: currentIndices }, null, 2)
-        const encodedIndex = btoa(unescape(encodeURIComponent(newIndexContent)))
-        
+        const newIndexContent = JSON.stringify(
+          { files: currentIndices },
+          null,
+          2,
+        )
+        const encodedIndex = btoa(
+          String.fromCharCode(...new TextEncoder().encode(newIndexContent)),
+        )
+
         const putIndexRes = await fetch(
-          `https://api.github.com/repos/${username}/${repoName}/contents/data/index.json`,
+          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/data/index.json`,
           {
             method: "PUT",
             headers: {
@@ -227,171 +270,239 @@ export const Add = () => {
         )
 
         if (!putIndexRes.ok) {
-          const error = await putIndexRes.json()
-          throw new Error(`Failed to update index.json: ${error.message}`)
+          const error = (await putIndexRes.json()) as { message?: string }
+          throw new Error(
+            `更新 index.json 失败：${error.message ?? "未知错误"}`,
+          )
         }
       }
 
-      messageApi.success("Stock data saved successfully.")
+      messageApi.success("已成功保存到 GitHub")
       setNewStocks([])
-    } catch (error: any) {
-      messageApi.error(error.message || "An unexpected error occurred.")
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : "发生未知错误"
+      messageApi.error(msg)
       console.error(error)
     } finally {
       setIsSubmitting(false)
     }
   }
 
-  const columns = [
-    { title: "Date", dataIndex: "date", key: "date" },
+  const columns: ColumnsType<Stock> = [
+    { title: "日期", dataIndex: "date", key: "date", width: 110 },
     {
-      title: "Stock Number",
+      title: "股票代码",
       dataIndex: "stockNumber",
       key: "stockNumber",
-      render: (text: string, record: Stock) => (
-        <Flex align="center" gap="small">
-          <span>{text}</span>
-          {record.future === "long" && (
-            <span style={{ color: "green" }}>(Long)</span>
-          )}
-          {record.future === "short" && (
-            <span style={{ color: "red" }}>(Short)</span>
-          )}
-        </Flex>
-      ),
+      width: 110,
     },
-    { title: "Stock Name", dataIndex: "stockName", key: "stockName" },
-    { title: "Price", dataIndex: "price", key: "price" },
     {
-      title: "Action",
+      title: "股票名称",
+      dataIndex: "stockName",
+      key: "stockName",
+      width: 140,
+    },
+    {
+      title: "收盘价",
+      dataIndex: "price",
+      key: "price",
+      width: 100,
+    },
+    {
+      title: "走势",
+      dataIndex: "future",
+      key: "future",
+      width: 80,
+      render: (val: Stock["future"]) => <FutureTag future={val} />,
+    },
+    {
+      title: "操作",
       key: "action",
-      render: (_: unknown, record: Stock) => (
-        <Flex gap="small">
-          <Button onClick={() => handleEdit(record)}>Edit</Button>
-          <Button danger onClick={() => handleDelete(record.uuid)}>
-            Delete
+      width: 160,
+      render: (_, record) => (
+        <Space size="small">
+          <Button
+            size="small"
+            icon={<EditOutlined />}
+            onClick={() => handleEdit(record)}
+          >
+            编辑
           </Button>
-        </Flex>
+          <Button
+            size="small"
+            danger
+            icon={<DeleteOutlined />}
+            onClick={() => handleDelete(record.uuid)}
+          >
+            删除
+          </Button>
+        </Space>
       ),
     },
   ]
 
+  const renderEmpty = (
+    <Empty
+      image={Empty.PRESENTED_IMAGE_SIMPLE}
+      description={
+        <Typography.Text type="secondary">还没有待提交的记录</Typography.Text>
+      }
+      style={{ padding: "32px 0" }}
+    />
+  )
+
   const renderMobileList = () => (
     <List
-      itemLayout="vertical"
       dataSource={newStocks}
+      locale={{ emptyText: renderEmpty }}
       renderItem={(stock) => (
         <List.Item
           key={stock.uuid}
           actions={[
-            <Button size="small" onClick={() => handleEdit(stock)}>
-              Edit
+            <Button
+              key="edit"
+              size="small"
+              icon={<EditOutlined />}
+              onClick={() => handleEdit(stock)}
+            >
+              编辑
             </Button>,
             <Button
+              key="delete"
               size="small"
               danger
+              icon={<DeleteOutlined />}
               onClick={() => handleDelete(stock.uuid)}
             >
-              Delete
+              删除
             </Button>,
           ]}
         >
           <List.Item.Meta
             title={
               <Flex align="center" gap="small">
-                <span>{`${stock.stockName} (${stock.stockNumber})`}</span>
-                {stock.future === "long" && (
-                  <span style={{ color: "green" }}>(Long)</span>
-                )}
-                {stock.future === "short" && (
-                  <span style={{ color: "red" }}>(Short)</span>
-                )}
+                <Typography.Text strong>
+                  {stock.stockName}（{stock.stockNumber}）
+                </Typography.Text>
+                <FutureTag future={stock.future} />
               </Flex>
             }
-            description={`Date: ${stock.date} | Price: ${stock.price}`}
+            description={`${stock.date} · 收盘价 ${stock.price.toFixed(2)}`}
           />
-          <div>
-            <div style={{ marginBottom: 8 }}>
-              <strong>Industry: </strong>
-              {stock.industry.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </div>
-            <div>
-              <strong>Notion: </strong>
-              {stock.notion.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </div>
-          </div>
+          <Space size={[4, 4]} wrap style={{ marginTop: 8 }}>
+            {stock.industry.map((tag) => (
+              <Tag key={tag} color="blue">
+                {tag}
+              </Tag>
+            ))}
+            {stock.notion.map((tag) => (
+              <Tag key={tag} color="purple">
+                {tag}
+              </Tag>
+            ))}
+          </Space>
         </List.Item>
       )}
     />
   )
 
   const renderDesktopTable = () => (
-    <Table dataSource={newStocks} columns={columns} rowKey="uuid" />
+    <Table<Stock>
+      dataSource={newStocks}
+      columns={columns}
+      rowKey="uuid"
+      pagination={false}
+      locale={{ emptyText: renderEmpty }}
+    />
   )
 
   return (
-    <div style={{ margin: screens.md ? "2rem" : "1rem" }}>
+    <div style={{ paddingBottom: 96 }}>
       {contextHolder}
-      <Flex
-        justify="space-between"
-        align="center"
-        style={{ marginBottom: "2rem" }}
-      >
-        <Typography.Title level={2} style={{ margin: 0 }}>
-          Add New Stocks
-        </Typography.Title>
-        <Button
-          icon={<ArrowLeftOutlined />}
-          onClick={() => {
-            if (newStocks.length > 0) {
-              setNextLocation("/")
-              setShowLeaveConfirm(true)
-            } else {
-              navigate("/")
-            }
-          }}
-        >
-          Back to Home
-        </Button>
-      </Flex>
-
-      <Card
-        title="New Stocks"
+      <PageHeader
+        title="添加记录"
+        subtitle={`编辑完成后点击「提交到 GitHub」写入仓库，共 ${newStocks.length} 条待提交`}
         extra={
-          <Button type="primary" onClick={handleAddNew}>
-            Add New Stock
+          <Button
+            icon={<ArrowLeftOutlined />}
+            onClick={() => {
+              if (newStocks.length > 0) {
+                setNextLocation("/")
+                setShowLeaveConfirm(true)
+              } else {
+                navigate("/")
+              }
+            }}
+          >
+            返回
           </Button>
         }
-        style={{ marginBottom: "2rem" }}
-      >
-        {screens.md ? renderDesktopTable() : renderMobileList()}
-      </Card>
+      />
 
-      <Affix offsetBottom={20}>
-        <Card title="Submit to GitHub">
+      <div style={{ padding: screens.md ? "24px 32px" : "16px" }}>
+        <Card
+          title={
+            <Flex align="center" justify="space-between" wrap="wrap" gap="small">
+              <Typography.Text strong>待提交列表</Typography.Text>
+              <Button
+                type="primary"
+                icon={<PlusOutlined />}
+                onClick={handleAddNew}
+              >
+                新增一条
+              </Button>
+            </Flex>
+          }
+          styles={{ body: { padding: screens.md ? 16 : 8 } }}
+          style={{ marginBottom: 16 }}
+        >
+          {screens.md ? renderDesktopTable() : renderMobileList()}
+        </Card>
+
+        <Card
+          title={
+            <Flex align="center" gap="small">
+              <CloudUploadOutlined />
+              <Typography.Text strong>提交到 GitHub</Typography.Text>
+            </Flex>
+          }
+          styles={{ body: { padding: 16 } }}
+        >
           <Flex vertical gap="middle">
-            <Input
-              placeholder="GitHub Token"
+            <Alert
+              showIcon
+              type="info"
+              icon={<InfoCircleOutlined />}
+              message="Token 仅保存在本地浏览器（localStorage），写入后会更新每月数据文件。"
+              description={
+                <Typography.Text type="secondary">
+                  需要具备 <code>repo</code> 权限的 Personal Access Token。
+                </Typography.Text>
+              }
+            />
+            <Input.Password
+              placeholder="GitHub Personal Access Token"
               value={token}
               onChange={(e) => setToken(e.target.value)}
             />
             <Button
               type="primary"
-              onClick={handleSubmitAll}
+              icon={<CloudUploadOutlined />}
               loading={isSubmitting}
+              onClick={handleSubmitAll}
+              disabled={newStocks.length === 0}
+              block
             >
-              Submit All
+              {newStocks.length > 0
+                ? `提交 ${newStocks.length} 条记录`
+                : "提交到 GitHub"}
             </Button>
           </Flex>
         </Card>
-      </Affix>
+      </div>
 
       <Modal
-        title={editingStock?.uuid ? "Edit Stock" : "Add New Stock"}
+        title={editingStock?.uuid ? "编辑记录" : "新增记录"}
         open={isModalOpen}
         onCancel={() => {
           setIsModalOpen(false)
@@ -399,6 +510,7 @@ export const Add = () => {
         }}
         footer={null}
         destroyOnClose
+        width={screens.md ? 640 : "calc(100vw - 32px)"}
       >
         <Editor
           ref={editorRef}
@@ -415,24 +527,18 @@ export const Add = () => {
         title="确认离开"
         open={showLeaveConfirm}
         onCancel={() => setShowLeaveConfirm(false)}
-        footer={[
-          <Button key="back" onClick={() => setShowLeaveConfirm(false)}>
-            取消
-          </Button>,
-          <Button
-            key="submit"
-            type="primary"
-            danger
-            onClick={() => {
-              setNewStocks([]) // Discard changes
-              setShowLeaveConfirm(false)
-            }}
-          >
-            放弃更改并离开
-          </Button>,
-        ]}
+        okButtonProps={{ danger: true }}
+        okText="放弃并离开"
+        cancelText="继续编辑"
+        onOk={() => {
+          setNewStocks([])
+          setShowLeaveConfirm(false)
+        }}
       >
-        <p>您有未保存的更改。确定要放弃更改并离开吗？</p>
+        <Typography.Paragraph>
+          您有 <Typography.Text strong>{newStocks.length}</Typography.Text>{" "}
+          条未提交的记录。确定要放弃这些更改并离开吗？
+        </Typography.Paragraph>
       </Modal>
     </div>
   )

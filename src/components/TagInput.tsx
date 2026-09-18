@@ -1,5 +1,5 @@
 import { PlusOutlined } from "@ant-design/icons"
-import { Flex, Input, Tag, theme, Tooltip, type InputRef } from "antd"
+import { Flex, Input, Tag, Tooltip, theme, type InputRef } from "antd"
 import { useEffect, useRef, useState } from "react"
 
 interface Props {
@@ -35,9 +35,7 @@ export const TagInput = ({ label, initialValue = [], onChange }: Props) => {
   const handleClose = (removedTag: string) => {
     const newTags = tags.filter((tag) => tag !== removedTag)
     setTags(newTags)
-    if (onChange) {
-      onChange(newTags)
-    }
+    onChange?.(newTags)
   }
 
   const showInput = () => {
@@ -52,9 +50,7 @@ export const TagInput = ({ label, initialValue = [], onChange }: Props) => {
     if (inputValue && !tags.includes(inputValue)) {
       const newTags = [...tags, inputValue]
       setTags(newTags)
-      if (onChange) {
-        onChange(newTags)
-      }
+      onChange?.(newTags)
     }
     setInputVisible(false)
     setInputValue("")
@@ -68,34 +64,35 @@ export const TagInput = ({ label, initialValue = [], onChange }: Props) => {
     const newTags = [...tags]
     newTags[editInputIndex] = editInputValue
     setTags(newTags)
-    if (onChange) {
-      onChange(newTags)
-    }
+    onChange?.(newTags)
     setEditInputIndex(-1)
     setEditInputValue("")
   }
 
   const tagInputStyle: React.CSSProperties = {
-    width: 64,
-    height: 22,
+    width: 120,
+    height: 24,
     marginInlineEnd: 8,
     verticalAlign: "top",
   }
 
   const tagPlusStyle: React.CSSProperties = {
-    height: 22,
+    height: 24,
+    paddingInline: 8,
     background: styleToken.colorBgContainer,
     borderStyle: "dashed",
+    cursor: "pointer",
   }
 
   return (
     <Flex
-      gap="4px 0"
+      gap="6px"
       wrap
       style={{
         borderRadius: 8,
-        padding: 12,
-        border: "1px dashed #666",
+        padding: 8,
+        border: `1px dashed ${styleToken.colorBorder}`,
+        background: styleToken.colorFillTertiary,
       }}
     >
       {tags.map<React.ReactNode>((tag, index) => {

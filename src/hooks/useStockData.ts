@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { StockDataContext } from "../contexts/StockDataContext";
+import { useContext } from "react"
+import { StockDataContext } from "../contexts/StockDataContext.ts"
 
 export const useStockData = () => {
-  const context = useContext(StockDataContext);
+  const context = useContext(StockDataContext)
   if (context === undefined) {
-    throw new Error("useStockData must be used within a StockDataProvider");
+    throw new Error("useStockData must be used within a StockDataProvider")
   }
-  return context;
-};
+  return context
+}

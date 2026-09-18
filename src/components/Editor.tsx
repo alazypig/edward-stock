@@ -1,4 +1,19 @@
-import { Button, DatePicker, Flex, Grid, Input, message, Radio } from "antd"
+import {
+  ArrowDownOutlined,
+  ArrowUpOutlined,
+  QuestionCircleOutlined,
+} from "@ant-design/icons"
+import {
+  Button,
+  DatePicker,
+  Flex,
+  Form,
+  Grid,
+  Input,
+  InputNumber,
+  Radio,
+  message,
+} from "antd"
 import dayjs from "dayjs"
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
@@ -17,13 +32,23 @@ interface Props {
   onCancel: () => void
 }
 
+const futureOptions: Array<{
+  label: string
+  value: Stock["future"]
+  icon?: React.ReactNode
+}> = [
+  { label: "上涨", value: "long", icon: <ArrowUpOutlined /> },
+  { label: "下跌", value: "short", icon: <ArrowDownOutlined /> },
+  { label: "未知", value: "none", icon: <QuestionCircleOutlined /> },
+]
+
 export const Editor = forwardRef<EditorMethods, Props>(
   ({ stockToEdit, onSave, onCancel }, ref) => {
     const [date, setDate] = useState("")
     const [stockNumber, setStockNumber] = useState("")
     const [stockName, setStockName] = useState("")
-    const [price, setPrice] = useState("")
-    const [future, setFuture] = useState<"long" | "short" | "none">("none")
+    const [price, setPrice] = useState<number | null>(null)
+    const [future, setFuture] = useState<Stock["future"]>("none")
     const [comment, setComment] = useState("")
 
     const [industry, setIndustry] = useState<string[]>([])
@@ -37,9 +62,7 @@ export const Editor = forwardRef<EditorMethods, Props>(
         setDate(stockToEdit.date || "")
         setStockNumber(stockToEdit.stockNumber || "")
         setStockName(stockToEdit.stockName || "")
-        setPrice(
-          stockToEdit.price !== undefined ? String(stockToEdit.price) : "",
-        )
+        setPrice(stockToEdit.price ?? null)
         setFuture(stockToEdit.future || "none")
         setComment(stockToEdit.comment || "")
         setIndustry(stockToEdit.industry || [])
@@ -50,155 +73,146 @@ export const Editor = forwardRef<EditorMethods, Props>(
     }, [stockToEdit])
 
     const clearFields = () => {
-      // setDate("");
       setStockNumber("")
       setStockName("")
-      setPrice("")
+      setPrice(null)
       setFuture("none")
       setComment("")
       setIndustry([])
       setNotion([])
     }
 
+    useImperativeHandle(ref, () => ({ clearFields }), [])
+
     const handleSave = () => {
-      if (
-        !date ||
-        !stockNumber ||
-        !stockName ||
-        industry.length === 0 ||
-        notion.length === 0
-      ) {
-        messageApi.error("Please fill in all required fields.")
+      if (!date) {
+        messageApi.error("请选择日期")
         return
       }
-
-      const priceNum = Number(price)
-
-      if (isNaN(priceNum)) {
-        messageApi.error("Please enter a valid price.")
+      if (!stockNumber.trim()) {
+        messageApi.error("请填写股票代码")
+        return
+      }
+      if (!stockName.trim()) {
+        messageApi.error("请填写股票名称")
+        return
+      }
+      if (industry.length === 0) {
+        messageApi.error("至少添加一个行业标签")
+        return
+      }
+      if (notion.length === 0) {
+        messageApi.error("至少添加一个概念标签")
+        return
+      }
+      if (price === null || Number.isNaN(price) || price <= 0) {
+        messageApi.error("请填写有效的收盘价")
         return
       }
 
       const item: Stock = {
         uuid: stockToEdit?.uuid ?? uuidv4(),
         date,
-        stockNumber,
-        stockName,
-        price: priceNum,
+        stockNumber: stockNumber.trim(),
+        stockName: stockName.trim(),
+        price,
         future,
-        comment,
+        comment: comment.trim(),
         industry,
         notion,
       }
 
       onSave(item)
-      clearFields()
     }
 
-    useImperativeHandle(ref, () => ({
-      clearFields,
-    }))
-
     return (
-      <div
-        style={{
-          marginTop: 24,
-        }}
-      >
+      <div style={{ marginTop: 8 }}>
         {contextHolder}
-        <Flex vertical gap={screens.md ? "middle" : "small"}>
-          <DatePicker
-            value={date ? dayjs(date) : null}
-            onChange={(v) => {
-              setDate(v ? v.format("YYYY-MM-DD") : "")
-            }}
-            style={{
-              width: "100%",
-            }}
-          />
+        <Form layout="vertical" component={false}>
+          <Form.Item label="日期" required>
+            <DatePicker
+              value={date ? dayjs(date) : null}
+              onChange={(v) => setDate(v ? v.format("YYYY-MM-DD") : "")}
+              format="YYYY-MM-DD"
+              placeholder="选择观察日期"
+              style={{ width: "100%" }}
+            />
+          </Form.Item>
 
           <Flex vertical={!screens.md} gap="middle">
-            <Input
-              style={{ flex: 1 }}
-              placeholder="Stock Number"
-              value={stockNumber}
-              onChange={(e) => {
-                setStockNumber(e.target.value)
-              }}
-            />
-            <Input
-              style={{ flex: 1 }}
-              placeholder="Stock Name"
-              value={stockName}
-              onChange={(e) => {
-                setStockName(e.target.value)
-              }}
-            />
+            <Form.Item label="股票代码" required style={{ flex: 1, marginBottom: 0 }}>
+              <Input
+                placeholder="例如 600000"
+                value={stockNumber}
+                onChange={(e) => setStockNumber(e.target.value)}
+              />
+            </Form.Item>
+            <Form.Item label="股票名称" required style={{ flex: 1, marginBottom: 0 }}>
+              <Input
+                placeholder="例如 浦发银行"
+                value={stockName}
+                onChange={(e) => setStockName(e.target.value)}
+              />
+            </Form.Item>
           </Flex>
 
-          <Input
-            placeholder="Price"
-            value={price}
-            onChange={(e) => {
-              setPrice(e.target.value)
-            }}
-          />
+          <Form.Item label="收盘价" required style={{ marginTop: 16 }}>
+            <InputNumber
+              placeholder="例如 12.34"
+              value={price}
+              onChange={(v) => setPrice(v ?? null)}
+              min={0}
+              step={0.01}
+              precision={2}
+              style={{ width: "100%" }}
+            />
+          </Form.Item>
 
-          <TagInput
-            label="行业"
-            initialValue={industry}
-            onChange={setIndustry}
-          />
+          <Form.Item label="行业" required>
+            <TagInput
+              label="+ 添加行业"
+              initialValue={industry}
+              onChange={setIndustry}
+            />
+          </Form.Item>
 
-          <TagInput label="概念" initialValue={notion} onChange={setNotion} />
+          <Form.Item label="概念" required>
+            <TagInput
+              label="+ 添加概念"
+              initialValue={notion}
+              onChange={setNotion}
+            />
+          </Form.Item>
 
-          <Radio.Group
-            value={future}
-            options={[
-              { label: "Long", value: "long" },
-              { label: "Short", value: "short" },
-              { label: "unknown", value: "none" },
-            ]}
-            optionType="button"
-            buttonStyle="solid"
-            onChange={(e) => {
-              setFuture(e.target.value)
-            }}
-          />
+          <Form.Item label="走势预测" required>
+            <Radio.Group
+              value={future}
+              optionType="button"
+              buttonStyle="solid"
+              onChange={(e) => setFuture(e.target.value)}
+              options={futureOptions}
+            />
+          </Form.Item>
 
-          <Input
-            placeholder="Comment"
-            value={comment}
-            onChange={(e) => {
-              setComment(e.target.value)
-            }}
-          />
-        </Flex>
+          <Form.Item label="备注">
+            <Input.TextArea
+              placeholder="记录你看多或看跌的理由"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              autoSize={{ minRows: 2, maxRows: 4 }}
+            />
+          </Form.Item>
+        </Form>
 
-        <Flex
-          style={{
-            width: "100%",
-            marginTop: 24,
-          }}
-        >
-          <Button
-            style={{
-              flex: 1,
-            }}
-            onClick={() => {
-              clearFields()
-              onCancel()
-            }}
-          >
-            Cancel
+        <Flex gap="small" style={{ marginTop: 8 }}>
+          <Button style={{ flex: 1 }} onClick={onCancel}>
+            取消
           </Button>
-          <div style={{ width: 16 }}></div>
           <Button style={{ flex: 1 }} type="primary" onClick={handleSave}>
-            Save
+            保存
           </Button>
         </Flex>
       </div>
     )
   },
 )
-

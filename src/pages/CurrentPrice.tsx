@@ -1,83 +1,84 @@
-import { ArrowLeftOutlined } from "@ant-design/icons"
+import { ReloadOutlined } from "@ant-design/icons"
 import {
   Button,
   Card,
   Descriptions,
+  Empty,
   Flex,
   Grid,
   List,
+  Space,
   Table,
-  theme,
+  Tag,
   Typography,
 } from "antd"
+import type { ColumnsType } from "antd/es/table"
 import dayjs from "dayjs"
 import { useCallback, useEffect, useMemo, useState } from "react"
-import { Link } from "react-router-dom"
+import { PageHeader } from "../components"
+import { useColorConvention } from "../hooks/useColorConvention"
 import { useStockData } from "../hooks/useStockData"
+import { getChangeHex, getChangeSemantic } from "../utils/changeColor"
 
 const { useBreakpoint } = Grid
 
 interface StockData {
   key: string
   name: string
-  openingPrice: string
-  previousClosingPrice: string
-  currentPrice: string
-  highestPrice: string
-  lowestPrice: string
-  volume: string
-  turnover: string
-  date: string
-  time: string
-  changeAmount: string
-  changePercentage: string
-  marketCap: string
+  currentPrice: number
+  volume: number
+  turnover: number
+  changeAmount: number
+  changePercentage: number
+  marketCap: number
+}
+
+const parseStock = (raw: string): StockData | null => {
+  const match = raw.match(/(?:var )?v_s_(\w+)="(.*)";/)
+  if (!match) return null
+
+  const stockCode = match[1]
+  const fields = match[2].split("~")
+  return {
+    key: stockCode,
+    name: fields[1],
+    currentPrice: Number(fields[3]),
+    changeAmount: Number(fields[4]),
+    changePercentage: Number(fields[5]),
+    volume: Math.round(Number(fields[6]) / 100),
+    turnover: Number(fields[7]),
+    marketCap: Number(fields[9]),
+  }
+}
+
+const withMarketPrefix = (stockNumber: string): string => {
+  if (stockNumber.startsWith("6")) return `sh${stockNumber}`
+  if (stockNumber.startsWith("0") || stockNumber.startsWith("3")) {
+    return `sz${stockNumber}`
+  }
+  return stockNumber
 }
 
 export const CurrentPrice = () => {
   const [stockData, setStockData] = useState<StockData[]>([])
   const [loading, setLoading] = useState(true)
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null)
   const { stocks } = useStockData()
-  const { token } = theme.useToken()
+  const { convention } = useColorConvention()
   const screens = useBreakpoint()
 
-  const sortedStockData = useMemo(() => {
-    return [...stockData].sort((a, b) => {
-      const percentageA = parseFloat(a.changePercentage) || 0
-      const percentageB = parseFloat(b.changePercentage) || 0
-      return percentageB - percentageA
-    })
-  }, [stockData])
-
   const stockCodes = useMemo(() => {
-    if (!stocks || stocks.length === 0) {
-      return []
-    }
+    if (!stocks || stocks.length === 0) return []
 
-    const allDates = stocks.map((stock) => stock.date)
-    const uniqueSortedDates = [...new Set(allDates)].sort((a, b) =>
-      dayjs(b).diff(a),
-    )
-    const last10Dates = uniqueSortedDates.slice(0, 10)
-    const last10DatesSet = new Set(last10Dates)
+    const uniqueDates = [...new Set(stocks.map((stock) => stock.date))]
+      .sort((a, b) => b.localeCompare(a))
+      .slice(0, 10)
+    const last10DatesSet = new Set(uniqueDates)
 
-    const recentStocks = stocks.filter((stock) =>
-      last10DatesSet.has(stock.date),
-    )
+    const recentStocks = stocks.filter((stock) => last10DatesSet.has(stock.date))
+    const uniqueNumbers = new Set(recentStocks.map((s) => s.stockNumber))
 
-    const uniqueStockNumbers = [
-      ...new Set(recentStocks.map((stock) => stock.stockNumber)),
-    ]
-
-    return uniqueStockNumbers.map((stockNumber) => {
-      if (stockNumber.startsWith("6")) {
-        return `sh${stockNumber}`
-      }
-      if (stockNumber.startsWith("0") || stockNumber.startsWith("3")) {
-        return `sz${stockNumber}`
-      }
-      return stockNumber
-    })
+    return Array.from(uniqueNumbers).map(withMarketPrefix)
   }, [stocks])
 
   const fetchData = useCallback(async () => {
@@ -91,46 +92,18 @@ export const CurrentPrice = () => {
       const response = await fetch(
         `https://qt.gtimg.cn/r=${Math.random()}&q=${stockCodes.map((code) => `s_${code}`).join(",")}`,
       )
-      const blob = await response.blob()
-      const reader = new FileReader()
-      reader.onload = () => {
-        const text = reader.result as string
-        const stockEntries = text.split("\n").filter(Boolean)
-        const parsedStocks: StockData[] = []
-        console.log(text)
-
-        stockEntries.forEach((entry) => {
-          const match = entry.match(/(?:var )?v_s_(\w+)="(.*)";/)
-
-          if (match) {
-            const stockCode = match[1]
-            const dataString = match[2]
-            const dataArray = dataString.split("~")
-
-            parsedStocks.push({
-              key: stockCode,
-              name: dataArray[1],
-              openingPrice: "", // Not available in new format
-              previousClosingPrice: "", // Not available in new format
-              currentPrice: dataArray[3],
-              highestPrice: "", // Not available in new format
-              lowestPrice: "", // Not available in new format
-              volume: (parseInt(dataArray[6]) / 100).toString(),
-              turnover: parseFloat(dataArray[7]).toString(),
-              date: "", // Not available in new format
-              time: "", // Not available in new format
-              changeAmount: dataArray[4],
-              changePercentage: dataArray[5],
-              marketCap: dataArray[9],
-            })
-          }
-        })
-        setStockData(parsedStocks)
-        setLoading(false)
-      }
-      reader.readAsText(blob, "gbk")
+      const buffer = await response.arrayBuffer()
+      const text = new TextDecoder("gbk").decode(buffer)
+      const parsed = text
+        .split("\n")
+        .filter(Boolean)
+        .map(parseStock)
+        .filter((s): s is StockData => s !== null)
+      setStockData(parsed)
+      setLastUpdated(dayjs().format("HH:mm:ss"))
     } catch (error) {
       console.error("Failed to fetch current price", error)
+    } finally {
       setLoading(false)
     }
   }, [stockCodes])
@@ -139,57 +112,124 @@ export const CurrentPrice = () => {
     fetchData()
   }, [fetchData])
 
-  const renderChange = (record: StockData) => {
-    const percentage = parseFloat(record.changePercentage)
-    const color = percentage < 0 ? "red" : "green"
-    return <span style={{ color }}>{percentage.toFixed(2)}%</span>
+  const renderChangeTag = (pct: number) => {
+    return (
+      <Tag
+        color={getChangeSemantic(pct, convention)}
+        style={{ fontWeight: 600, margin: 0, borderRadius: 4 }}
+      >
+        {pct > 0 ? "+" : ""}
+        {pct.toFixed(2)}%
+      </Tag>
+    )
   }
 
-  const columns = [
-    { title: "股票代码", dataIndex: "key", key: "key" },
-    { title: "股票名称", dataIndex: "name", key: "name" },
-    { title: "当前价格", dataIndex: "currentPrice", key: "currentPrice" },
+  const columns: ColumnsType<StockData> = [
+    { title: "股票代码", dataIndex: "key", key: "key", width: 120 },
+    { title: "股票名称", dataIndex: "name", key: "name", width: 140 },
     {
-      title: "今日涨跌幅",
-      key: "change",
-      render: (_: unknown, record: StockData) => renderChange(record),
-      sorter: (a: StockData, b: StockData) => {
-        const percentageA = parseFloat(a.changePercentage)
-        const percentageB = parseFloat(b.changePercentage)
-        return percentageA - percentageB
-      },
-      defaultSortOrder: "descend",
+      title: "当前价",
+      dataIndex: "currentPrice",
+      key: "currentPrice",
+      width: 100,
+      render: (val: number) => <Typography.Text strong>{val.toFixed(2)}</Typography.Text>,
     },
-    { title: "成交额（万元）", dataIndex: "turnover", key: "turnover" },
-    { title: "市值（亿）", dataIndex: "marketCap", key: "marketCap" },
+    {
+      title: "今日涨跌",
+      key: "change",
+      width: 170,
+      render: (_, record) => {
+        const amount = record.changeAmount
+        const color = getChangeHex(amount, convention)
+        return (
+          <Space size={6} align="center">
+            <Typography.Text
+              strong
+              style={{ color, fontVariantNumeric: "tabular-nums" }}
+            >
+              {amount > 0 ? "+" : ""}
+              {amount.toFixed(2)}
+            </Typography.Text>
+            {renderChangeTag(record.changePercentage)}
+          </Space>
+        )
+      },
+    },
+    {
+      title: "成交量（手）",
+      dataIndex: "volume",
+      key: "volume",
+      width: 110,
+    },
+    {
+      title: "成交额（万元）",
+      dataIndex: "turnover",
+      key: "turnover",
+      width: 130,
+      render: (val: number) => val.toLocaleString("zh-CN"),
+    },
+    {
+      title: "市值（亿）",
+      dataIndex: "marketCap",
+      key: "marketCap",
+      width: 110,
+      render: (val: number) => val.toLocaleString("zh-CN"),
+    },
   ]
+
+  const renderEmpty = (
+    <Empty
+      image={Empty.PRESENTED_IMAGE_SIMPLE}
+      description={
+        <Typography.Text type="secondary">
+          最近 10 个交易日暂无股票记录，先去添加吧
+        </Typography.Text>
+      }
+      style={{ padding: "48px 0" }}
+    />
+  )
 
   const renderMobileList = () => (
     <List
       loading={loading}
       grid={{ gutter: 16, xs: 1, sm: 2 }}
-      dataSource={sortedStockData}
-      renderItem={(stock: StockData) => (
+      dataSource={stockData}
+      locale={{ emptyText: renderEmpty }}
+      renderItem={(stock) => (
         <List.Item>
-          <Card
-            hoverable
-            title={`${stock.name} (${stock.key})`}
-            size="small"
-          >
-            <Descriptions column={1} bordered size="small">
-              <Descriptions.Item label="当前价格">
-                {stock.currentPrice}
-              </Descriptions.Item>
-              <Descriptions.Item label="今日涨跌幅">
-                {renderChange(stock)}
-              </Descriptions.Item>
-              <Descriptions.Item label="成交额（万元）">
-                {stock.turnover}
-              </Descriptions.Item>
-              <Descriptions.Item label="市值（亿）">
-                {stock.marketCap}
-              </Descriptions.Item>
-            </Descriptions>
+          <Card hoverable size="small" styles={{ body: { padding: 16 } }}>
+            <Flex justify="space-between" align="center" style={{ marginBottom: 8 }}>
+              <Typography.Text strong>
+                {stock.name}（{stock.key}）
+              </Typography.Text>
+              <Tag>{stock.currentPrice.toFixed(2)}</Tag>
+            </Flex>
+            <Descriptions
+              column={1}
+              size="small"
+              items={[
+                {
+                  key: "change",
+                  label: "今日涨跌",
+                  children: renderChangeTag(stock.changePercentage),
+                },
+                {
+                  key: "volume",
+                  label: "成交量（手）",
+                  children: stock.volume.toLocaleString("zh-CN"),
+                },
+                {
+                  key: "turnover",
+                  label: "成交额（万元）",
+                  children: stock.turnover.toLocaleString("zh-CN"),
+                },
+                {
+                  key: "marketCap",
+                  label: "市值（亿）",
+                  children: stock.marketCap.toLocaleString("zh-CN"),
+                },
+              ]}
+            />
           </Card>
         </List.Item>
       )}
@@ -197,42 +237,34 @@ export const CurrentPrice = () => {
   )
 
   const renderDesktopTable = () => (
-    <Table
+    <Table<StockData>
       loading={loading}
-      dataSource={sortedStockData}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      columns={columns as any}
-      bordered
+      dataSource={stockData}
+      columns={columns}
+      bordered={false}
       pagination={false}
       scroll={{ y: 500 }}
+      locale={{ emptyText: renderEmpty }}
+      rowKey="key"
     />
   )
 
   return (
     <div>
-      <div
-        style={{
-          backgroundColor: token.colorBgContainer,
-          padding: "1rem",
-          borderBottom: `1px solid ${token.colorBorder}`,
-          position: "sticky",
-          top: 0,
-          zIndex: 1,
-        }}
-      >
-        <Flex justify="space-between" align="center" wrap="wrap">
-          <Typography.Title level={2} style={{ margin: "0.5rem 0" }}>
-            Current Price
-          </Typography.Title>
-          <Flex gap="middle" wrap="wrap">
-            <Button onClick={fetchData}>Refresh</Button>
-            <Link to="/">
-              <Button icon={<ArrowLeftOutlined />}>Back to Home</Button>
-            </Link>
-          </Flex>
-        </Flex>
-      </div>
-      <div style={{ padding: screens.md ? "2rem" : "1rem" }}>
+      <PageHeader
+        title="实时行情"
+        subtitle={
+          lastUpdated
+            ? `最后更新：${lastUpdated} · 共 ${stockData.length} 只股票`
+            : "读取最近 10 个交易日出现过的股票实时报价"
+        }
+        extra={
+          <Button icon={<ReloadOutlined />} onClick={fetchData} loading={loading}>
+            刷新
+          </Button>
+        }
+      />
+      <div style={{ padding: screens.md ? "24px 32px" : "16px" }}>
         {screens.md ? renderDesktopTable() : renderMobileList()}
       </div>
     </div>

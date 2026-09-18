@@ -1,30 +1,58 @@
 import {
+  PlusOutlined,
+  ReloadOutlined,
+  SearchOutlined,
+} from "@ant-design/icons"
+import {
   Button,
   Card,
   Descriptions,
+  Empty,
   Flex,
   Grid,
   Input,
   List,
+  Space,
   Table,
   Tag,
+  Tooltip,
   Typography,
   theme,
 } from "antd"
+import type { ColumnsType } from "antd/es/table"
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
+import { PageHeader } from "../components"
+import { useColorConvention } from "../hooks/useColorConvention"
 import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
+import { getChangeSemantic } from "../utils/changeColor"
 
 const { useBreakpoint } = Grid
 
-const renderFuture = (val: Stock["future"]) => {
-  if (val === "long") {
-    return <span style={{ color: "green", fontWeight: "bold" }}>上涨</span>
-  } else if (val === "short") {
-    return <span style={{ color: "red", fontWeight: "bold" }}>下跌</span>
+const FutureTag = ({ future }: { future: Stock["future"] }) => {
+  const { convention } = useColorConvention()
+  if (future === "long") {
+    return (
+      <Tag
+        color={getChangeSemantic(1, convention)}
+        style={{ fontWeight: 600 }}
+      >
+        上涨
+      </Tag>
+    )
   }
-  return "未知"
+  if (future === "short") {
+    return (
+      <Tag
+        color={getChangeSemantic(-1, convention)}
+        style={{ fontWeight: 600 }}
+      >
+        下跌
+      </Tag>
+    )
+  }
+  return <Tag>未知</Tag>
 }
 
 export const Home = () => {
@@ -42,95 +70,192 @@ export const Home = () => {
     if (!searchTerm) {
       return sortedStocks
     }
-    const lowerCaseSearchTerm = searchTerm.toLowerCase()
+    const lower = searchTerm.toLowerCase()
     return sortedStocks.filter(
       (stock) =>
-        stock.stockNumber.toLowerCase().includes(lowerCaseSearchTerm) ||
-        stock.stockName.toLowerCase().includes(lowerCaseSearchTerm) ||
-        stock.comment.toLowerCase().includes(lowerCaseSearchTerm) ||
-        stock.industry.some((industry) =>
-          industry.toLowerCase().includes(lowerCaseSearchTerm),
-        ) ||
-        stock.notion.some((notion) =>
-          notion.toLowerCase().includes(lowerCaseSearchTerm),
-        ),
+        stock.stockNumber.toLowerCase().includes(lower) ||
+        stock.stockName.toLowerCase().includes(lower) ||
+        stock.comment.toLowerCase().includes(lower) ||
+        stock.industry.some((item) => item.toLowerCase().includes(lower)) ||
+        stock.notion.some((item) => item.toLowerCase().includes(lower)),
     )
   }, [sortedStocks, searchTerm])
 
-  const columns = [
-    { title: "日期", dataIndex: "date", key: "date" },
-    { title: "股票号码", dataIndex: "stockNumber", key: "stockNumber" },
-    { title: "股票名称", dataIndex: "stockName", key: "stockName" },
-    { title: "收盘价", dataIndex: "price", key: "price" },
+  const summary = useMemo(() => {
+    if (stocks.length === 0) return null
+    const dates = new Set(stocks.map((s) => s.date))
+    const longCount = stocks.filter((s) => s.future === "long").length
+    const shortCount = stocks.filter((s) => s.future === "short").length
+    return {
+      total: stocks.length,
+      dates: dates.size,
+      longCount,
+      shortCount,
+    }
+  }, [stocks])
+
+  const columns: ColumnsType<Stock> = [
+    { title: "日期", dataIndex: "date", key: "date", width: 130 },
+    {
+      title: "股票代码",
+      dataIndex: "stockNumber",
+      key: "stockNumber",
+      width: 110,
+    },
+    {
+      title: "股票名称",
+      dataIndex: "stockName",
+      key: "stockName",
+      width: 140,
+    },
+    {
+      title: "收盘价",
+      dataIndex: "price",
+      key: "price",
+      width: 100,
+      render: (val: number) => (
+        <Typography.Text strong>{val.toFixed(2)}</Typography.Text>
+      ),
+    },
     {
       title: "行业",
       dataIndex: "industry",
       key: "industry",
+      width: 180,
       render: (val: string[]) => (
-        <>
+        <Flex gap={4} wrap align="flex-start">
           {val.map((item) => (
-            <Tag key={item}>{item}</Tag>
+            <Tag key={item} color="blue">
+              {item}
+            </Tag>
           ))}
-        </>
+        </Flex>
       ),
     },
     {
       title: "概念",
       dataIndex: "notion",
       key: "notion",
+      width: 240,
       render: (val: string[]) => (
-        <>
+        <Flex gap={4} wrap align="flex-start">
           {val.map((item) => (
-            <Tag key={item}>{item}</Tag>
+            <Tag key={item} color="purple">
+              {item}
+            </Tag>
           ))}
-        </>
+        </Flex>
       ),
     },
     {
-      title: "预测走势",
+      title: "预测",
       dataIndex: "future",
       key: "future",
-      render: renderFuture,
+      width: 90,
+      render: (val: Stock["future"]) => <FutureTag future={val} />,
     },
-    { title: "备注", dataIndex: "comment", key: "comment" },
+    {
+      title: "备注",
+      dataIndex: "comment",
+      key: "comment",
+      width: 200,
+      ellipsis: {
+        showTitle: false,
+      },
+      render: (val: string) =>
+        val ? (
+          <Tooltip title={val}>
+            <Typography.Text type="secondary">{val}</Typography.Text>
+          </Tooltip>
+        ) : (
+          <Typography.Text type="secondary">—</Typography.Text>
+        ),
+    },
   ]
+
+  const renderEmpty = (
+    <Empty
+      image={Empty.PRESENTED_IMAGE_SIMPLE}
+      description={
+        <Typography.Text type="secondary">暂无股票记录</Typography.Text>
+      }
+      style={{ padding: "48px 0" }}
+    >
+      <Link to="/add">
+        <Button type="primary" icon={<PlusOutlined />}>
+          添加第一条记录
+        </Button>
+      </Link>
+    </Empty>
+  )
 
   const renderMobileList = () => (
     <List
       loading={loading}
       grid={{ gutter: 16, xs: 1, sm: 2 }}
       dataSource={filteredStocks}
+      locale={{ emptyText: renderEmpty }}
       renderItem={(stock: Stock) => (
         <List.Item>
-          <Card
-            hoverable
-            title={`${stock.stockName} (${stock.stockNumber})`}
-            size="small"
-          >
-            <Descriptions column={1} bordered size="small">
-              <Descriptions.Item label="日期">{stock.date}</Descriptions.Item>
-              <Descriptions.Item label="收盘价">
-                {stock.price}
-              </Descriptions.Item>
-              <Descriptions.Item label="预测走势">
-                {renderFuture(stock.future)}
-              </Descriptions.Item>
-              <Descriptions.Item label="行业">
-                {stock.industry.map((item) => (
-                  <Tag key={item}>{item}</Tag>
-                ))}
-              </Descriptions.Item>
-              <Descriptions.Item label="概念">
-                {stock.notion.map((item) => (
-                  <Tag key={item}>{item}</Tag>
-                ))}
-              </Descriptions.Item>
-              {stock.comment && (
-                <Descriptions.Item label="备注">
-                  {stock.comment}
-                </Descriptions.Item>
-              )}
-            </Descriptions>
+          <Card hoverable size="small" styles={{ body: { padding: 16 } }}>
+            <Flex justify="space-between" align="center" style={{ marginBottom: 8 }}>
+              <Typography.Text strong>
+                {stock.stockName}（{stock.stockNumber}）
+              </Typography.Text>
+              {<FutureTag future={stock.future} />}
+            </Flex>
+            <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+              {stock.date}
+            </Typography.Text>
+            <Descriptions
+              column={1}
+              size="small"
+              style={{ marginTop: 12 }}
+              items={[
+                {
+                  key: "price",
+                  label: "收盘价",
+                  children: (
+                    <Typography.Text strong>{stock.price.toFixed(2)}</Typography.Text>
+                  ),
+                },
+                {
+                  key: "industry",
+                  label: "行业",
+                  children: (
+                    <Space size={[4, 4]} wrap>
+                      {stock.industry.map((item) => (
+                        <Tag key={item} color="blue">
+                          {item}
+                        </Tag>
+                      ))}
+                    </Space>
+                  ),
+                },
+                {
+                  key: "notion",
+                  label: "概念",
+                  children: (
+                    <Space size={[4, 4]} wrap>
+                      {stock.notion.map((item) => (
+                        <Tag key={item} color="purple">
+                          {item}
+                        </Tag>
+                      ))}
+                    </Space>
+                  ),
+                },
+                ...(stock.comment
+                  ? [
+                      {
+                        key: "comment",
+                        label: "备注",
+                        children: stock.comment,
+                      },
+                    ]
+                  : []),
+              ]}
+            />
           </Card>
         </List.Item>
       )}
@@ -138,53 +263,55 @@ export const Home = () => {
   )
 
   const renderDesktopTable = () => (
-    <Table
+    <Table<Stock>
       loading={loading}
       dataSource={filteredStocks}
       columns={columns}
       scroll={{ x: true }}
       rowKey="uuid"
+      pagination={{
+        showSizeChanger: true,
+        showTotal: (total) => `共 ${total} 条`,
+        defaultPageSize: 20,
+      }}
+      locale={{
+        emptyText: renderEmpty,
+      }}
+      style={{ borderRadius: token.borderRadiusLG }}
     />
   )
 
   return (
     <div>
-      <div
-        style={{
-          backgroundColor: token.colorBgContainer,
-          padding: "1rem",
-          borderBottom: `1px solid ${token.colorBorder}`,
-          position: "sticky",
-          top: 0,
-          zIndex: 1,
-        }}
-      >
-        <Flex justify="space-between" align="center" wrap="wrap">
-          <Typography.Title level={2} style={{ margin: "0.5rem 0" }}>
-            Stock List
-          </Typography.Title>
-          <Input.Search
-            placeholder="搜索股票号码、名称、行业或概念"
-            allowClear
-            onSearch={setSearchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: 300 }}
-          />
-          <Flex gap="middle" wrap="wrap">
-            <Button onClick={refetch}>Refresh</Button>
+      <PageHeader
+        title="股票列表"
+        subtitle={
+          summary
+            ? `共 ${summary.total} 条记录，覆盖 ${summary.dates} 个交易日 · 看涨 ${summary.longCount} / 看跌 ${summary.shortCount}`
+            : "录入你的第一条股票观察"
+        }
+        extra={
+          <>
+            <Input
+              allowClear
+              placeholder="搜索代码、名称、行业或概念"
+              prefix={<SearchOutlined style={{ color: token.colorTextPlaceholder }} />}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              style={{ width: screens.md ? 280 : "100%" }}
+            />
+            <Button icon={<ReloadOutlined />} onClick={refetch}>
+              刷新
+            </Button>
             <Link to="/add">
-              <Button type="primary">Add New</Button>
+              <Button type="primary" icon={<PlusOutlined />}>
+                添加记录
+              </Button>
             </Link>
-            <Link to="/analysis">
-              <Button>Analysis</Button>
-            </Link>
-            <Link to="/current-price">
-              <Button>Current Price</Button>
-            </Link>
-          </Flex>
-        </Flex>
-      </div>
-      <div style={{ padding: screens.md ? "2rem" : "1rem" }}>
+          </>
+        }
+      />
+      <div style={{ padding: screens.md ? "24px 32px" : "16px" }}>
         {screens.md ? renderDesktopTable() : renderMobileList()}
       </div>
     </div>
