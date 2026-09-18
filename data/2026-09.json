@@ -1,0 +1,51 @@
+{
+  "stockData": [
+    {
+      "uuid": "a9ce0a88-06c9-44a0-84fe-1fa09267cded",
+      "date": "2026-09-18",
+      "stockNumber": "600666",
+      "stockName": "奥瑞德",
+      "price": 3.54,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "IT服务"
+      ],
+      "notion": [
+        "云计算"
+      ]
+    },
+    {
+      "uuid": "3bf8acc0-397d-4d00-8b61-bf9c34d2ff19",
+      "date": "2026-09-18",
+      "stockNumber": "002213",
+      "stockName": "大为股份",
+      "price": 29.38,
+      "future": "long",
+      "comment": "关注",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "存储芯片",
+        "芯片"
+      ]
+    },
+    {
+      "uuid": "18d8d035-ce78-4213-b6f5-a55f131bcc13",
+      "date": "2026-09-18",
+      "stockNumber": "002885",
+      "stockName": "京泉华",
+      "price": 28.5,
+      "future": "none",
+      "comment": "关注",
+      "industry": [
+        "其他电子"
+      ],
+      "notion": [
+        "数据中心",
+        "新能源汽车"
+      ]
+    }
+  ]
+}
