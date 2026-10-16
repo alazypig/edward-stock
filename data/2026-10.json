@@ -1,0 +1,53 @@
+{
+  "stockData": [
+    {
+      "uuid": "171f9fd1-46e2-4377-bba2-de2660bd949a",
+      "date": "2026-10-16",
+      "stockNumber": "600072",
+      "stockName": "中船科技",
+      "price": 10,
+      "future": "long",
+      "comment": "距底部不高",
+      "industry": [
+        "风电设备"
+      ],
+      "notion": [
+        "国产航母",
+        "风电"
+      ]
+    },
+    {
+      "uuid": "dbff90c8-5152-4935-b66e-0bf9fd0e024f",
+      "date": "2026-10-16",
+      "stockNumber": "603861",
+      "stockName": "白云电器",
+      "price": 11.8,
+      "future": "long",
+      "comment": "底部建仓",
+      "industry": [
+        "电网设备"
+      ],
+      "notion": [
+        "特高压",
+        "柔性直流输电"
+      ]
+    },
+    {
+      "uuid": "284325dd-a379-4222-ba73-f72585f689e2",
+      "date": "2026-10-16",
+      "stockNumber": "002965",
+      "stockName": "祥鑫科技",
+      "price": 23.16,
+      "future": "none",
+      "comment": "观望",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "人形机器人",
+        "机器人",
+        "液冷服务器"
+      ]
+    }
+  ]
+}
