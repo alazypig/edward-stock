@@ -48,6 +48,37 @@
         "机器人",
         "液冷服务器"
       ]
+    },
+    {
+      "uuid": "164dd630-5341-4cbc-81b4-082b1b612aaa",
+      "date": "2026-10-23",
+      "stockNumber": "600592",
+      "stockName": "龙溪股份",
+      "price": 15.61,
+      "future": "long",
+      "comment": "底部位置",
+      "industry": [
+        "通用设备"
+      ],
+      "notion": [
+        "人形机器人",
+        "国企改革"
+      ]
+    },
+    {
+      "uuid": "8515b928-1342-4f33-b72e-f1ba04030024",
+      "date": "2026-10-23",
+      "stockNumber": "000670",
+      "stockName": "盈方微",
+      "price": 6.63,
+      "future": "none",
+      "comment": "底部位置",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "存储芯片"
+      ]
     }
   ]
 }
