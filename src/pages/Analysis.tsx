@@ -1,20 +1,17 @@
-import { CalendarOutlined, FundOutlined, StockOutlined } from "@ant-design/icons"
 import {
-  Card,
-  Flex,
-  Grid,
-  Spin,
-  Statistic,
-  Table,
-  Typography,
-} from "antd"
+  CalendarOutlined,
+  FundOutlined,
+  StockOutlined,
+} from "@ant-design/icons"
+import { Card, Flex, Grid, Spin, Statistic, Table, Typography } from "antd"
 import type { ColumnsType } from "antd/es/table"
 import type { SortOrder } from "antd/es/table/interface"
 import WordCloud from "react-d3-cloud"
 import { PageHeader } from "../components"
+import { ANALYSIS_RECORD_LIMIT } from "../config"
 import { useAnalysisData, type AnalyzedStock } from "../hooks/useAnalysisData"
 import { useColorConvention } from "../hooks/useColorConvention"
-import { useStockData } from "../hooks/useStockData"
+import { useRecentStocks } from "../hooks/useRecentStocks"
 import { getChangeHex } from "../utils/changeColor"
 
 const { useBreakpoint } = Grid
@@ -23,15 +20,16 @@ const fontSizeMapper = (word: { value: number }) =>
   Math.max(12, Math.log2(Math.max(2, word.value)) * 12)
 
 export const Analysis = () => {
-  const { stocks, loading } = useStockData()
+  const { stocks, loading } = useRecentStocks(ANALYSIS_RECORD_LIMIT)
   const { convention } = useColorConvention()
   const screens = useBreakpoint()
 
-  const { analyzedData, industryWords, notionWords } = useAnalysisData(stocks)
+  const { analyzedData, industryWords, notionWords, uniqueCount } =
+    useAnalysisData(stocks)
 
   const summary = {
     total: stocks.length,
-    unique: analyzedData.length,
+    unique: uniqueCount,
     industries: industryWords.length,
     notions: notionWords.length,
   }
@@ -121,7 +119,7 @@ export const Analysis = () => {
     <div>
       <PageHeader
         title="数据分析"
-        subtitle="基于最近 10 个交易日的股票记录做聚合"
+        subtitle={`基于最近 ${ANALYSIS_RECORD_LIMIT} 条记录聚合 · 按交易日整日取整`}
       />
       <div style={{ padding: screens.md ? "24px 32px" : "16px" }}>
         <Spin spinning={loading}>

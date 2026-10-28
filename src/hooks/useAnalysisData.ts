@@ -11,92 +11,99 @@ interface AnalyzedStock {
   count: number
 }
 
+/**
+ * 聚合传入的记录。时间范围由调用方决定（分析页只传最近 N 条），
+ * 这里不再额外做时间窗过滤。
+ */
 export const useAnalysisData = (stocks: Stock[] | undefined) => {
-  const { analyzedData, industryWords, notionWords } = useMemo(() => {
-    if (!stocks || stocks.length === 0) {
-      return { analyzedData: [], industryWords: [], notionWords: [] }
-    }
-
-    const allDates = stocks.map((stock) => stock.date)
-    const uniqueSortedDates = [...new Set(allDates)].sort((a, b) =>
-      dayjs(b).diff(a),
-    )
-    const last10Dates = uniqueSortedDates.slice(0, 10)
-    const last10DatesSet = new Set(last10Dates)
-
-    const recentStocks = stocks.filter((stock) =>
-      last10DatesSet.has(stock.date),
-    )
-
-    // Left Section Data
-    const groupedByStockNumber = recentStocks.reduce(
-      (acc, stock) => {
-        if (!acc[stock.stockNumber]) {
-          acc[stock.stockNumber] = []
-        }
-        acc[stock.stockNumber].push(stock)
-        return acc
-      },
-      {} as Record<string, Stock[]>,
-    )
-
-    const processedData = Object.values(groupedByStockNumber)
-      .filter((group) => group.length > 1)
-      .map((group) => {
-        const sortedGroup = group.sort((a, b) =>
-          dayjs(a.date).diff(dayjs(b.date)),
-        )
-        const firstEntry = sortedGroup[0]
-        const lastEntry = sortedGroup[sortedGroup.length - 1]
+  const { analyzedData, industryWords, notionWords, uniqueCount } =
+    useMemo(() => {
+      if (!stocks || stocks.length === 0) {
         return {
-          key: firstEntry.stockNumber,
-          stockNumber: firstEntry.stockNumber,
-          stockName: firstEntry.stockName,
-          firstPrice: firstEntry.price,
-          lastPrice: lastEntry.price,
-          count: group.length,
+          analyzedData: [],
+          industryWords: [],
+          notionWords: [],
+          uniqueCount: 0,
         }
-      })
+      }
 
-    // Middle & Right Section Data
-    const industryWordCounts = recentStocks
-      .flatMap((stock) => stock.industry)
-      .reduce(
-        (acc, word) => {
-          acc[word] = (acc[word] || 0) + 1
+      const uniqueCount = new Set(stocks.map((stock) => stock.stockNumber)).size
+
+      // Left Section Data
+      const groupedByStockNumber = stocks.reduce(
+        (acc, stock) => {
+          if (!acc[stock.stockNumber]) {
+            acc[stock.stockNumber] = []
+          }
+          acc[stock.stockNumber].push(stock)
           return acc
         },
-        {} as Record<string, number>,
+        {} as Record<string, Stock[]>,
       )
 
-    const industryWords = Object.entries(industryWordCounts).map(
-      ([text, value]) => ({
-        text,
-        value,
-      }),
-    )
+      const processedData = Object.values(groupedByStockNumber)
+        // 只保留出现 2 次以上的股票，"涨跌幅" 才有意义
+        .filter((group) => group.length > 1)
+        .map((group) => {
+          const sortedGroup = group.sort((a, b) =>
+            dayjs(a.date).diff(dayjs(b.date)),
+          )
+          const firstEntry = sortedGroup[0]
+          const lastEntry = sortedGroup[sortedGroup.length - 1]
+          return {
+            key: firstEntry.stockNumber,
+            stockNumber: firstEntry.stockNumber,
+            stockName: firstEntry.stockName,
+            firstPrice: firstEntry.price,
+            lastPrice: lastEntry.price,
+            count: group.length,
+          }
+        })
 
-    const notionWordCounts = recentStocks
-      .flatMap((stock) => stock.notion)
-      .reduce(
-        (acc, word) => {
-          acc[word] = (acc[word] || 0) + 1
-          return acc
-        },
-        {} as Record<string, number>,
+      // Middle & Right Section Data
+      const industryWordCounts = stocks
+        .flatMap((stock) => stock.industry)
+        .reduce(
+          (acc, word) => {
+            acc[word] = (acc[word] || 0) + 1
+            return acc
+          },
+          {} as Record<string, number>,
+        )
+
+      const industryWords = Object.entries(industryWordCounts).map(
+        ([text, value]) => ({
+          text,
+          value,
+        }),
       )
 
-    const notionWords = Object.entries(notionWordCounts).map(
-      ([text, value]) => ({
-        text,
-        value,
-      }),
-    )
+      const notionWordCounts = stocks
+        .flatMap((stock) => stock.notion)
+        .reduce(
+          (acc, word) => {
+            acc[word] = (acc[word] || 0) + 1
+            return acc
+          },
+          {} as Record<string, number>,
+        )
 
-    return { analyzedData: processedData, industryWords, notionWords }
-  }, [stocks])
+      const notionWords = Object.entries(notionWordCounts).map(
+        ([text, value]) => ({
+          text,
+          value,
+        }),
+      )
 
-  return { analyzedData, industryWords, notionWords }
+      return {
+        analyzedData: processedData,
+        industryWords,
+        notionWords,
+        uniqueCount,
+      }
+    }, [stocks])
+
+  return { analyzedData, industryWords, notionWords, uniqueCount }
 }
 
 export type { AnalyzedStock }

@@ -1,4 +1,5 @@
 export * from "./Editor"
+export * from "./FutureTag"
 export * from "./PageHeader"
 export * from "./PageSpinner"
 export * from "./TagInput"

@@ -1,8 +1,4 @@
-import {
-  PlusOutlined,
-  ReloadOutlined,
-  SearchOutlined,
-} from "@ant-design/icons"
+import { PlusOutlined, ReloadOutlined, SearchOutlined } from "@ant-design/icons"
 import {
   Button,
   Card,
@@ -22,38 +18,11 @@ import {
 import type { ColumnsType } from "antd/es/table"
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { PageHeader } from "../components"
-import { useColorConvention } from "../hooks/useColorConvention"
+import { FutureTag, PageHeader } from "../components"
 import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
-import { getChangeSemantic } from "../utils/changeColor"
 
 const { useBreakpoint } = Grid
-
-const FutureTag = ({ future }: { future: Stock["future"] }) => {
-  const { convention } = useColorConvention()
-  if (future === "long") {
-    return (
-      <Tag
-        color={getChangeSemantic(1, convention)}
-        style={{ fontWeight: 600 }}
-      >
-        上涨
-      </Tag>
-    )
-  }
-  if (future === "short") {
-    return (
-      <Tag
-        color={getChangeSemantic(-1, convention)}
-        style={{ fontWeight: 600 }}
-      >
-        下跌
-      </Tag>
-    )
-  }
-  return <Tag>未知</Tag>
-}
 
 export const Home = () => {
   const { stocks, loading, refetch } = useStockData()
@@ -198,7 +167,11 @@ export const Home = () => {
       renderItem={(stock: Stock) => (
         <List.Item>
           <Card hoverable size="small" styles={{ body: { padding: 16 } }}>
-            <Flex justify="space-between" align="center" style={{ marginBottom: 8 }}>
+            <Flex
+              justify="space-between"
+              align="center"
+              style={{ marginBottom: 8 }}
+            >
               <Typography.Text strong>
                 {stock.stockName}（{stock.stockNumber}）
               </Typography.Text>
@@ -216,7 +189,9 @@ export const Home = () => {
                   key: "price",
                   label: "收盘价",
                   children: (
-                    <Typography.Text strong>{stock.price.toFixed(2)}</Typography.Text>
+                    <Typography.Text strong>
+                      {stock.price.toFixed(2)}
+                    </Typography.Text>
                   ),
                 },
                 {
@@ -295,7 +270,9 @@ export const Home = () => {
             <Input
               allowClear
               placeholder="搜索代码、名称、行业或概念"
-              prefix={<SearchOutlined style={{ color: token.colorTextPlaceholder }} />}
+              prefix={
+                <SearchOutlined style={{ color: token.colorTextPlaceholder }} />
+              }
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{ width: screens.md ? 280 : "100%" }}

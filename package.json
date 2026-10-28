@@ -2,12 +2,14 @@
   "name": "edward-stock",
   "private": true,
   "version": "0.0.0",
+  "packageManager": "pnpm@10.18.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",

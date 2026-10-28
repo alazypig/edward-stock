@@ -26,41 +26,23 @@ import type { ColumnsType } from "antd/es/table"
 import dayjs from "dayjs"
 import { useEffect, useRef, useState } from "react"
 import { useBlocker, useNavigate } from "react-router-dom"
-import { Editor, PageHeader, type EditorMethods } from "../components"
-import { useColorConvention } from "../hooks/useColorConvention"
+import {
+  Editor,
+  FutureTag,
+  PageHeader,
+  type EditorMethods,
+} from "../components"
+import {
+  CONTENTS_API_BASE,
+  INDEX_FILE,
+  LAST_DATE_STORAGE_KEY,
+  TOKEN_STORAGE_KEY,
+} from "../config"
+import { useStockData } from "../hooks/useStockData"
 import type { GitHubFile, Stock } from "../type"
-import { getChangeSemantic } from "../utils/changeColor"
+import { decodeBase64Utf8, encodeBase64Utf8 } from "../utils/base64"
 
 const { useBreakpoint } = Grid
-
-const GITHUB_USERNAME = "alazypig"
-const GITHUB_REPO = "edward-stock"
-const TOKEN_STORAGE_KEY = "github_token"
-const LAST_DATE_STORAGE_KEY = "last_stock_date"
-
-const decodeBase64Utf8 = (base64: string): string => {
-  const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0))
-  return new TextDecoder().decode(bytes)
-}
-
-const FutureTag = ({ future }: { future: Stock["future"] }) => {
-  const { convention } = useColorConvention()
-  if (future === "long") {
-    return (
-      <Tag color={getChangeSemantic(1, convention)} style={{ fontWeight: 600 }}>
-        上涨
-      </Tag>
-    )
-  }
-  if (future === "short") {
-    return (
-      <Tag color={getChangeSemantic(-1, convention)} style={{ fontWeight: 600 }}>
-        下跌
-      </Tag>
-    )
-  }
-  return <Tag>未知</Tag>
-}
 
 export const Add = () => {
   const [token, setToken] = useState<string>(
@@ -79,17 +61,14 @@ export const Add = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const screens = useBreakpoint()
   const navigate = useNavigate()
-  const [showLeaveConfirm, setShowLeaveConfirm] = useState(false)
-  const [nextLocation, setNextLocation] = useState<string | null>(null)
+  const { refetch } = useStockData()
 
-  useBlocker((tx) => {
-    if (newStocks.length > 0) {
-      setNextLocation(tx.nextLocation.pathname)
-      setShowLeaveConfirm(true)
-      return true
-    }
-    return false
-  })
+  // 有未提交记录时拦截路由跳转，交给确认弹窗决定 proceed / reset
+  const blocker = useBlocker(
+    ({ currentLocation, nextLocation }) =>
+      newStocks.length > 0 &&
+      currentLocation.pathname !== nextLocation.pathname,
+  )
 
   useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
@@ -105,13 +84,6 @@ export const Add = () => {
       window.removeEventListener("beforeunload", handleBeforeUnload)
     }
   }, [newStocks])
-
-  useEffect(() => {
-    if (!showLeaveConfirm && nextLocation) {
-      navigate(nextLocation)
-      setNextLocation(null)
-    }
-  }, [showLeaveConfirm, nextLocation, navigate])
 
   const handleSave = (item: Stock) => {
     if (item.date) {
@@ -166,10 +138,9 @@ export const Add = () => {
         groupedNewStocks[month].push(stock)
       })
 
-      const indexRes = await fetch(
-        `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/data/index.json`,
-        { headers: { Authorization: `Bearer ${token}` } },
-      )
+      const indexRes = await fetch(`${CONTENTS_API_BASE}/${INDEX_FILE}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
 
       let indexFile: GitHubFile | null = null
       let currentIndices: string[] = []
@@ -184,12 +155,10 @@ export const Add = () => {
 
       for (const month of Object.keys(groupedNewStocks)) {
         const fileName = `${month}.json`
-        const filePath = `data/${fileName}`
 
-        const fileRes = await fetch(
-          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${filePath}`,
-          { headers: { Authorization: `Bearer ${token}` } },
-        )
+        const fileRes = await fetch(`${CONTENTS_API_BASE}/${fileName}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
 
         let oldData: Stock[] = []
         let sha: string | undefined = undefined
@@ -202,9 +171,7 @@ export const Add = () => {
 
         const monthNewStocks = groupedNewStocks[month]
         const newStockKeys = new Set(
-          monthNewStocks.map(
-            (stock) => `${stock.date}|${stock.stockNumber}`,
-          ),
+          monthNewStocks.map((stock) => `${stock.date}|${stock.stockNumber}`),
         )
 
         const filteredOldData = oldData.filter(
@@ -213,27 +180,26 @@ export const Add = () => {
 
         const newData = [...filteredOldData, ...monthNewStocks]
         const newContent = JSON.stringify({ stockData: newData }, null, 2)
-        const encoded = btoa(String.fromCharCode(...new TextEncoder().encode(newContent)))
+        const encoded = encodeBase64Utf8(newContent)
 
-        const putRes = await fetch(
-          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${filePath}`,
-          {
-            method: "PUT",
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              message: `Update stock data for ${month} from website`,
-              content: encoded,
-              sha,
-            }),
+        const putRes = await fetch(`${CONTENTS_API_BASE}/${fileName}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
-        )
+          body: JSON.stringify({
+            message: `Update stock data for ${month} from website`,
+            content: encoded,
+            sha,
+          }),
+        })
 
         if (!putRes.ok) {
           const error = (await putRes.json()) as { message?: string }
-          throw new Error(`更新 ${fileName} 失败：${error.message ?? "未知错误"}`)
+          throw new Error(
+            `更新 ${fileName} 失败：${error.message ?? "未知错误"}`,
+          )
         }
 
         if (!currentIndices.includes(fileName)) {
@@ -249,25 +215,20 @@ export const Add = () => {
           null,
           2,
         )
-        const encodedIndex = btoa(
-          String.fromCharCode(...new TextEncoder().encode(newIndexContent)),
-        )
+        const encodedIndex = encodeBase64Utf8(newIndexContent)
 
-        const putIndexRes = await fetch(
-          `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/data/index.json`,
-          {
-            method: "PUT",
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              message: `Update index.json from website`,
-              content: encodedIndex,
-              sha: indexFile?.sha,
-            }),
+        const putIndexRes = await fetch(`${CONTENTS_API_BASE}/${INDEX_FILE}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
-        )
+          body: JSON.stringify({
+            message: `Update index.json from website`,
+            content: encodedIndex,
+            sha: indexFile?.sha,
+          }),
+        })
 
         if (!putIndexRes.ok) {
           const error = (await putIndexRes.json()) as { message?: string }
@@ -279,6 +240,8 @@ export const Add = () => {
 
       messageApi.success("已成功保存到 GitHub")
       setNewStocks([])
+      // raw.githubusercontent.com 有 CDN 缓存，强制刷新一次，避免列表仍是旧数据
+      await refetch()
     } catch (error) {
       const msg = error instanceof Error ? error.message : "发生未知错误"
       messageApi.error(msg)
@@ -423,17 +386,7 @@ export const Add = () => {
         title="添加记录"
         subtitle={`编辑完成后点击「提交到 GitHub」写入仓库，共 ${newStocks.length} 条待提交`}
         extra={
-          <Button
-            icon={<ArrowLeftOutlined />}
-            onClick={() => {
-              if (newStocks.length > 0) {
-                setNextLocation("/")
-                setShowLeaveConfirm(true)
-              } else {
-                navigate("/")
-              }
-            }}
-          >
+          <Button icon={<ArrowLeftOutlined />} onClick={() => navigate("/")}>
             返回
           </Button>
         }
@@ -442,7 +395,12 @@ export const Add = () => {
       <div style={{ padding: screens.md ? "24px 32px" : "16px" }}>
         <Card
           title={
-            <Flex align="center" justify="space-between" wrap="wrap" gap="small">
+            <Flex
+              align="center"
+              justify="space-between"
+              wrap="wrap"
+              gap="small"
+            >
               <Typography.Text strong>待提交列表</Typography.Text>
               <Button
                 type="primary"
@@ -509,7 +467,7 @@ export const Add = () => {
           setEditingStock(null)
         }}
         footer={null}
-        destroyOnClose
+        destroyOnHidden
         width={screens.md ? 640 : "calc(100vw - 32px)"}
       >
         <Editor
@@ -525,15 +483,12 @@ export const Add = () => {
 
       <Modal
         title="确认离开"
-        open={showLeaveConfirm}
-        onCancel={() => setShowLeaveConfirm(false)}
+        open={blocker.state === "blocked"}
+        onCancel={() => blocker.reset?.()}
         okButtonProps={{ danger: true }}
         okText="放弃并离开"
         cancelText="继续编辑"
-        onOk={() => {
-          setNewStocks([])
-          setShowLeaveConfirm(false)
-        }}
+        onOk={() => blocker.proceed?.()}
       >
         <Typography.Paragraph>
           您有 <Typography.Text strong>{newStocks.length}</Typography.Text>{" "}
