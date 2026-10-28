@@ -79,6 +79,86 @@
       "notion": [
         "存储芯片"
       ]
+    },
+    {
+      "uuid": "576fa1ee-afd8-488a-ab83-16db947bc5e0",
+      "date": "2026-10-28",
+      "stockNumber": "603158",
+      "stockName": "腾龙股份",
+      "price": 10.22,
+      "future": "none",
+      "comment": "接近底部位置",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "汽车热管理",
+        "专精特新"
+      ]
+    },
+    {
+      "uuid": "5fdbaf7c-b9bd-460e-8ef7-5b7b66eac68c",
+      "date": "2026-10-28",
+      "stockNumber": "002635",
+      "stockName": "安洁科技",
+      "price": 13.77,
+      "future": "long",
+      "comment": "底部",
+      "industry": [
+        "消费电子"
+      ],
+      "notion": [
+        "共封装光学",
+        "消费电子"
+      ]
+    },
+    {
+      "uuid": "2514fb04-9ff5-44ed-b7e3-b7eca46ef361",
+      "date": "2026-10-28",
+      "stockNumber": "002097",
+      "stockName": "山河智能",
+      "price": 7.03,
+      "future": "long",
+      "comment": "底部",
+      "industry": [
+        "工程机械"
+      ],
+      "notion": [
+        "传感器"
+      ]
+    },
+    {
+      "uuid": "f5663907-5696-4ff4-8998-45bb3ee33555",
+      "date": "2026-10-28",
+      "stockNumber": "002031",
+      "stockName": "巨轮智能",
+      "price": 5.41,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "减速器",
+        "人形机器人",
+        "机器人"
+      ]
+    },
+    {
+      "uuid": "89beabb3-671f-4b30-a3c0-213d03bbe361",
+      "date": "2026-10-28",
+      "stockNumber": "603366",
+      "stockName": "日出东方",
+      "price": 7.68,
+      "future": "long",
+      "comment": "底部",
+      "industry": [
+        "厨卫电器"
+      ],
+      "notion": [
+        "空气能热泵",
+        "储能"
+      ]
     }
   ]
 }
