@@ -79,6 +79,53 @@
       "notion": [
         "存储芯片"
       ]
+    },
+    {
+      "uuid": "c280be6d-7800-4e06-afe7-88e1e9ba0d2e",
+      "date": "2026-10-30",
+      "stockNumber": "605006",
+      "stockName": "山东玻纤",
+      "price": 13.39,
+      "future": "none",
+      "comment": "二次探底，观望",
+      "industry": [
+        "玻璃纤维"
+      ],
+      "notion": [
+        "风电"
+      ]
+    },
+    {
+      "uuid": "342d42f3-6bf8-4f49-968e-d4c23736e122",
+      "date": "2026-10-30",
+      "stockNumber": "002510",
+      "stockName": "天汽模",
+      "price": 5.98,
+      "future": "long",
+      "comment": "底部",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "大飞机",
+        "特斯拉"
+      ]
+    },
+    {
+      "uuid": "b67c9e32-c280-47db-a9b5-33910ba4c59f",
+      "date": "2026-10-30",
+      "stockNumber": "603619",
+      "stockName": "中曼石油",
+      "price": 20.78,
+      "future": "none",
+      "comment": "底部，观望",
+      "industry": [
+        "油气开采"
+      ],
+      "notion": [
+        "天然气",
+        "一带一路"
+      ]
     }
   ]
 }
