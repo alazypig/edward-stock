@@ -1,0 +1,6 @@
+# 由 GitHub Contents API 写入/维护的数据，格式必须保持 app 写出的样子
+data/
+# 构建产物
+dist/
+# 锁文件不参与格式化
+pnpm-lock.yaml
