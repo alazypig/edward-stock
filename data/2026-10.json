@@ -126,6 +126,37 @@
         "天然气",
         "一带一路"
       ]
+    },
+    {
+      "uuid": "f7668205-d2b5-4d93-9015-62cff5160471",
+      "date": "2026-10-30",
+      "stockNumber": "002979",
+      "stockName": "雷赛智能",
+      "price": 50,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "自动化设备"
+      ],
+      "notion": [
+        "专精特新",
+        "机器人",
+        "人形机器人"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 31,
+          "max": 41
+        },
+        "neutral": {
+          "min": 44,
+          "max": 52
+        },
+        "optimistic": {
+          "min": 56,
+          "max": 67
+        }
+      }
     }
   ]
 }
