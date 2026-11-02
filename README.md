@@ -33,12 +33,17 @@ npm run format
 
 ## 数据存储
 
+数据放在 **`data` 分支**（`main` 只放代码），目录结构：
+
 ```
-data/
+data/                     # data 分支根目录
 ├── index.json      # { "files": ["2026-10.json", "2026-09.json", ...] }  新→旧
 ├── 2026-10.json    # { "stockData": [Stock, ...] }
 └── ...
 ```
+
+这样的好处：网页上新增 / 修改记录只产生 `data` 分支的提交，`main` 不动，
+Cloudflare Pages 也就不会因为数据变更而重新编译部署。
 
 单条记录：
 
@@ -61,11 +66,12 @@ data/
 }
 ```
 
-- **读取**：`raw.githubusercontent.com`，输出走 CDN；刷新时带时间戳参数绕过缓存。
+- **读取**：`raw.githubusercontent.com/alazypig/edward-stock/data/data/...`，输出走 CDN；刷新时带时间戳参数绕过缓存。
 - **按需加载**：列表页需要全量历史，首次使用时才懒加载；分析页只要最近 100 条
   （`ANALYSIS_RECORD_LIMIT`），从最新月份往前逐月下载，凑够 100 条即停止，
   并按交易日整日取整（边界那天超了也整日保留）。
 - **写入**：GitHub Contents API，需要 `repo` 权限的 Personal Access Token（在「添加记录」页填写，仅存 localStorage）。
+  读取和写入都带 `data` 分支（`?ref=data` / `branch: "data"`），提交信息带 `[skip ci]`。
   写入按 `日期|股票代码` 去重，新增月份会自动登记进 `index.json`。
 - **估值区间（选填）**：`valuation` 保存保守 / 中性 / 乐观三档价格的上下限。列表和待提交
   列表显示中性区间：收盘价低于中性下限标 **红**，高于中性上限标 **黄**；hover 展示三档

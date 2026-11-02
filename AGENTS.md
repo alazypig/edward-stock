@@ -23,7 +23,7 @@ Run `build` before commit — it does typecheck via `tsc -b`. No test framework 
 ## Architecture
 
 - **Single-page app** with 4 lazy-loaded routes: Home (list), Add (input), Analysis (word clouds), CurrentPrice (live prices).
-- **Data layer**: JSON files in `data/` committed to `alazypig/edward-stock` on GitHub. The app reads via `raw.githubusercontent.com` and writes via GitHub Contents API (needs a personal token in the Add page).
+- **Data layer**: JSON files live on the **`data` branch** (`data/*.json`), not on `main` — `main` holds code only, so Cloudflare Pages rebuilds only when code changes. The app reads raw.githubusercontent.com (`/data/data/...`), and writes via GitHub Contents API with `branch: 'data'`, `?ref=data` for reads and a `[skip ci]` suffix on commit messages.
 - **Data index**: `data/index.json` lists monthly files (e.g. `2026-06.json`), newest first. Full history is ~260 KB; the list page needs all of it.
 - **Two data sources**:
   - `useStockData()` → `StockDataContext`: **lazy** full load (index + every month). Triggered on first consume (Home / Add / CurrentPrice), so visiting only `/analysis` never downloads the whole history.

@@ -35,8 +35,11 @@ import {
 } from "../components"
 import {
   CONTENTS_API_BASE,
+  DATA_BRANCH,
+  DATA_REF_QUERY,
   INDEX_FILE,
   LAST_DATE_STORAGE_KEY,
+  SKIP_CI_SUFFIX,
   TOKEN_STORAGE_KEY,
 } from "../config"
 import { useStockData } from "../hooks/useStockData"
@@ -139,9 +142,10 @@ export const Add = () => {
         groupedNewStocks[month].push(stock)
       })
 
-      const indexRes = await fetch(`${CONTENTS_API_BASE}/${INDEX_FILE}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      const indexRes = await fetch(
+        `${CONTENTS_API_BASE}/${INDEX_FILE}${DATA_REF_QUERY}`,
+        { headers: { Authorization: `Bearer ${token}` } },
+      )
 
       let indexFile: GitHubFile | null = null
       let currentIndices: string[] = []
@@ -157,9 +161,10 @@ export const Add = () => {
       for (const month of Object.keys(groupedNewStocks)) {
         const fileName = `${month}.json`
 
-        const fileRes = await fetch(`${CONTENTS_API_BASE}/${fileName}`, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
+        const fileRes = await fetch(
+          `${CONTENTS_API_BASE}/${fileName}${DATA_REF_QUERY}`,
+          { headers: { Authorization: `Bearer ${token}` } },
+        )
 
         let oldData: Stock[] = []
         let sha: string | undefined = undefined
@@ -190,9 +195,10 @@ export const Add = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            message: `Update stock data for ${month} from website`,
+            message: `Update stock data for ${month} from website${SKIP_CI_SUFFIX}`,
             content: encoded,
             sha,
+            branch: DATA_BRANCH,
           }),
         })
 
@@ -225,9 +231,10 @@ export const Add = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            message: `Update index.json from website`,
+            message: `Update index.json from website${SKIP_CI_SUFFIX}`,
             content: encodedIndex,
             sha: indexFile?.sha,
+            branch: DATA_BRANCH,
           }),
         })
 
