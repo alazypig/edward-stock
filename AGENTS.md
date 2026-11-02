@@ -46,4 +46,5 @@ Run `build` before commit — it does typecheck via `tsc -b`. No test framework 
 - Stock codes are prefixed with `sh` (Shanghai, starts with `6`) or `sz` (Shenzhen, starts with `0`/`3`) before querying live prices.
 - Unsaved Add-page records block navigation via `useBlocker`; the confirm modal is driven by `blocker.state` (`proceed()` = discard & leave, `reset()` = stay).
 - The `Stock` type has `future: "long" | "short" | "none"` — these are Chinese stock predictions (上涨/下跌/未知).
+- `Stock.valuation` is optional (保守/中性/乐观 三档上下限). Home and Add render it via `ValuationCell`: red when price < neutral.min, yellow when price > neutral.max, tooltip lists all three bands and marks the current one. Other pages ignore it. The editor requires all six numbers (or none) and min <= max.
 - **Never format `data/`**: `.prettierignore` excludes it on purpose. The app writes JSON with expanded arrays via `JSON.stringify(..., null, 2)`, so running Prettier over `data/` rewrites all monthly files for no reason (and stale formatting has already caused records from a newer commit to be reverted locally).

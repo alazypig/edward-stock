@@ -30,6 +30,7 @@ import {
   Editor,
   FutureTag,
   PageHeader,
+  ValuationCell,
   type EditorMethods,
 } from "../components"
 import {
@@ -270,6 +271,15 @@ export const Add = () => {
       dataIndex: "price",
       key: "price",
       width: 100,
+      render: (val: number) => val.toFixed(2),
+    },
+    {
+      title: "估值区间",
+      key: "valuation",
+      width: 150,
+      render: (_, record) => (
+        <ValuationCell valuation={record.valuation} price={record.price} />
+      ),
     },
     {
       title: "走势",
@@ -364,6 +374,12 @@ export const Add = () => {
               </Tag>
             ))}
           </Space>
+          {stock.valuation ? (
+            <Flex align="center" gap="small" style={{ marginTop: 8 }}>
+              <Typography.Text type="secondary">估值区间</Typography.Text>
+              <ValuationCell valuation={stock.valuation} price={stock.price} />
+            </Flex>
+          ) : null}
         </List.Item>
       )}
     />

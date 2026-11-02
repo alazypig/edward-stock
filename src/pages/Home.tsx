@@ -18,7 +18,7 @@ import {
 import type { ColumnsType } from "antd/es/table"
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { FutureTag, PageHeader } from "../components"
+import { FutureTag, PageHeader, ValuationCell } from "../components"
 import { useStockData } from "../hooks/useStockData"
 import type { Stock } from "../type"
 
@@ -84,6 +84,14 @@ export const Home = () => {
       width: 100,
       render: (val: number) => (
         <Typography.Text strong>{val.toFixed(2)}</Typography.Text>
+      ),
+    },
+    {
+      title: "估值区间",
+      key: "valuation",
+      width: 150,
+      render: (_, record) => (
+        <ValuationCell valuation={record.valuation} price={record.price} />
       ),
     },
     {
@@ -194,6 +202,20 @@ export const Home = () => {
                     </Typography.Text>
                   ),
                 },
+                ...(stock.valuation
+                  ? [
+                      {
+                        key: "valuation",
+                        label: "估值区间",
+                        children: (
+                          <ValuationCell
+                            valuation={stock.valuation}
+                            price={stock.price}
+                          />
+                        ),
+                      },
+                    ]
+                  : []),
                 {
                   key: "industry",
                   label: "行业",

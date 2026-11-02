@@ -12,15 +12,41 @@ import {
   Input,
   InputNumber,
   Radio,
+  Typography,
   message,
 } from "antd"
 import dayjs from "dayjs"
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
-import type { Stock } from "../type"
+import type { Stock, Valuation, ValuationRange } from "../type"
+import { VALUATION_LEVELS, type ValuationLevel } from "../utils/valuation"
 import { TagInput } from "./TagInput"
 
 const { useBreakpoint } = Grid
+
+type RangeInput = { min: number | null; max: number | null }
+type ValuationInput = Record<ValuationLevel, RangeInput>
+
+const EMPTY_VALUATION_INPUT: ValuationInput = {
+  conservative: { min: null, max: null },
+  neutral: { min: null, max: null },
+  optimistic: { min: null, max: null },
+}
+
+const toValuationInput = (valuation?: Valuation): ValuationInput => {
+  if (!valuation) return EMPTY_VALUATION_INPUT
+  return {
+    conservative: {
+      min: valuation.conservative.min,
+      max: valuation.conservative.max,
+    },
+    neutral: { min: valuation.neutral.min, max: valuation.neutral.max },
+    optimistic: {
+      min: valuation.optimistic.min,
+      max: valuation.optimistic.max,
+    },
+  }
+}
 
 export interface EditorMethods {
   clearFields: () => void
@@ -53,6 +79,9 @@ export const Editor = forwardRef<EditorMethods, Props>(
 
     const [industry, setIndustry] = useState<string[]>([])
     const [notion, setNotion] = useState<string[]>([])
+    const [valuation, setValuation] = useState<ValuationInput>(
+      EMPTY_VALUATION_INPUT,
+    )
 
     const [messageApi, contextHolder] = message.useMessage()
     const screens = useBreakpoint()
@@ -67,6 +96,7 @@ export const Editor = forwardRef<EditorMethods, Props>(
         setComment(stockToEdit.comment || "")
         setIndustry(stockToEdit.industry || [])
         setNotion(stockToEdit.notion || [])
+        setValuation(toValuationInput(stockToEdit.valuation))
       } else {
         clearFields()
       }
@@ -80,6 +110,18 @@ export const Editor = forwardRef<EditorMethods, Props>(
       setComment("")
       setIndustry([])
       setNotion([])
+      setValuation(EMPTY_VALUATION_INPUT)
+    }
+
+    const updateValuation = (
+      level: ValuationLevel,
+      field: "min" | "max",
+      value: number | null,
+    ) => {
+      setValuation((prev) => ({
+        ...prev,
+        [level]: { ...prev[level], [field]: value },
+      }))
     }
 
     useImperativeHandle(ref, () => ({ clearFields }), [])
@@ -110,6 +152,32 @@ export const Editor = forwardRef<EditorMethods, Props>(
         return
       }
 
+      // 估值区间选填；只要填了任意一个数字，就要求三档上下限都完整且合法
+      const hasValuationInput = VALUATION_LEVELS.some(
+        ({ key }) => valuation[key].min !== null || valuation[key].max !== null,
+      )
+      let valuationData: Valuation | undefined
+      if (hasValuationInput) {
+        const ranges: Record<string, ValuationRange> = {}
+        for (const { key, label } of VALUATION_LEVELS) {
+          const { min, max } = valuation[key]
+          if (min === null || max === null) {
+            messageApi.error(`请填写完整的${label}估值下限和上限`)
+            return
+          }
+          if (min > max) {
+            messageApi.error(`${label}估值的下限不能大于上限`)
+            return
+          }
+          ranges[key] = { min, max }
+        }
+        valuationData = {
+          conservative: ranges.conservative,
+          neutral: ranges.neutral,
+          optimistic: ranges.optimistic,
+        }
+      }
+
       const item: Stock = {
         uuid: stockToEdit?.uuid ?? uuidv4(),
         date,
@@ -120,6 +188,7 @@ export const Editor = forwardRef<EditorMethods, Props>(
         comment: comment.trim(),
         industry,
         notion,
+        valuation: valuationData,
       }
 
       onSave(item)
@@ -140,14 +209,22 @@ export const Editor = forwardRef<EditorMethods, Props>(
           </Form.Item>
 
           <Flex vertical={!screens.md} gap="middle">
-            <Form.Item label="股票代码" required style={{ flex: 1, marginBottom: 0 }}>
+            <Form.Item
+              label="股票代码"
+              required
+              style={{ flex: 1, marginBottom: 0 }}
+            >
               <Input
                 placeholder="例如 600000"
                 value={stockNumber}
                 onChange={(e) => setStockNumber(e.target.value)}
               />
             </Form.Item>
-            <Form.Item label="股票名称" required style={{ flex: 1, marginBottom: 0 }}>
+            <Form.Item
+              label="股票名称"
+              required
+              style={{ flex: 1, marginBottom: 0 }}
+            >
               <Input
                 placeholder="例如 浦发银行"
                 value={stockName}
@@ -166,6 +243,43 @@ export const Editor = forwardRef<EditorMethods, Props>(
               precision={2}
               style={{ width: "100%" }}
             />
+          </Form.Item>
+
+          <Form.Item
+            label="估值区间（选填）"
+            extra="填了任意一个数字，就需要把保守 / 中性 / 乐观的上下限都填完整"
+          >
+            <Flex vertical gap="small">
+              {VALUATION_LEVELS.map(({ key, label }) => (
+                <Flex key={key} align="center" gap="small">
+                  <Typography.Text
+                    type="secondary"
+                    style={{ width: 28, flexShrink: 0 }}
+                  >
+                    {label}
+                  </Typography.Text>
+                  <InputNumber
+                    placeholder="下限"
+                    value={valuation[key].min}
+                    onChange={(v) => updateValuation(key, "min", v ?? null)}
+                    min={0}
+                    step={0.01}
+                    precision={2}
+                    style={{ flex: 1 }}
+                  />
+                  <Typography.Text type="secondary">-</Typography.Text>
+                  <InputNumber
+                    placeholder="上限"
+                    value={valuation[key].max}
+                    onChange={(v) => updateValuation(key, "max", v ?? null)}
+                    min={0}
+                    step={0.01}
+                    precision={2}
+                    style={{ flex: 1 }}
+                  />
+                </Flex>
+              ))}
+            </Flex>
           </Form.Item>
 
           <Form.Item label="行业" required>
