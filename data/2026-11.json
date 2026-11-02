@@ -1,0 +1,94 @@
+{
+  "stockData": [
+    {
+      "uuid": "902288f0-9226-426e-9505-b828c693321d",
+      "date": "2026-11-02",
+      "stockNumber": "002579",
+      "stockName": "中京电子",
+      "price": 12.05,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "元件"
+      ],
+      "notion": [
+        "先进封装",
+        "PCB"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 8.4,
+          "max": 10.5
+        },
+        "neutral": {
+          "min": 12,
+          "max": 14.8
+        },
+        "optimistic": {
+          "min": 15.6,
+          "max": 19.2
+        }
+      }
+    },
+    {
+      "uuid": "cb9fcc32-fbd7-4e21-b00f-afac7ec63daa",
+      "date": "2026-11-02",
+      "stockNumber": "600258",
+      "stockName": "首旅酒店",
+      "price": 12.95,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "酒店餐饮"
+      ],
+      "notion": [
+        "旅游",
+        "国企改革"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 10.2,
+          "max": 12
+        },
+        "neutral": {
+          "min": 13.5,
+          "max": 16
+        },
+        "optimistic": {
+          "min": 17,
+          "max": 19.5
+        }
+      }
+    },
+    {
+      "uuid": "7d3a0c60-888e-4bbb-924d-c285540833d5",
+      "date": "2026-11-02",
+      "stockNumber": "603690",
+      "stockName": "至纯科技",
+      "price": 17.82,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "半导体"
+      ],
+      "notion": [
+        "中芯国际",
+        "芯片"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 14.2,
+          "max": 17.3
+        },
+        "neutral": {
+          "min": 20.4,
+          "max": 24.5
+        },
+        "optimistic": {
+          "min": 27.6,
+          "max": 32.8
+        }
+      }
+    }
+  ]
+}
