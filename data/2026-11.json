@@ -89,6 +89,96 @@
           "max": 32.8
         }
       }
+    },
+    {
+      "uuid": "4be1c52a-586a-4ac3-819e-115fda2ae74f",
+      "date": "2026-11-06",
+      "stockNumber": "000722",
+      "stockName": "湖南发展",
+      "price": 12.37,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "电力"
+      ],
+      "notion": [
+        "绿色发电"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 7.88,
+          "max": 7.89
+        },
+        "neutral": {
+          "min": 11.49,
+          "max": 11.5
+        },
+        "optimistic": {
+          "min": 16.13,
+          "max": 16.14
+        }
+      }
+    },
+    {
+      "uuid": "9578c39f-f9fe-4830-95db-aec8aa89affb",
+      "date": "2026-11-06",
+      "stockNumber": "002488",
+      "stockName": "金固股份",
+      "price": 6.8,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "汽车零部件"
+      ],
+      "notion": [
+        "机器人",
+        "人形机器人"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 3.77,
+          "max": 3.78
+        },
+        "neutral": {
+          "min": 9.95,
+          "max": 9.96
+        },
+        "optimistic": {
+          "min": 16.34,
+          "max": 16.35
+        }
+      }
+    },
+    {
+      "uuid": "bfc387c7-64e2-4244-b387-43d7ead34fc2",
+      "date": "2026-11-06",
+      "stockNumber": "002611",
+      "stockName": "东方精工",
+      "price": 19.91,
+      "future": "none",
+      "comment": "",
+      "industry": [
+        "专用设备"
+      ],
+      "notion": [
+        "高端设备",
+        "机器人",
+        "人形机器人"
+      ],
+      "valuation": {
+        "conservative": {
+          "min": 7.83,
+          "max": 7.84
+        },
+        "neutral": {
+          "min": 9.83,
+          "max": 9.84
+        },
+        "optimistic": {
+          "min": 12.83,
+          "max": 12.84
+        }
+      }
     }
   ]
 }
